@@ -1,5 +1,5 @@
 """
-    Created to convert url-encoded string 2 dictionary
+    Created to convert valid url-encoded string to dictionary
     Baselined:  2017-02-13
 
     @author:    Breanna Sipley
