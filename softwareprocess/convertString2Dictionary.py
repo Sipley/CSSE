@@ -1,45 +1,51 @@
 """
     Created to convert url-encoded string 2 dictionary
-    Baselined:  YYYY-MM-DD
+    Baselined:  2017-02-13
 
     @author:    Breanna Sipley
 """
+import re
+import urllib
 
-def convertString2Dictionary(inputString = ''):
-    import re
-    import urllib
+
+def convertString2Dictionary(inputString=''):
     errorDict = {'error':'true'}
+    inputString = str(inputString)
     string = urllib.unquote(inputString)
     output = []
-    #test for illegal sep
+    # test for illegal char
     if not re.match('^[A-Za-z0-9=/., ]*$', string):
         return errorDict
-    #test for non-empty input
-    elif len(string) <= 1:
+    if re.match('.*[=,]$', string):
         return errorDict
-    #test for presence of 1+ key=value pair
-    elif "=" not in string:
+    # test for at least 1 key=value pair
+    if '=' not in string:
         return errorDict
-    #test for alpha first char
-    elif not string[0].isalpha():
-        return errorDict
-    #remove legal whitespace
-    string = string.replace('= ','=')
-    string = string.replace(', ',',')
-    #test for embedded whitespace
+    # remove valid whitespace if present
+    string = string.replace('= ', '=')
+    string = string.replace(', ', ',')
+    # test for embedded whitespace
     if ' ' in string:
         return errorDict
-    #for each pair, split key & value
+    # for each pair, split key & value
     for key in string.split(','):
         output.append(key.split('='))
-    #test for duplicate key
+    # test for duplicate key
     listKey = [key[0] for key in output]
-    isDupKey = list(set(listKey))
-    if listKey != isDupKey:
+    dupKeyChecker = list(set(listKey))
+    if len(listKey) != len(dupKeyChecker):
         return errorDict
-    #create dictionary
+    # test key 2+ characters, begin with alpha
+    for key in listKey:
+        if len(key) < 2:
+            return errorDict
+        if not key[0].isalpha():
+            return errorDict
+    # check for each key having a value
+    listValue = [value[1] for value in output]
+    for value in listValue:
+        if len(value) < 1:
+            return errorDict
+    # create dictionary
     outputValue = dict(output)
-    #test for non-empty values
-    if outputValue.values() == ['']:
-        return errorDict
     return outputValue
