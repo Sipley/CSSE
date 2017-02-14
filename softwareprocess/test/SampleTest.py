@@ -26,4 +26,8 @@ class SampleTest(TestCase):
         self.assertIsInstance(S.Sample(4),S.Sample)
 
     def test100_020_ShouldConstructInstanceWithLowBound(self):
-        self.assertIsInstance(S.Sample(2),S.Sample)
+        myS = S.Sample(2)
+        self.assertIsInstance(myS,S.Sample)
+        self.assertEquals(myS.n, 2)
+        #want to get number of degrees of freedom.
+        #would like to get n back & see if equal to 2
