@@ -24,3 +24,6 @@ class SampleTest(TestCase):
 #   Happy path
     def test100_010_ShouldConstructInstanceWithNominalValue(self):
         self.assertIsInstance(S.Sample(4),S.Sample)
+
+    def test100_020_ShouldConstructInstanceWithLowBound(self):
+        self.assertIsInstance(S.Sample(2),S.Sample)
