@@ -38,3 +38,19 @@ class SampleTest(TestCase):
         myS = S.Sample(29)
         self.assertIsInstance(myS,S.Sample)
         self.assertEquals(myS.getN(), 29)
+
+    def test100_910_ShouldRaiseExceptionOnMissingN(self):
+        #decide what string going to raise
+        #'invalid n'
+        expectedString = "Sample.__init__:  invalid n"
+        #want to raise an exception with name of class & name of method that raises exception
+        with self.assertRaises(ValueError) as context:
+        #within next statements, should raise value error.  If doesn't, bad
+        #if does, good
+        #and if does, should assign to variable called context
+        #now instantiate
+            myS = S.Sample()
+        self.assertEqual(expectedString, context.exception.args[0][0:len(expectedString)])
+        #if doesn't, fail right here & gimme red light
+        #check to make sure that argument problem is string
+        #red light
