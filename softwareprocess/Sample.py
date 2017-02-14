@@ -1,3 +1,6 @@
 class Sample():
     def __init__(self,n):
-        pass
+        self.n = n
+
+    def getN(self):
+        return self.n

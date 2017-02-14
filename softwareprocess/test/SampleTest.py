@@ -31,3 +31,6 @@ class SampleTest(TestCase):
         self.assertEquals(myS.n, 2)
         #want to get number of degrees of freedom.
         #would like to get n back & see if equal to 2
+        #red light: no attritube 'n'
+        #bad smell violating n
+
