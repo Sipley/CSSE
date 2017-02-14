@@ -54,3 +54,5 @@ class SampleTest(TestCase):
         #if doesn't, fail right here & gimme red light
         #check to make sure that argument problem is string
         #red light
+        #good, is red light
+        #now, let's write production code to fix this
