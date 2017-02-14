@@ -34,3 +34,7 @@ class SampleTest(TestCase):
         #red light: no attritube 'n'
         #bad smell violating n
 
+    def test100_020_ShouldConstructInstanceWithHighBound(self):
+        myS = S.Sample(29)
+        self.assertIsInstance(myS,S.Sample)
+        self.assertEquals(myS.getN(), 29)
