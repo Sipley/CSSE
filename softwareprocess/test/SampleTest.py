@@ -38,6 +38,7 @@ class SampleTest(TestCase):
         myS = S.Sample(29)
         self.assertIsInstance(myS,S.Sample)
         self.assertEquals(myS.getN(), 29)
+
 '''
     #if __name__ == '__main__':
     def test100_910_ShouldRaiseExceptionOnMissingN(self):
@@ -94,7 +95,7 @@ class SampleTest(TestCase):
 
         #want to exercise BDD.  what behavior do we want to drive this?
             #we want to raise an exception should n be out of bounds
-'''
+
             def test100_920_ShouldRaiseExceptionOnLowN(self):
                 expectedString = "Sample.__init__: invalid n"
                 with self.assertRaises(ValueError) as context:
@@ -106,7 +107,7 @@ class SampleTest(TestCase):
                 with self.assertRaises(ValueError) as context:
                     myS = S.Sample(1)
                 self.assertEqual(expectedString, context.exception.args[0][0:len(expectedString)])
-'''
+
 '''
 
 
