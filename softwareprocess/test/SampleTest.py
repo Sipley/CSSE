@@ -99,8 +99,8 @@ class SampleTest(TestCase):
             def test100_920_ShouldRaiseExceptionOnLowN(self):
                 expectedString = "Sample.__init__: invalid n"
                 with self.assertRaises(ValueError) as context:
-                    myS = S.Sample()
-                self.assertEqual(expectedString, context.exception.args[0][0:leng(expectedString)])
+                    myS = S.Sample(1)
+                self.assertEqual(expectedString, context.exception.args[0][0:len(expectedString)])
 
 
 
