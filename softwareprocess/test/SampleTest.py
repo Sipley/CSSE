@@ -109,7 +109,7 @@ class SampleTest(TestCase):
                 self.assertEqual(expectedString, context.exception.args[0][0:len(expectedString)])
 
 '''
-
+'''
 #-------
 #---- Acceptance tests
 
@@ -147,7 +147,7 @@ class SampleTest(TestCase):
             #high t, low n
             #high t, high n
         #Determined from that table
-
+'''
 #-------
 #--- 300 gamma
 #       inputs: x -> numeric
