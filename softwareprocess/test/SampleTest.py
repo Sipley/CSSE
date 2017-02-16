@@ -1,5 +1,6 @@
 from unittest import TestCase
 import softwareprocess.Sample as S
+import math
 
 class SampleTest(TestCase):
     pass
@@ -159,6 +160,7 @@ class SampleTest(TestCase):
 
     def test300_010_ShouldReturn1(self):
         self.assertEquals(S.gamma(1), 1)
+        self.assertEquals(myS.gamma(1), 1)
 
 
 
