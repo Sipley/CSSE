@@ -3,7 +3,7 @@ import softwareprocess.Sample as S
 
 class SampleTest(TestCase):
     pass
-
+'''
 #---------------
 #--- Acceptance tests
 #    100 constructor
@@ -38,7 +38,7 @@ class SampleTest(TestCase):
         myS = S.Sample(29)
         self.assertIsInstance(myS,S.Sample)
         self.assertEquals(myS.getN(), 29)
-
+'''
 '''
     #if __name__ == '__main__':
     def test100_910_ShouldRaiseExceptionOnMissingN(self):
