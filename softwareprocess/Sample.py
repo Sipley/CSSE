@@ -10,3 +10,6 @@ class Sample():
 
     def getN(self):
         return self.n
+
+    def gamma(self, x):
+        return 1
