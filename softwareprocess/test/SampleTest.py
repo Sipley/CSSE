@@ -59,7 +59,7 @@ class SampleTest(TestCase):
                 #good, is red light
                 #now, let's write production code to fix this
 
-            '''
+
             #boundary level analysis.  So want to have tests that test boundaries
             #look at nominal value.  Then lower boundary & upper boundary
             #HAPPY PATH == nominal operation of software.  Normal stuff w/o delving into any problem areas
@@ -91,7 +91,7 @@ class SampleTest(TestCase):
                 #we said, if this happens, then we expect exception to be raised
                 #if raised, assign to variable called context, then peel off string to see whether it's actually what we want
             #now, let's work on bounds
-            '''
+
 
         #want to exercise BDD.  what behavior do we want to drive this?
             #we want to raise an exception should n be out of bounds
@@ -109,6 +109,44 @@ class SampleTest(TestCase):
                 self.assertEqual(expectedString, context.exception.args[0][0:len(expectedString)])
 
 '''
+
+#-------
+#---- Acceptance tests
+
+# Happy path tests
+    if __name__ == '__main__':
+        if __name__ == '__main__':
+            def test200_010_ShouldCalculatePWithNominalT(self):
+                myS = S.Sample(6)
+                self.assertAlmostEquals(myS.p(1.4398,1), 0.9, 3)
+                #we need to find the answer first
+                #retrieved from t-distribution guides resource
+                #This is different than if working with function we don't know the answer to
+                #so, for 6 degrees of freedom: 1.4398.  If one with 1 tail, should get .9.  If 2 tails should get .8
+                #this would test for 0.9 exactly, but we're not going to get that back, since this is an approx to begin with
+                #so need to adjust code to almost equals rather than equals
+                #need to put number of digits of accuracy
+                #how do we decide number of digits?  Ask the customer.  What is amount of accuracy?
+                #not something i decide.  Something customer decides
+                #NOTE:  THIS IS AN ACCEPTANCE TEST.
+                #acceptance test: an outward facing method.  & for those we test those with acceptance tests
+                #customer says 3 (after .9)
+                #we know we're done after we have enough Happy test & sad tests to satisfy boundary level analysis
+
+    #WE SHOULD HAVE 10 HAPPY PATH TESTS
+        #1 tail
+            # nominal value
+            #low t, low n
+            #low t, high n
+            #high t, low n
+            #high t, high n
+        #2 tail
+            # nominal value
+            #low t, low n
+            #low t, high n
+            #high t, low n
+            #high t, high n
+        #Determined from that table
 
 
 
