@@ -148,7 +148,17 @@ class SampleTest(TestCase):
             #high t, high n
         #Determined from that table
 
+#-------
+#--- 300 gamma
+#       inputs: x -> numeric
+#       output: float
+#
+#   Happy path analysis
+#       input
+#           x:
 
+    def test300_010_ShouldReturn1(self):
+        self.assertEquals(S.gamma(1), 1)
 
 
 
