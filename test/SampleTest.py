@@ -195,7 +195,7 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         self.assertEquals(mySample.gamma(5), 24)
 
-    def test200_030_ShouldWorkOnHalfX(self):
+    def test200_040_ShouldWorkOnHalfX(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.gamma(5.0 / 2.0), 1.329, 3)
 
