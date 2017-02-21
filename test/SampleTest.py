@@ -261,3 +261,7 @@ class SampleTest(unittest.TestCase):
 #    def test500_020_BuildSimpson2(self):
 #        mySample = SM.Sample(self.nominalN)
 #        self.assertEquals(mySample.integrate(0,1), 8.0)
+
+    def test500_010_ShouldCalcFirstAndLastTerms(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assert
