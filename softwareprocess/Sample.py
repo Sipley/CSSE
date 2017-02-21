@@ -71,7 +71,7 @@ class Sample(object):
     def getF(self):
         return self.f
 
-    def integrate(self, 0.0, t, n, f):
+    def integrate(self, t, n, f):
         epsilon = 0.001
         sOld = 0
         sNew = epsilon
