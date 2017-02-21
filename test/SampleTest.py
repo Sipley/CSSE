@@ -238,15 +238,20 @@ class SampleTest(unittest.TestCase):
 # 500 integrate
 # Analysis
 #   inputs
-#        lowBound -> 0.0.  Set
 #        highBound -> t.  Already validated.
 #        n -> mandatory. already validated
 #        f -> mandatory. already validated
 #   outputs
 #       area under t-curve -> float .GE. 0
 # Happy path
+#   Nominal:  if f(u,n) returns u, then integrate should return 0.5
 # Sad path
-#   lowBound > 0
+#   none
+
+# Happy path
+    def test500_010_ShouldEvalulateSimpleF:
+        def f(u,n):
+            return u
 
 # Sad path
 
