@@ -265,7 +265,13 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         def simpleF3(u, n):
             return u**6
-        self.assertAlmostEquals(mySample.integrate(1,5, f=simpleF3), 0.14285714285)
+        self.assertAlmostEquals(mySample.integrate(1,5, f=simpleF3), 0.142857, 3)
+
+    def test500_040_ShouldIntegrateSimpleF4(self):
+        mySample = SM.Sample(self.nominalN)
+        def simpleF4(u, n):
+            return u**100
+        self.assertAlmostEquals(mySample.integrate(1,5, f=simpleF4), 0.142857, 3)
 
 # Sad path
   #  none
