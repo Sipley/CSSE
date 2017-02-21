@@ -254,4 +254,6 @@ class SampleTest(unittest.TestCase):
 #        mySample = SM.Sample(self.nominalN)
 #        self.assertAlmostEquals(mySample.integrate(0, 1, 5, 3), 0.5, 3)
 
-    def test500_010_Is
+    def test500_010_BuildSimpson1:
+        mySample = SM.Sample(self.nominalN)
+        self.assertEquals(mySample.integrate(0, 1), .25)

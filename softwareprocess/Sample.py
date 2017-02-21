@@ -84,7 +84,10 @@ class Sample(object):
         return simpsonNew
     '''
 
-    def integrate():
+    def integrate(self, lowerBound, upperBound):
+        s=4
+        w=(upperBound-lowerBound)/s
+        return w
         pass
 
 
