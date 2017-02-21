@@ -71,7 +71,7 @@ class Sample(object):
     def getF(self):
         return self.f
 
-    def simpsonBuild(self, lowerBound, upperBound, n):
+    def integrate(self, lowerBound, upperBound, n):
         epsilon = 0.001
         sOld = 0
         sNew = epsilon
