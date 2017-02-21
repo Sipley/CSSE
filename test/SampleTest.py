@@ -337,3 +337,14 @@ class SampleTest(unittest.TestCase):
 #if didn't get enough accuracy, up the number of slices -> 8
 # .2 is not close enough to .20052
 #hard add in terms
+
+#let's try a BUNCH OF SLICES
+    def test900_030_ShouldCalculateWithABunchOfSlices(self):
+        def f(u, n):
+            return u**9
+        lowBound = 0.0
+        highBound = 1.0
+        expectResult = (highBound**10)/10.0
+        mySample = SM.Sample(self.nominalN)
+#use almostEquals because floating point number
+        self.assertAlmostEquals(expectResult, mySample.integrate(lowBound, highBound, self.nominalN, f), 3)
