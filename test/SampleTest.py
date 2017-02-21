@@ -251,6 +251,6 @@ class SampleTest(unittest.TestCase):
 # Happy path
     def test500_010_ShouldEvalulateSimpleF(self):
         mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(1, 5, f)
+        self.assertAlmostEquals(mySample.integrate(1, 5, f), 1)
 # Sad path
 
