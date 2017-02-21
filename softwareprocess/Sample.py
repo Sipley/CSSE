@@ -65,6 +65,7 @@ class Sample(object):
     #    return result
 
     def f(self, u, n):
+        n = float(n)
         return u
 
 
