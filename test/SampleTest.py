@@ -249,7 +249,7 @@ class SampleTest(unittest.TestCase):
 #   none
 
 # Happy path
-    def test500_010_ShouldEvalulateSimpleF:
+    def test500_010_ShouldEvalulateSimpleF(self):
         def f(u,n):
             return u
         mySample = SM.Sample(self.nominalN)
