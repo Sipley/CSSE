@@ -247,6 +247,7 @@ class SampleTest(unittest.TestCase):
 # Happy path
 #   nominal case:  let f(u,n) return u, integrate 0 -> 1 = 0.5
 # Sad path
+#   lowBound not equal to zero
 
 
     def test500_010_ShouldCalculateIntegralOfF(self):
