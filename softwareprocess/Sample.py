@@ -85,7 +85,7 @@ class Sample(object):
     '''
 
     def integrate(self, lowerBound, upperBound):
-        s=4
+        s=4.0
         w=(upperBound-lowerBound)/s
         return w
         pass
