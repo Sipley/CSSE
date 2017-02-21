@@ -238,21 +238,15 @@ class SampleTest(unittest.TestCase):
 # 500 integrate
 # Analysis
 #   inputs
-#        lowBound -> 0.0
+#        lowBound -> 0.0.  Set
 #        highBound -> t.  Already validated.
 #        n -> mandatory. already validated
 #        f -> mandatory. already validated
 #   outputs
 #       area under t-curve -> float .GE. 0
 # Happy path
-#   lowerBound = 0.0
-#   lowerBound missing
 # Sad path
-#   lowBound not equal to zero
+#   lowBound > 0
 
 # Sad path
-    def test600_920ShouldRaiseExceptionOnOutOfBoundsT(self):
-        mySample = SM.Sample(self.nominalN)
-        with self.assertRaises(ValueError) as context:
-            mySample.integrate(underBound =! 0)
-        self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
+
