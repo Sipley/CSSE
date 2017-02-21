@@ -252,6 +252,7 @@ class SampleTest(unittest.TestCase):
     def test500_010_ShouldEvalulateSimpleF:
         def f(u,n):
             return u
-
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.f(1,5), 0.5)
 # Sad path
 
