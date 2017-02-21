@@ -109,5 +109,6 @@ class Sample(object):
             else:
                 sNew += 4 * self.f(lowerBound + term * w, n)
             term += 1
+        sNew *= w / 3
         return sNew
 

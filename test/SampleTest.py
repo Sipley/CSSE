@@ -272,4 +272,4 @@ class SampleTest(unittest.TestCase):
 
     def test500_020_ShouldAddCalcAllOtherTerms(self):
         mySample = SM.Sample(self.nominalN)
-        self.assertEquals(mySample.simpsonBuild(0, 1, 5), 6)
+        self.assertEquals(mySample.simpsonBuild(0, 1, 5), 12)
