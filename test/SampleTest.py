@@ -238,13 +238,16 @@ class SampleTest(unittest.TestCase):
 # 500 integrate
 # Analysis
 #   inputs
-#        highBound -> t.  Already validated.
-#        n -> mandatory. already validated
-#        f -> mandatory. already validated
+#        highBound -> t
+#        n -> doesn't really do anything, but should an argument
+#        f --> default to self.f
 #   outputs
 #       area under t-curve -> float .GE. 0
 # Happy path
-#   Nominal:  if f(u,n) returns u, then integrate should return 0.5
+#   Nominal:    if f(u,n) returns u, then integrate should return 0.5
+#   Nominal:    if f(u,n) returns u**2, then integrate should return 1/3
+#   Nominal:    if f(u,n) returns u**6, then integrate should return 1/7
+#   Nominal:    if f(u,n) returns u**100, then integrate should return 1/101
 # Sad path
 #   none
 
