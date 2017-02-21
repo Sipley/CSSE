@@ -348,3 +348,15 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
 #use almostEquals because floating point number
         self.assertAlmostEquals(expectResult, mySample.integrate(lowBound, highBound, self.nominalN, f), 3)
+
+#let's try with indeterminate number of slices; previously S hardwired to 16, want to calc on fly
+#need to create epsilon & the other goods
+    def test900_030_ShouldCalculateWithABunchOfSlices(self):
+        def f(u, n):
+            return u**100
+        lowBound = 0.0
+        highBound = 1.0
+        expectResult = (highBound**101)/101.0
+        mySample = SM.Sample(self.nominalN)
+#use almostEquals because floating point number
+        self.assertAlmostEquals(expectResult, mySample.integrate(lowBound, highBound, self.nominalN, f), 3)
