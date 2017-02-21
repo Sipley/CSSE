@@ -64,10 +64,8 @@ class Sample(object):
         result = base ** exponent
         return result
 
-    def integrate(self, lowBound, highBound, n, f):
-        lowBound = 0
+    def integrate(self, 0, t, n, f):
         n = float(n)
-        f = result
         pass
 
 
