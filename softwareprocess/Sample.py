@@ -67,19 +67,19 @@ class Sample(object):
     def f(self, u, n):
         return u
 
-   # def integrate(self, lowerBound, upperBound, n, f):
-   #     n = float(n)
-   #     epsilon = .001
-   #     simpsonOld = 0.0
-   #     simpsonNew = epsilon
-   #     S=4
-   #     while (abs((simpsonNew - simpsonOld)/simpsonNew) > epsilon):
-   #         w=(upperBound-lowerBound)/S
-   #         simpsonNew = (w/3) * (f(lowerBound, n) + 4f(lowerBound + w, n) + \
-   #            2f(lowerBound + 2w,n) + 4f(lowerBound + 3w, n) + 2f(lowerBound + 4w, n)
-   #                ... + 4f(higherBound - w, n) + f(higherBound, n))
-   #         S=S*2
-   #     return w
+    def integrate(self, lowerBound, upperBound, n, f):
+        n = float(n)
+        epsilon = .001
+        simpsonOld = 0.0
+        simpsonNew = epsilon
+        S=4
+        while (abs((simpsonNew - simpsonOld)/simpsonNew) > epsilon):
+            w=(upperBound-lowerBound)/S
+            simpsonNew = (w/3) * (f(lowerBound, n) + 4f(lowerBound + w, n) + \
+               2f(lowerBound + 2w,n) + 4f(lowerBound + 3w, n) + 2f(lowerBound + 4w, n)
+                   ... + 4f(higherBound - w, n) + f(higherBound, n))
+            S=S*2
+        return simpsonNew
 
 
 
