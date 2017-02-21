@@ -251,4 +251,4 @@ class SampleTest(unittest.TestCase):
 # Happy path
 # NOTE: when I wrote this, I did it piecewise
 # Sad path
-    none
+  #  none

@@ -71,21 +71,21 @@ class Sample(object):
     def getF(self):
         return self.f
 
-    def integrate(self, t, n, f):
+    def integrate(self, t, n, f=self.f):
         epsilon = 0.001
         sOld = 0
         sNew = epsilon
         s = 4.0
         while (abs((sNew - sOld)/ sNew )) > epsilon:
             sOld = sNew
-            sNew = self.f(0.0, n) + self.f(t, n)
+            sNew = f(0.0, n) + f(t, n)
             w = (t - 0.0)/s
             term = 1
             while term < s:
                 if term % 2 == 0:
-                    sNew += 2 * self.f(0.0 + term * w, n)
+                    sNew += 2 * f(0.0 + term * w, n)
                 else:
-                    sNew += 4 * self.f(0.0 + term * w, n)
+                    sNew += 4 * f(0.0 + term * w, n)
                 term += 1
             sNew *= w / 3
             s = s * 2
