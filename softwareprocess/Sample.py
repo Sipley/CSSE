@@ -68,7 +68,7 @@ class Sample(object):
         return u
 
 
-   '''
+    '''
     def integrate(self, lowerBound, upperBound, n, f):
         n = float(n)
         epsilon = .001
@@ -84,7 +84,8 @@ class Sample(object):
         return simpsonNew
     '''
 
-
+    def integrate():
+        pass
 
 
 
