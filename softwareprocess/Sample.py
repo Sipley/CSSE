@@ -95,16 +95,16 @@ class Sample(object):
     def getF(self):
         return self.f
 
-    def simpsonBuild(self, lowerBound, upperBound):
-        sNew = self.f(lowerBound, 5) + self.f(upperBound, 5)
+    def simpsonBuild(self, lowerBound, upperBound, n):
+        sNew = self.f(lowerBound, n) + self.f(upperBound, n)
         s = 4.0
         w = (upperBound - lowerBound)/s
         term = 1
         while term < s:
             if term % 2 == 0:
-                sNew += 2 * self.f(lowerBound + term * w, 5)
+                sNew += 2 * self.f(lowerBound + term * w, n)
             else:
-                sNew += 4 * self.f(lowerBound + term * w, 5)
+                sNew += 4 * self.f(lowerBound + term * w, n)
             term += 1
         return sNew
 
