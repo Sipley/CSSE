@@ -251,4 +251,4 @@ class SampleTest(unittest.TestCase):
 
     def test500_010_ShouldCalculateIntegralOfF(self):
         mySample = SM.Sample(self.nominalN)
-        self.assertEquals(mySample.integrate(0, 1, 0, ))
+        self.assertEquals(mySample.integrate(0, 1, 5, 1), 0.5)
