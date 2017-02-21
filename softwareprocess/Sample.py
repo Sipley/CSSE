@@ -91,6 +91,6 @@ class Sample(object):
     #    return s
     #    pass
 
-    def simpsonBuild(self, lowerbound, upperBound, f):
+    def simpsonBuild(self, lowerbound, upperBound):
         return sNew
 
