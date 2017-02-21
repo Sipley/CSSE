@@ -94,16 +94,15 @@ class Sample(object):
 #        return sNew
 
     def integrate(self, lowBound, highBound, n, f):
-        slices = 8
+        slices = 16
         w = (highBound - lowBound) / slices
         simpsonNew = f(lowBound, n)
-        simpsonNew += 4.0 * f(lowBound + 1.0 * w, n) + \
-                        2.0 * f(lowBound + 2.0 * w, n) + \
-                        4.0 * f(lowBound + 3.0 * w, n) + \
-                        2.0 * f(lowBound + 4.0 * w, n) + \
-                        4.0 * f(lowBound + 5.0 * w, n) + \
-                        2.0 * f(lowBound + 6.0 * w, n) + \
-                        4.0 * f(lowBound + 7.0 * w, n)
+        for i in range(1, slices):
+            if(i==(i/2*2)):
+                coefficient = 2.0
+            else:
+                coefficient = 4.0
+            simpsonNew += coefficient * f(lowBound + w * i, n)
         simpsonNew += f(highBound, n)
-        simpsonNew *= w / 3
+        simpsonNew *= w / 3.0
         return simpsonNew
