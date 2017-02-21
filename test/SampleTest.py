@@ -58,7 +58,7 @@ class SampleTest(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             SM.Sample()
         self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
-
+'''
 # 600 p
 #    Desired level of confidence:    boundary value analysis
 #    Input-output Analysis
@@ -198,7 +198,7 @@ class SampleTest(unittest.TestCase):
     def test200_040_ShouldWorkOnHalfX(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.gamma(5.0 / 2.0), 1.329, 3)
-
+'''
 # 300 calculateConstant
 # Analysis
 #     inputs
