@@ -64,7 +64,7 @@ class Sample(object):
         result = base ** exponent
         return result
 
-    def integrate(self, lowerBound, upperBound, self.n, self.f):
+    def integrate(self, lowerBound, upperBound, n, f):
         pass
 
 
