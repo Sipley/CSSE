@@ -235,3 +235,14 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.f(1, 5), 0.578703704)
 
+# 500 integrate
+# Analysis
+#   inputs
+#        lowBound -> 0.0
+#        highBound -> t.  Already validated.
+#        n -> already validated
+#        f -> already validated
+#   outputs
+#       area under t-curve -> float .GE. 0
+# Happy path
+#   nominal case:  integrate(
