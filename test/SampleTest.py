@@ -91,9 +91,9 @@ class SampleTest(unittest.TestCase):
 #        tails:  invalid tails    tails = 3
 #
 # Happy path
-#    def test600_010ShouldCalculateNominalCase1Tail(self):
-#        mySample = SM.Sample(7)
-#        self.assertAlmostEquals(mySample.p(1.8946, 1), .950, 3)
+    def test600_010ShouldCalculateNominalCase1Tail(self):
+        mySample = SM.Sample(7)
+        self.assertAlmostEquals(mySample.p(1.8946, 1), .950, 3)
 
 #    def test600_020ShouldCalculateNominalCase2Tail(self):
 #        mySample = SM.Sample(7)
