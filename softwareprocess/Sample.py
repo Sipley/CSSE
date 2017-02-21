@@ -62,7 +62,6 @@ class Sample(object):
         base = (1 + (u ** 2) / n)
         exponent = -(n + 1.0) / 2
         result = base ** exponent
-        return result
 
     def integrate(self, lowBound, highBound, n, f):
         pass

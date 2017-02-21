@@ -183,21 +183,21 @@ class SampleTest(unittest.TestCase):
 #     Sad path:
 #            none ... x is pre-validated
 #
-#    def test200_010_ShouldReturnUpperTerminationCondition(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertEquals(mySample.gamma(1), 1)
+    def test200_010_ShouldReturnUpperTerminationCondition(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertEquals(mySample.gamma(1), 1)
 
-#    def test200_020_ShouldReturnLowerTerminationCondition(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertEquals(mySample.gamma(1.0 / 2.0), math.sqrt(math.pi))
+    def test200_020_ShouldReturnLowerTerminationCondition(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertEquals(mySample.gamma(1.0 / 2.0), math.sqrt(math.pi))
 
-#    def test200_030_ShouldWorkOnIntegerX(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertEquals(mySample.gamma(5), 24)
+    def test200_030_ShouldWorkOnIntegerX(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertEquals(mySample.gamma(5), 24)
 
-#    def test200_040_ShouldWorkOnHalfX(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertAlmostEquals(mySample.gamma(5.0 / 2.0), 1.329, 3)
+    def test200_040_ShouldWorkOnHalfX(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.gamma(5.0 / 2.0), 1.329, 3)
 
 # 300 calculateConstant
 # Analysis
@@ -240,9 +240,15 @@ class SampleTest(unittest.TestCase):
 #   inputs
 #        lowBound -> 0.0
 #        highBound -> t.  Already validated.
-#        n -> already validated
-#        f -> already validated
+#        n -> mandatory. already validated
+#        f -> mandatory. already validated
 #   outputs
 #       area under t-curve -> float .GE. 0
 # Happy path
-#   nominal case:  integrate(
+#   nominal case:  integrate(0, 1, n, f) = 0.5
+#                        n doesn't matter
+#                        initial test, f(u,n): return u
+
+    def test500_010_ShouldCalculateIntegralOfF:
+        mySample = SM.Sample(self.nominalN)
+        self.assertEquals(my.Sample.integrate(0, 1, 0, ))
