@@ -318,3 +318,4 @@ class SampleTest(unittest.TestCase):
 #RED LIGHT: TypeError: unsupported operand type(s) for -: 'NoneType' and 'float'
 #let's add some code
 #hardcoded Simpson for 4 slices
+#NameError: global name 'highBound' is not defined
