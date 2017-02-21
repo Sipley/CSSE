@@ -252,7 +252,7 @@ class SampleTest(unittest.TestCase):
 # NOTE: when I wrote this, I did it piecewise
     def test500_010_ShouldIntegrateSimpleF(self):
         mySample = SM.Sample(self.nominalN)
-        def simpleF(u):
+        def simpleF(u, n):
             return u
         self.assertAlmostEquals(mySample.integrate(1, 5, fn=simpleF), 0.5, 5)
 
