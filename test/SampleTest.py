@@ -251,6 +251,8 @@ class SampleTest(unittest.TestCase):
 #   lowBound not equal to zero
 
 # Sad path
-    def test500_010_ShouldRaiseExceptionLowBoundOtherZero(self):
+    def test600_920ShouldRaiseExceptionOnOutOfBoundsT(self):
         mySample = SM.Sample(self.nominalN)
-        self.
+        with self.assertRaises(ValueError) as context:
+            mySample.integrate(underBound =! 0)
+        self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
