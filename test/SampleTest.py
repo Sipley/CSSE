@@ -252,29 +252,65 @@ class SampleTest(unittest.TestCase):
 #   none
 
 # Happy path
-    def test500_010_ShouldIntegrateSimpleF(self):
-        mySample = SM.Sample(self.nominalN)
-        def simpleF(u, n):
-            return u
-        self.assertAlmostEquals(mySample.integrate(1, 5, f=simpleF), 0.5, 5)
+#    def test500_010_ShouldIntegrateSimpleF(self):
+#        mySample = SM.Sample(self.nominalN)
+#        def simpleF(u, n):
+#            return u
+#        self.assertAlmostEquals(mySample.integrate(1, 5, f=simpleF), 0.5, 5)
 
-    def test500_020_ShouldIntegrateSimpleF2(self):
-        mySample = SM.Sample(self.nominalN)
-        def simpleF2(u, n):
-            return u**2
-        self.assertAlmostEquals(mySample.integrate(1,5, f=simpleF2), .33, 2)
+#    def test500_020_ShouldIntegrateSimpleF2(self):
+#        mySample = SM.Sample(self.nominalN)
+#        def simpleF2(u, n):
+#            return u**2
+#        self.assertAlmostEquals(mySample.integrate(1,5, f=simpleF2), .33, 2)
 
-    def test500_030_ShouldIntegrateSimpleF3(self):
-        mySample = SM.Sample(self.nominalN)
-        def simpleF3(u, n):
-            return u**6
-        self.assertAlmostEquals(mySample.integrate(1,5, f=simpleF3), 0.142857, 3)
+#    def test500_030_ShouldIntegrateSimpleF3(self):
+#        mySample = SM.Sample(self.nominalN)
+#        def simpleF3(u, n):
+#            return u**6
+#        self.assertAlmostEquals(mySample.integrate(1,5, f=simpleF3), 0.142857, 3)
 
-    def test500_040_ShouldIntegrateSimpleF4(self):
-        mySample = SM.Sample(self.nominalN)
-        def simpleF4(u, n):
-            return u**100
-        self.assertAlmostEquals(mySample.integrate(1,5, f=simpleF4), 0.00990099009, 3)
+#    def test500_040_ShouldIntegrateSimpleF4(self):
+#        mySample = SM.Sample(self.nominalN)
+#        def simpleF4(u, n):
+#            return u**100
+#        self.assertAlmostEquals(mySample.integrate(1,5, f=simpleF4), 0.00990099009, 3)
 
-# Sad path
-  #  none
+# 900 integrate
+# ANALYSIS
+#    inputs
+#        low bound -> numeric mandatory validated ... will be 0.0
+#        high bound -> numeric mandatory validated ... will be t
+#         n -> integer mandatory validated 2..29
+#         f -> function mandatory validated (since internal to us)
+#   output
+#       float .GE. 0
+#
+# Happy path analysis
+#       Ideally would like to evaluate using boundary value analysis
+#       Would like an expected result
+#       integrate(lowBound, highBound, n, f)  expected result is
+#       note: difficult to integrate function itself, so let's approach using simpler fncs
+#       then trust our output assuming we trust our code
+#       Strategy
+#           1) known curve, minimum slices, hardcode Simpson coefficients
+#           2) known curve (just a bit more complicated), cut into minimum slices * 2 \
+#                hardcode Simpson coeffecients
+#           3) known curve, hardcode the number of slices, calculate coefficients on the fly
+#           4) known curve, converge based on number of slices
+#        Once done with last one, confident integrate is working for known formula
+#       Ideally plug in my f then run acceptance tests
+#       Get to work in simplest form, then generalize, calc coefficient
+#       NOTE: simpson can't handle anything fewer than 4 slices: 1, 4, 2, 1.
+#       # of terms = number of slices + 1
+
+    def test900_010_ShouldCalcWithMinumberOfSlices(self):
+#easiest function to work with: constant function.  NOTE: if integrate from 0->1 : 1
+        def f(u, n):
+            return 1.0
+        lowBound = 0.0
+        highBound = 1.0
+        expectResult = highBound
+        mySample = SM.Sample(self.nominalN)
+#use almostEquals because floating point number
+        self.assertAlmostEquals(expectResult, mySample.integrate(lowBound, highBound, self.nominalN, f), 3)
