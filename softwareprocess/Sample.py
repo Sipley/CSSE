@@ -67,7 +67,7 @@ class Sample(object):
     def f(self, u, n):
         return u
 
-    def integrate(self, lowerBound, upperBound, n, f(self,u,n)):
+    def integrate(self, lowerBound, upperBound, self.n, self.f):
         pass
 
 
