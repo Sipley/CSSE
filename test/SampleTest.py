@@ -270,6 +270,6 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         self.assertEquals(mySample.simpsonBuild(0, 2), 2)
 
-    def test500_020_ShouldAddCalcAllOtherEvenTerms:
+    def test500_020_ShouldAddCalcAllOtherEvenTerms(self):
         mySample = SM.Sample(self.nominalN)
         self.assertEquals(mySample.simpsonBuild(0, 1), 1)
