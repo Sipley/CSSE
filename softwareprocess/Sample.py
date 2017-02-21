@@ -103,5 +103,6 @@ class Sample(object):
         while term < s:
             if term % 2 == 0:
                 sNew += 2 * self.f(lowerBound + term * w)
+                term += 2
         return sNew
 
