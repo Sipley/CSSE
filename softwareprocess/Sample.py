@@ -96,6 +96,9 @@ class Sample(object):
         return self.f
 
     def simpsonBuild(self, lowerBound, upperBound, n):
+        epsilon = 0.001
+        sOld = 0
+        sNew = epsilon
         sNew = self.f(lowerBound, n) + self.f(upperBound, n)
         s = 4.0
         w = (upperBound - lowerBound)/s
