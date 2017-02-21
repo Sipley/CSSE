@@ -103,9 +103,8 @@ class Sample(object):
         while term < s:
             if term % 2 == 0:
                 sNew += 2 * self.f(lowerBound + term * w, 5)
-                term += 2
             else:
                 sNew += 4 * self.f(lowerBound + term * w, 5)
-                term += 2
+            term += 1
         return sNew
 
