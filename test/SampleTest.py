@@ -249,10 +249,6 @@ class SampleTest(unittest.TestCase):
 #   none
 
 # Happy path
-    def test500_010_ShouldIntegrate(self):
-        def f(u,n):
-            return u
-        mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(1,5, f(1,5)), 0.5)
+# NOTE: when I wrote this, I did it piecewise
 # Sad path
-
+    none
