@@ -264,4 +264,4 @@ class SampleTest(unittest.TestCase):
 
     def test500_010_ShouldCalcFirstAndLastTerms(self):
         mySample = SM.Sample(self.nominalN)
-        self.assert
+        self.assertEquals(mySample.simpsonBuild(0, 1, f), 1)
