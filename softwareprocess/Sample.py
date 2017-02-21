@@ -94,12 +94,16 @@ class Sample(object):
 #        return sNew
 
     def integrate(self, lowBound, highBound, n, f):
-        slices = 4
+        slices = 8
         w = (highBound - lowBound) / slices
         simpsonNew = f(lowBound, n)
         simpsonNew += 4.0 * f(lowBound + 1.0 * w, n) + \
                         2.0 * f(lowBound + 2.0 * w, n) + \
-                        4.0 * f(lowBound + 3.0 * w, n)
+                        4.0 * f(lowBound + 3.0 * w, n) + \
+                        2.0 * f(lowBound + 4.0 * w, n) + \
+                        4.0 * f(lowBound + 5.0 * w, n) + \
+                        2.0 * f(lowBound + 6.0 * w, n) + \
+                        4.0 * f(lowBound + 7.0 * w, n) + \
         simpsonNew += f(highBound, n)
         simpsonNew *= w / 3
         return simpsonNew

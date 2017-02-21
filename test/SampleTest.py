@@ -333,6 +333,7 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
 #use almostEquals because floating point number
         self.assertAlmostEquals(expectResult, mySample.integrate(lowBound, highBound, self.nominalN, f), 3)
-
-
+#red light
 #if didn't get enough accuracy, up the number of slices -> 8
+# .2 is not close enough to .20052
+#hard add in terms
