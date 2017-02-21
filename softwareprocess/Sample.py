@@ -66,7 +66,6 @@ class Sample(object):
 
     def integrate(self, lowBound, highBound, n, f):
         lowBound = 0
-        highBound = t
         n = float(n)
         f = result
         pass
