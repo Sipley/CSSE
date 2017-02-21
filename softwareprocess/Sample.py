@@ -72,7 +72,7 @@ class Sample(object):
         return self.f
 
     def integrate(self, t, n, f):
-        epsilon = 0.001
+        epsilon = 0.0001
         sOld = 0
         sNew = epsilon
         s = 4.0
