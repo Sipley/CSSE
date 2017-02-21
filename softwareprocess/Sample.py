@@ -71,15 +71,15 @@ class Sample(object):
     def getF(self):
         return self.f
 
-    def integrate(self, lowerBound, upperBound, n):
+    def integrate(self, lowerBound, t, n):
         epsilon = 0.001
         sOld = 0
         sNew = epsilon
         s = 4.0
         while (abs((sNew - sOld)/ sNew )) > epsilon:
             sOld = sNew
-            sNew = self.f(lowerBound, n) + self.f(upperBound, n)
-            w = (upperBound - lowerBound)/s
+            sNew = self.f(lowerBound, n) + self.f(t, n)
+            w = (t - lowerBound)/s
             term = 1
             while term < s:
                 if term % 2 == 0:
