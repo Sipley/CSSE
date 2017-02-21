@@ -57,17 +57,17 @@ class Sample(object):
         result = numerator / denominator
         return result
 
-    def f(self, u, n):
-        n = float(n)
-        base = (1 + (u ** 2) / n)
-        exponent = -(n + 1.0) / 2
-        result = base ** exponent
-        return result
+    #def f(self, u, n):
+    #    n = float(n)
+    #    base = (1 + (u ** 2) / n)
+    #    exponent = -(n + 1.0) / 2
+    #    result = base ** exponent
+    #    return result
 
     def f(self, u, n):
         return u
 
-    def integrate(self, lowerBound, upperBound, n, f):
+    def integrate(self, lowerBound, upperBound, n, f(self,u,n)):
         pass
 
 

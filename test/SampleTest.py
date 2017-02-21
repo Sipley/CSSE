@@ -227,13 +227,13 @@ class SampleTest(unittest.TestCase):
 # Sad path
 #            none ... x is pre-validated
 
-    def test400_010_ShouldCalculateFStarterCase(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.f(0, 5), 1, 4)
+#    def test400_010_ShouldCalculateFStarterCase(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertAlmostEquals(mySample.f(0, 5), 1, 4)
 
-    def test400_020_ShouldCalculateF(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.f(1, 5), 0.578703704)
+#    def test400_020_ShouldCalculateF(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertAlmostEquals(mySample.f(1, 5), 0.578703704)
 
 # 500 integrate
 # Analysis
