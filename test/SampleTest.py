@@ -245,10 +245,10 @@ class SampleTest(unittest.TestCase):
 #   outputs
 #       area under t-curve -> float .GE. 0
 # Happy path
-#   nominal case:  integrate(0, 1, n, f) = 0.5
-#                        n doesn't matter
-#                        initial test, f(u,n): return u
+#   nominal case:  let f(u,n) return u, integrate 0 -> 1 = 0.5
+# Sad path
+    
 
-    def test500_010_ShouldCalculateIntegralOfF(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertEquals(mySample.integrate(0, 1, 5, 1), 0.5)
+#    def test500_010_ShouldCalculateIntegralOfF(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertEquals(mySample.integrate(0, 1, 5, 1), 0.5)
