@@ -245,31 +245,12 @@ class SampleTest(unittest.TestCase):
 #   outputs
 #       area under t-curve -> float .GE. 0
 # Happy path
-#   nominal case:  let f(u,n) return u, integrate 0 -> 1 = 0.5
+#   lowerBound = 0.0
+#   lowerBound missing
 # Sad path
 #   lowBound not equal to zero
 
-
-#    def test500_010_ShouldCalculateIntegralOfF(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertAlmostEquals(mySample.integrate(0, 1, 5, 3), 0.5, 3)
-
-#    def test500_010_BuildSimpson1(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertEquals(mySample.integrate(0, 1), .25)
-
-#    def test500_020_BuildSimpson2(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertEquals(mySample.integrate(0,1), 8.0)
-
-#    def test500_010_ShouldCalcFirstAndLastTerms(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertEquals(mySample.simpsonBuild(0, 1), 1)
-
-#    def test500_010_ShouldCalcFirstAndLastTerms2(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertEquals(mySample.simpsonBuild(0, 2), 2)
-
-#    def test500_020_ShouldAddCalcAllOtherTerms(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertEquals(mySample.simpsonBuild(0, 1, 5), .5)
+# Sad path
+    def test500_010_ShouldRaiseExceptionLowBoundOtherZero(self):
+        mySample = SM.Sample(self.nominalN)
+        self.
