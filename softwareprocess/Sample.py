@@ -97,7 +97,7 @@ class Sample(object):
         slices = 4
         w = (highBound - lowBound) / slices
         simpsonNew = f(lowBound, n)
-        simpsonNew = += 4.0 * f(lowBound + 1.0 * w, n) + \
+        simpsonNew += 4.0 * f(lowBound + 1.0 * w, n) + \
                         2.0 * f(lowBound + 2.0 * w, n) + \
                         4.0 * f(lowBound + 3.0 * w, n)
         simpsonNew += f(highBound, n)
