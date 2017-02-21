@@ -99,16 +99,18 @@ class Sample(object):
         epsilon = 0.001
         sOld = 0
         sNew = epsilon
-        sNew = self.f(lowerBound, n) + self.f(upperBound, n)
         s = 4.0
-        w = (upperBound - lowerBound)/s
-        term = 1
-        while term < s:
-            if term % 2 == 0:
-                sNew += 2 * self.f(lowerBound + term * w, n)
-            else:
-                sNew += 4 * self.f(lowerBound + term * w, n)
-            term += 1
-        sNew *= w / 3
+        while (abs((sNew - sOld)/ sNew )) > epsilon:
+            sOld = sNew
+            sNew = self.f(lowerBound, n) + self.f(upperBound, n)
+            w = (upperBound - lowerBound)/s
+            term = 1
+            while term < s:
+                if term % 2 == 0:
+                    sNew += 2 * self.f(lowerBound + term * w, n)
+                else:
+                    sNew += 4 * self.f(lowerBound + term * w, n)
+                term += 1
+            sNew *= w / 3
         return sNew
 
