@@ -249,5 +249,8 @@ class SampleTest(unittest.TestCase):
 #   none
 
 # Happy path
+    def test500_010_ShouldIntegrate(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.integrate(1,5), 0.5)
 # Sad path
 
