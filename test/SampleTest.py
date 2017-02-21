@@ -249,7 +249,6 @@ class SampleTest(unittest.TestCase):
 #   none
 
 # Happy path
-# NOTE: when I wrote this, I did it piecewise
     def test500_010_ShouldIntegrateSimpleF(self):
         mySample = SM.Sample(self.nominalN)
         def simpleF(u, n):
