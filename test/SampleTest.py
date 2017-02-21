@@ -111,9 +111,9 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(20)
         self.assertAlmostEquals(mySample.p(0.2567, 1), 0.600, 3)
 
-#    def test600_060ShouldCalculateHighNLowT2TailEdgeCase(self):
-#        mySample = SM.Sample(20)
-#        self.assertAlmostEquals(mySample.p(0.2567, 2), 0.200, 3)
+    def test600_060ShouldCalculateHighNLowT2TailEdgeCase(self):
+        mySample = SM.Sample(20)
+        self.assertAlmostEquals(mySample.p(0.2567, 2), 0.200, 3)
 
 #    def test600_070ShouldCalculateLowNHighT1EdgeCase(self):
 #        mySample = SM.Sample(3)
