@@ -258,6 +258,6 @@ class SampleTest(unittest.TestCase):
 #        mySample = SM.Sample(self.nominalN)
 #        self.assertEquals(mySample.integrate(0, 1), .25)
 
-    def test500_020_BuildSimpson2(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertEquals(mySample.integrate(0,1), 2.0)
+#    def test500_020_BuildSimpson2(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertEquals(mySample.integrate(0,1), 8.0)
