@@ -250,6 +250,6 @@ class SampleTest(unittest.TestCase):
 #   lowBound not equal to zero
 
 
-    def test500_010_ShouldCalculateIntegralOfF(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(0, 1, 5, 3), 0.5, 3)
+#    def test500_010_ShouldCalculateIntegralOfF(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertAlmostEquals(mySample.integrate(0, 1, 5, 3), 0.5, 3)

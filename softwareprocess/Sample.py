@@ -67,6 +67,8 @@ class Sample(object):
     def f(self, u, n):
         return u
 
+
+   '''
     def integrate(self, lowerBound, upperBound, n, f):
         n = float(n)
         epsilon = .001
@@ -80,7 +82,7 @@ class Sample(object):
                    ... + 4(f(higherBound - w, n)) + f((higherBound, n)))
             S=S*2
         return simpsonNew
-
+    '''
 
 
 
