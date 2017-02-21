@@ -21,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/test/SampleTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="266" column="52" lean-forward="true" selection-start-line="266" selection-start-column="52" selection-end-line="266" selection-end-column="52" />
+              <caret line="274" column="56" lean-forward="false" selection-start-line="274" selection-start-column="56" selection-end-line="274" selection-end-column="56" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -32,8 +32,8 @@
       <file leaf-file-name="Sample.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="103" column="26" lean-forward="false" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -59,6 +59,7 @@
       <find>integra</find>
       <find>def test300</find>
       <find>sample</find>
+      <find>get</find>
       <find>mysample</find>
     </findStrings>
   </component>
@@ -442,34 +443,34 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 40m 56s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 52m 54s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 41m 18s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 53m 01s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 41m 39s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 53m 22s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 42m 18s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 53m 33s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 42m 35s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 54m 02s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 45m 23s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 55m 45s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 45m 41s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 03h 00m 55s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 45m 55s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 03h 01m 04s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 49m 20s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 03h 02m 28s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 02h 50m 13s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 03h 03m 41s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -638,7 +639,7 @@
     <entry file="file://$PROJECT_DIR$/test/SampleTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="266" column="52" lean-forward="true" selection-start-line="266" selection-start-column="52" selection-end-line="266" selection-end-column="52" />
+          <caret line="274" column="56" lean-forward="false" selection-start-line="274" selection-start-column="56" selection-end-line="274" selection-end-column="56" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -647,8 +648,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="103" column="26" lean-forward="false" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
           <folding />
         </state>
       </provider>

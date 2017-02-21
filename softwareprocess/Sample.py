@@ -101,7 +101,7 @@ class Sample(object):
         w = (upperBound - lowerBound)/s
         term = 1
         while term < s:
-            if term % 2 = 0:
+            if term % 2 == 0:
                 sNew += 2 * self.f(lowerBound + term * w)
         return sNew
 
