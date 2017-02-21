@@ -76,8 +76,8 @@ class Sample(object):
         while (abs((simpsonNew - simpsonOld)/simpsonNew) > epsilon):
             w=(upperBound-lowerBound)/S
             simpsonNew = (w/3) * (f(lowerBound, n) + 4(f(lowerBound + w, n)) + \
-               2(f(lowerBound + 2w,n)) + 4(f(lowerBound + 3w, n)) + 2(f(lowerBound + 4w, n))
-                   ... + 4(f(higherBound - w, n)) + f((higherBound, n))
+               2*(f(lowerBound + 2 * w,n)) + 4*(f(lowerBound + 3 * w, n)) + 2*(f(lowerBound + 4 * w, n))
+                   ... + 4(f(higherBound - w, n)) + f((higherBound, n)))
             S=S*2
         return simpsonNew
 
