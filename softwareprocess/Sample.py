@@ -71,6 +71,9 @@ class Sample(object):
     def getF(self):
         return self.f
 
+    def simpleF(self, u, n):
+        return u
+
     def integrate(self, t, n, fn=None):
         if fn is None:
             fn = self.f
