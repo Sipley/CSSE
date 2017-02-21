@@ -314,3 +314,7 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
 #use almostEquals because floating point number
         self.assertAlmostEquals(expectResult, mySample.integrate(lowBound, highBound, self.nominalN, f), 3)
+#don't care about n, so just use self.nominalN (in this case 4)
+#RED LIGHT: TypeError: unsupported operand type(s) for -: 'NoneType' and 'float'
+#let's add some code
+#hardcoded Simpson for 4 slices
