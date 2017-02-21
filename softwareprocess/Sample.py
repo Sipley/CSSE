@@ -57,40 +57,16 @@ class Sample(object):
         result = numerator / denominator
         return result
 
-    #def f(self, u, n):
-    #    n = float(n)
-    #    base = (1 + (u ** 2) / n)
-    #    exponent = -(n + 1.0) / 2
-    #    result = base ** exponent
-    #    return result
-
     def f(self, u, n):
         n = float(n)
-        return u
+        base = (1 + (u ** 2) / n)
+        exponent = -(n + 1.0) / 2
+        result = base ** exponent
+        return result
 
-
-    '''
-    def integrate(self, lowerBound, upperBound, n, f):
-        n = float(n)
-        epsilon = .001
-        simpsonOld = 0.0
-        simpsonNew = epsilon
-        S=4
-        while (abs((simpsonNew - simpsonOld)/simpsonNew) > epsilon):
-            w=(upperBound-lowerBound)/S
-            simpsonNew = (w/3) * (f(lowerBound, n) + 4(f(lowerBound + w, n)) + \
-               2*(f(lowerBound + 2 * w,n)) + 4*(f(lowerBound + 3 * w, n)) + 2*(f(lowerBound + 4 * w, n))
-                   ... + 4(f(higherBound - w, n)) + f((higherBound, n)))
-            S=S*2
-        return simpsonNew
-    '''
-
-    #def integrate(self, lowerBound, upperBound):
-    #    s=4.0
-    #    w=(upperBound-lowerBound)/s
-    #    s = s*2
-    #    return s
-    #    pass
+    #def f(self, u, n):
+    #    n = float(n)
+    #    return u
 
     def getF(self):
         return self.f
