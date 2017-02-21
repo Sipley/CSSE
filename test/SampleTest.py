@@ -58,7 +58,7 @@ class SampleTest(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             SM.Sample()
         self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
-'''
+
 # 600 p
 #    Desired level of confidence:    boundary value analysis
 #    Input-output Analysis
@@ -91,76 +91,76 @@ class SampleTest(unittest.TestCase):
 #        tails:  invalid tails    tails = 3
 #
 # Happy path
-    def test600_010ShouldCalculateNominalCase1Tail(self):
-        mySample = SM.Sample(7)
-        self.assertAlmostEquals(mySample.p(1.8946, 1), .950, 3)
+#    def test600_010ShouldCalculateNominalCase1Tail(self):
+#        mySample = SM.Sample(7)
+#        self.assertAlmostEquals(mySample.p(1.8946, 1), .950, 3)
 
-    def test600_020ShouldCalculateNominalCase2Tail(self):
-        mySample = SM.Sample(7)
-        self.assertAlmostEquals(mySample.p(1.8946, 2), .900, 3)
+#    def test600_020ShouldCalculateNominalCase2Tail(self):
+#        mySample = SM.Sample(7)
+#        self.assertAlmostEquals(mySample.p(1.8946, 2), .900, 3)
 
-    def test600_030ShouldCalculateLowNLowT1TailEdgeCase(self):
-        mySample = SM.Sample(3)
-        self.assertAlmostEquals(mySample.p(0.2767, 1), 0.600, 3)
+#    def test600_030ShouldCalculateLowNLowT1TailEdgeCase(self):
+#        mySample = SM.Sample(3)
+#        self.assertAlmostEquals(mySample.p(0.2767, 1), 0.600, 3)
 
-    def test600_040ShouldCalculateLowNLowT2TailEdgeCase(self):
-        mySample = SM.Sample(3)
-        self.assertAlmostEquals(mySample.p(0.2767, 2), 0.200, 3)
+#    def test600_040ShouldCalculateLowNLowT2TailEdgeCase(self):
+#        mySample = SM.Sample(3)
+#        self.assertAlmostEquals(mySample.p(0.2767, 2), 0.200, 3)
 
-    def test600_050ShouldCalculateHighNLowT1TailEdgeCase(self):
-        mySample = SM.Sample(20)
-        self.assertAlmostEquals(mySample.p(0.2567, 1), 0.600, 3)
+#    def test600_050ShouldCalculateHighNLowT1TailEdgeCase(self):
+#        mySample = SM.Sample(20)
+#        self.assertAlmostEquals(mySample.p(0.2567, 1), 0.600, 3)
 
-    def test600_060ShouldCalculateHighNLowT2TailEdgeCase(self):
-        mySample = SM.Sample(20)
-        self.assertAlmostEquals(mySample.p(0.2567, 2), 0.200, 3)
+#    def test600_060ShouldCalculateHighNLowT2TailEdgeCase(self):
+#        mySample = SM.Sample(20)
+#        self.assertAlmostEquals(mySample.p(0.2567, 2), 0.200, 3)
 
-    def test600_070ShouldCalculateLowNHighT1EdgeCase(self):
-        mySample = SM.Sample(3)
-        self.assertAlmostEquals(mySample.p(5.8409, 1), .995, 3)
+#    def test600_070ShouldCalculateLowNHighT1EdgeCase(self):
+#        mySample = SM.Sample(3)
+#        self.assertAlmostEquals(mySample.p(5.8409, 1), .995, 3)
 
-    def test600_080ShouldCalculateLowNHighT2EdgeCase(self):
-        mySample = SM.Sample(3)
-        self.assertAlmostEquals(mySample.p(5.8409, 2), .990, 3)
+#    def test600_080ShouldCalculateLowNHighT2EdgeCase(self):
+#        mySample = SM.Sample(3)
+#        self.assertAlmostEquals(mySample.p(5.8409, 2), .990, 3)
 
-    def test600_090ShouldCalculateHighHighT1TailEdgeCase(self):
-        mySample = SM.Sample(20)
-        self.assertAlmostEquals(mySample.p(2.8453, 1), .995, 3)
+#    def test600_090ShouldCalculateHighHighT1TailEdgeCase(self):
+#        mySample = SM.Sample(20)
+#        self.assertAlmostEquals(mySample.p(2.8453, 1), .995, 3)
 
-    def test600_100ShouldCalculateHighHighT2TailEdgeCase(self):
-        mySample = SM.Sample(20)
-        self.assertAlmostEquals(mySample.p(2.8453, 2), .990, 3)
+#    def test600_100ShouldCalculateHighHighT2TailEdgeCase(self):
+#        mySample = SM.Sample(20)
+#        self.assertAlmostEquals(mySample.p(2.8453, 2), .990, 3)
 
-    def test600_110ShouldCalculateCalculateWithDefaultTails(self):
-        mySample = SM.Sample(7)
-        self.assertAlmostEquals(mySample.p(1.8946), .950, 3)
+#    def test600_110ShouldCalculateCalculateWithDefaultTails(self):
+#        mySample = SM.Sample(7)
+#        self.assertAlmostEquals(mySample.p(1.8946), .950, 3)
 
 # Sad path
-    def test600_910ShouldRaiseExceptionOnMissingT(self):
-        expectedString = "Sample.p:"
-        mySample = SM.Sample(self.nominalN)
-        with self.assertRaises(ValueError) as context:
-            mySample.p(tails=1)
-        self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
+#    def test600_910ShouldRaiseExceptionOnMissingT(self):
+#        expectedString = "Sample.p:"
+#        mySample = SM.Sample(self.nominalN)
+#        with self.assertRaises(ValueError) as context:
+#            mySample.p(tails=1)
+#        self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
 
-    def test600_920ShouldRaiseExceptionOnOutOfBoundsT(self):
-        expectedString = "Sample.p:"
-        mySample = SM.Sample(self.nominalN)
-        with self.assertRaises(ValueError) as context:
-            mySample.p(t= -1, tails=1)
-        self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
+#    def test600_920ShouldRaiseExceptionOnOutOfBoundsT(self):
+#        expectedString = "Sample.p:"
+#        mySample = SM.Sample(self.nominalN)
+#        with self.assertRaises(ValueError) as context:
+#            mySample.p(t= -1, tails=1)
+#        self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
 
-    def test600_930ShouldRaiseExceptionOnNonNumericT(self):
-        expectedString = "Sample.p:"
-        mySample = SM.Sample(self.nominalN)
-        with self.assertRaises(ValueError) as context:
-            mySample.p(t= "abc", tails=1)
-        self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
+#    def test600_930ShouldRaiseExceptionOnNonNumericT(self):
+#        expectedString = "Sample.p:"
+#        mySample = SM.Sample(self.nominalN)
+#        with self.assertRaises(ValueError) as context:
+#            mySample.p(t= "abc", tails=1)
+#        self.assertEquals(expectedString, context.exception.args[0][0:len(expectedString)])
 
-    def test600_930ShouldRaiseExceptionInvalidTails(self):
-        mySample = SM.Sample(self.nominalN)
-        with self.assertRaises(ValueError) as context:
-            mySample.p(t=self.nominalT, tails=0)
+#    def test600_930ShouldRaiseExceptionInvalidTails(self):
+#        mySample = SM.Sample(self.nominalN)
+#        with self.assertRaises(ValueError) as context:
+#            mySample.p(t=self.nominalT, tails=0)
 
 #--------------------------------------------------------------------
 # Architecture:
@@ -183,22 +183,22 @@ class SampleTest(unittest.TestCase):
 #     Sad path:
 #            none ... x is pre-validated
 #
-    def test200_010_ShouldReturnUpperTerminationCondition(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertEquals(mySample.gamma(1), 1)
+#    def test200_010_ShouldReturnUpperTerminationCondition(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertEquals(mySample.gamma(1), 1)
 
-    def test200_020_ShouldReturnLowerTerminationCondition(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertEquals(mySample.gamma(1.0 / 2.0), math.sqrt(math.pi))
+#    def test200_020_ShouldReturnLowerTerminationCondition(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertEquals(mySample.gamma(1.0 / 2.0), math.sqrt(math.pi))
 
-    def test200_030_ShouldWorkOnIntegerX(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertEquals(mySample.gamma(5), 24)
+#    def test200_030_ShouldWorkOnIntegerX(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertEquals(mySample.gamma(5), 24)
 
-    def test200_040_ShouldWorkOnHalfX(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.gamma(5.0 / 2.0), 1.329, 3)
-'''
+#    def test200_040_ShouldWorkOnHalfX(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertAlmostEquals(mySample.gamma(5.0 / 2.0), 1.329, 3)
+
 # 300 calculateConstant
 # Analysis
 #     inputs
