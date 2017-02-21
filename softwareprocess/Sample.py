@@ -68,6 +68,7 @@ class Sample(object):
         return u
 
     def integrate(self, lowerBound, upperBound, n, f):
+        n = float(n)
         S=4
         w=(upperBound-lowerBound)/S
         pass
