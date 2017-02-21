@@ -319,3 +319,20 @@ class SampleTest(unittest.TestCase):
 #let's add some code
 #hardcoded Simpson for 4 slices
 #NameError: global name 'highBound' is not defined
+#NOTE: double check argument call names
+
+#Try to create function that requires more than 4 terms
+
+    def test900_020_ShouldCalcWithMinumberOfSlicesTimesTwo(self):
+#easiest function to work with: constant function.  NOTE: if integrate from 0->1 : 1
+        def f(u, n):
+            return u**4
+        lowBound = 0.0
+        highBound = 1.0
+        expectResult = (highBound**5)/5.0
+        mySample = SM.Sample(self.nominalN)
+#use almostEquals because floating point number
+        self.assertAlmostEquals(expectResult, mySample.integrate(lowBound, highBound, self.nominalN, f), 3)
+
+
+#if didn't get enough accuracy, up the number of slices -> 8
