@@ -249,6 +249,6 @@ class SampleTest(unittest.TestCase):
 #                        n doesn't matter
 #                        initial test, f(u,n): return u
 
-    def test500_010_ShouldCalculateIntegralOfF:
+    def test500_010_ShouldCalculateIntegralOfF(self):
         mySample = SM.Sample(self.nominalN)
         self.assertEquals(my.Sample.integrate(0, 1, 0, f))
