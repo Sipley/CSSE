@@ -96,6 +96,6 @@ class Sample(object):
         return self.f
 
     def simpsonBuild(self, lowerbound, upperBound):
-        sNew = f(lowerBound, 5) + f(upperBound, 5)
+        sNew = self.f(lowerBound, 5) + self.f(upperBound, 5)
         return sNew
 
