@@ -103,7 +103,7 @@ class Sample(object):
                         2.0 * f(lowBound + 4.0 * w, n) + \
                         4.0 * f(lowBound + 5.0 * w, n) + \
                         2.0 * f(lowBound + 6.0 * w, n) + \
-                        4.0 * f(lowBound + 7.0 * w, n) + \
+                        4.0 * f(lowBound + 7.0 * w, n) 
         simpsonNew += f(highBound, n)
         simpsonNew *= w / 3
         return simpsonNew
