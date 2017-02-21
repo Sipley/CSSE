@@ -254,7 +254,7 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         def simpleF(u):
             return u
-        self.assertAlmostEquals(mySample.integrate(1, 5, fn=simpleF, 0.5, 5)
+        self.assertAlmostEquals(mySample.integrate(1, 5, fn=simpleF), 0.5, 5)
 
 # Sad path
   #  none
