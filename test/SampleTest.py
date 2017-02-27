@@ -363,3 +363,4 @@ class SampleTest(unittest.TestCase):
     #use almostEquals because floating point number
             self.assertAlmostEquals(expectResult, mySample.integrate(lowBound, highBound, self.nominalN, f), 3)
 
+#NOTE:  needed to adjust argument names again (add in lowerBound; change 0, t in 34)
