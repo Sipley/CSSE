@@ -33,7 +33,7 @@ def dispatch(values=None):
         degrees = observation.split('d')[1]
         if(not(isinstance(altitude, int))):
             values['error'] = 'observation is invalid'
-        if(len(degrees)=0)):
+        if(len(degrees) == 0)):
             values['error'] = 'observation is invalid'
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
