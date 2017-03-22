@@ -27,9 +27,9 @@ def dispatch(values=None):
         if(not('temperature' in values) or (values['temperature'] == '')):
             values['temperature'] = '0'
 
-        observation = values['observation']
-        altitude = observation.split('d')[0]
-        degrees = observation.split('d')[1]
+        #observation = values['observation']
+        #altitude = observation.split('d')[0]
+        #degrees = observation.split('d')[1]
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
