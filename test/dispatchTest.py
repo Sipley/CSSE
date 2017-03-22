@@ -33,6 +33,12 @@ class dispatchTest(unittest.TestCase):
  #       result = dispatch.dispatch(sighting)
  #       self.assertDictEqual(sighting, result)
 
+    def test100_010_shouldReturnValuesOpPredict(self):
+        sighting = {'op'='predict'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'op'='predict'}
+        self.assertDictEqual(result, expectedResult)
+
 # SAD PATH
 
     def test900_010_shouldReturnErrorNoOp(self):
