@@ -27,15 +27,22 @@ def dispatch(values=None):
             degrees = float(observation.split('d')[1])
             if(not(0 <= altitude < 90)):
                 values['error'] = 'observation is invalid'
+                return values
             if(not(0 <= degrees < 60)):
                 values['error'] = 'observation is invalid'
+                return values
         else:
             values['error'] = 'observation is invalid'
         if ('height' in values):
             if not(re.match('\d+\.*\d*$', values['height'])):
                 values['error'] = 'height is invalid'
+                return values
         if ('temperature' in values):
-            if not(-20 <= abs(values['temperature'] < 120)):
+            try: int(values['temperature'])
+            except ValueError:
+                values['error'] = 'temperature is invalid'
+                return values
+            if not(-20 <= int(values['temperature']) < 120):
                 values['error'] = 'temperature is invalid'
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
