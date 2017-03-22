@@ -20,7 +20,7 @@ def dispatch(values=None):
             return values
         if(not('height' in values) or (values['height'] == '')):
             values['height'] = '0'
-        if(not('horizon' in values) or (values['horizon'] != 'natural' or 'artificial')):
+        if(not('horizon' in values) or (values['horizon'] != 'natural' or 'Natural' or 'artificial' or 'Artificial')):
             values['horizon'] = 'natural'
         if(not('pressure' in values) or (values['pressure'] == '')):
             values['pressure'] = '1010'
