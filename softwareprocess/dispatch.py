@@ -21,14 +21,6 @@ def dispatch(values=None):
         if('altitude' in values):
             values['error'] = 'altitude already exists'
             return values
-#        if(not('height' in values) or (values['height'] == '')):
-#            values['height'] = '0'
-#        if(not('horizon' in values) or (values['horizon'] != 'natural' or 'Natural' or 'artificial' or 'Artificial')):
-#            values['horizon'] = 'natural'
-#        if(not('pressure' in values) or (values['pressure'] == '')):
-#            values['pressure'] = '1010'
-#        if(not('temperature' in values) or (values['temperature'] == '')):
-#            values['temperature'] = '72'
         observation = values['observation']
         if re.match('\d+d\d+\.\d', observation):
             altitude = int(observation.split('d')[0])
