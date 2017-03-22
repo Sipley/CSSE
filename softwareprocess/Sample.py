@@ -1,3 +1,4 @@
+'''
 import math
 class Sample(object):
 
@@ -116,3 +117,4 @@ class Sample(object):
             slices *= 2
         return simpsonNew
 
+'''
