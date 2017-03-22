@@ -39,6 +39,9 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'op':'predict'}
         self.assertDictEqual(result, expectedResult)
 
+    def test100_020_shouldReturnSplitObservation(self):
+        sighting = {'op':'adjust','observation'='100d10.5'}
+
 # SAD PATH
 
     def test900_010_shouldReturnErrorNoOp(self):
