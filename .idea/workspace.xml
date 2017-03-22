@@ -64,9 +64,11 @@
         <entry file="file://$PROJECT_DIR$/test/dispatchTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
-              <caret line="246" column="25" lean-forward="false" selection-start-line="246" selection-start-column="25" selection-end-line="246" selection-end-column="25" />
+              <caret line="252" column="25" lean-forward="false" selection-start-line="252" selection-start-column="25" selection-end-line="252" selection-end-column="25" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <marker date="1490211475000" expanded="true" signature="112:12816" ph="..." />
+                <marker date="1490211475000" expanded="true" signature="12608:12816" ph="..." />
               </folding>
             </state>
           </provider>
@@ -560,9 +562,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 22m 52s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 25m 38s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -588,6 +587,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 35m 49s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 37m 10s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -860,9 +862,11 @@
     <entry file="file://$PROJECT_DIR$/test/dispatchTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
-          <caret line="246" column="25" lean-forward="false" selection-start-line="246" selection-start-column="25" selection-end-line="246" selection-end-column="25" />
+          <caret line="252" column="25" lean-forward="false" selection-start-line="252" selection-start-column="25" selection-end-line="252" selection-end-column="25" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <marker date="1490211475000" expanded="true" signature="112:12816" ph="..." />
+            <marker date="1490211475000" expanded="true" signature="12608:12816" ph="..." />
           </folding>
         </state>
       </provider>

@@ -244,4 +244,10 @@ class dispatchTest(unittest.TestCase):
     def test900_320_shouldReturnErrorBadH(self):
         sighting = {'observation': '45d15.2', 'height': 'a', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
         result = dispatch.dispatch(sighting)
+        expectedResult = {'observation': '45d15.2', 'height': 'a', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71', 'error':'height is invalid'}
+        self.assertDictEqual(result, expectedResult)
+
+    def test900_330_shouldReturnErrorBadHorizon(self):
+        sighting = {'observation': '45d15.2', 'height': '6', 'horizon': 'green', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
+        result = dispatch.dispatch(sighting)
         expectedResult = 
