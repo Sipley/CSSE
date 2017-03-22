@@ -38,7 +38,7 @@ def dispatch(values=None):
             if(not(0 <= degrees < 60)):
                 values['error'] = 'observation is invalid'
         else:
-            values('error') = 'observation is invalid'
+            values['error'] = 'observation is invalid'
 
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
