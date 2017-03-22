@@ -34,7 +34,7 @@ class dispatchTest(unittest.TestCase):
  #       self.assertDictEqual(sighting, result)
 
     def test100_010_shouldReturnValuesOpPredict(self):
-        sighting = {'op'='predict'}
+        sighting = {'op':'predict'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'op':'predict'}
         self.assertDictEqual(result, expectedResult)
@@ -70,9 +70,14 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'op':'unknown','error':'op is not a legal operation'}
         self.assertDictEqual(result, expectedResult)
 
-
     def test900_060_shouldReturnErrorParameterMissing(self):
         sighting = {'op':''}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error': 'op is not a legal operation', 'op':''}
+        self.assertDictEqual(result, expectedResult)
+
+    def test900_070_shouldReturnValuesNoObs(self):
+        sighting = {'op':'adjust'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'op':'predict'}
         self.assertDictEqual(result, expectedResult)
