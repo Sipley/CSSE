@@ -48,6 +48,7 @@ class dispatchTest(unittest.TestCase):
         self.assertEquals(altitude, expectedAltitude)
         self.assertEquals(degrees, expectedDegrees)
 '''
+
     def test100_030_shouldReturnDefaultParameters(self):
         sighting = {'op':'adjust','observation':'test'}
         result = dispatch.dispatch(sighting)
