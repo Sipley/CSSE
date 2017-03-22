@@ -128,7 +128,7 @@ class dispatchTest(unittest.TestCase):
         self.assertDictEqual(result, expectedResult)
 
     def test900_130_shouldReturnErrorInvalidObsNeg(self):
-        sighting = {'op':'adjust','observation':'0'}
+        sighting = {'op':'adjust','obsevation':'-1d0.0'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'obervation is invalid','op':'adjust','obsevation':'-1d0.0'}
         self.assertDictEqual(result, expectedResult)
