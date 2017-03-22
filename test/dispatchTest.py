@@ -262,5 +262,5 @@ class dispatchTest(unittest.TestCase):
     def test900_350_shouldReturnErrorDegreeNotFloat(self):
         sighting = {'op':adjust','obervation':'0d1'}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'error':'height is invalid','op':'adjust','observation':'0d0.1','height':'-1'}
+        expectedResult = {'error':'obervation is invalid','op':'0d1}
         self.assertDictEqual(result, expectedResult)
