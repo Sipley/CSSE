@@ -64,4 +64,9 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'op':'unknown','error':'op is not a legal operation'}
         self.assertDictEqual(result, expectedResult)
 
- 
+
+    def test900_060_shouldReturnErrorParameterMissing(self):
+        sighting = {'op':''}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error': 'parameter is missing'}
+        self.assertDictEqual(result, expectedResult)
