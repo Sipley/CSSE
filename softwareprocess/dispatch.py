@@ -16,22 +16,22 @@ def dispatch(values=None):
     if(values['op'] == 'adjust'):
         if(not('observation' in values) or (values['observation'] == '')):
             values['error'] = 'mandatory information is missing'
-            return values
         if('altitude' in values):
             values['error'] = 'altitude already exists'
             return values
-        if(not('height' in values) or (values['height'] == '')):
-            values['height'] = '0'
-        if(not('horizon' in values) or (values['horizon'] != 'natural' or 'Natural' or 'artificial' or 'Artificial')):
-            values['horizon'] = 'natural'
-        if(not('pressure' in values) or (values['pressure'] == '')):
-            values['pressure'] = '1010'
-        if(not('temperature' in values) or (values['temperature'] == '')):
-            values['temperature'] = '72'
+#        if(not('height' in values) or (values['height'] == '')):
+#            values['height'] = '0'
+#        if(not('horizon' in values) or (values['horizon'] != 'natural' or 'Natural' or 'artificial' or 'Artificial')):
+#            values['horizon'] = 'natural'
+#        if(not('pressure' in values) or (values['pressure'] == '')):
+#            values['pressure'] = '1010'
+#        if(not('temperature' in values) or (values['temperature'] == '')):
+#            values['temperature'] = '72'
 
-        #observation = values['observation']
-        #altitude = observation.split('d')[0]
-        #degrees = observation.split('d')[1]
+        observation = values['observation']
+        altitude = observation.split('d')[0]
+        degrees = observation.split('d')[1]
+        if()
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
