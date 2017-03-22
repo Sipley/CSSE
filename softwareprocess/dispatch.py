@@ -7,7 +7,7 @@ def dispatch(values=None):
         return {'error': 'parameter is missing'}
     if(not(isinstance(values,dict))):
         return {'error': 'parameter is not a dictionary'}
-    if (not('op' in values)):
+    if(not('op' in values)):
         values['error'] = 'no op is specified'
         return values
 
@@ -15,6 +15,9 @@ def dispatch(values=None):
     if(values['op'] == 'adjust'):
         if(not('observation' in values) or (values['observation'] == '')):
             return {'error': 'mandatory information is missing'}
+        if('altitude' in values):
+            values['error'] = 'altitude already exists'
+            return values
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
