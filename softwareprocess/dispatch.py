@@ -22,7 +22,7 @@ def dispatch(values=None):
             values['error'] = 'altitude already exists'
             return values
         observation = values['observation']
-        if re.match('\d+d\d+\.\d', observation):
+        if re.match('\d+d\d+\.\d$', observation):
             altitude = int(observation.split('d')[0])
             degrees = float(observation.split('d')[1])
             if(not(0 <= altitude < 90)):
