@@ -29,7 +29,8 @@ def dispatch(values=None):
 #        if(not('temperature' in values) or (values['temperature'] == '')):
 #            values['temperature'] = '72'
         observation = values['observation']
-        if
+        if not(re.match('\d+d\d+\.\d', observation)):
+            values['error'] = 'observation is invalid'
         altitude = observation.split('d')[0]
         degrees = observation.split('d')[1]
         #if(not(isinstance(altitude, int))):

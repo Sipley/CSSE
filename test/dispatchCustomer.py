@@ -5,7 +5,7 @@ sighting = {'op':'adjust','observation':'12d12'}
 result = dispatch.dispatch(sighting)
 print result
 '''
-
+'''
 import re
 observation = '10d1.1'
 
@@ -13,7 +13,7 @@ if re.match('\d+d\d+\.\d', observation):
     print 'yes'
 else:
     print 'no'
-
+'''
 
 '''
 test = '12d'
