@@ -100,11 +100,21 @@ class dispatchTest(unittest.TestCase):
     def test900_080_shouldReturnErrorNoObs(self):
         sighting = {'op':'adjust','observation':''}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'error':'mandatory information is missing'}
+        expectedResult = {'error':'mandatory information is missing', 'op':'adjust','observation':''}
         self.assertDictEqual(result, expectedResult)
 
     def test900_090_shouldReturnErrorAltExists(self):
         sighting = {'altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'altitude already exists','altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
+        self.assertDictEqual(result, expectedResult)
+
+    def test900_100_shouldReturnErrorBadObsFormat(self):
+        sighting = {'op':'adjust','observation':'80.1d0.0'}
+        observation = sighting['observation']
+        amplitude = observation.split('d')[0]
+        degrees = observation.split('d')[1]
+        self.assert
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error':'observation is invalid','op':'adjust','observation':'80.1d0.0'}
         self.assertDictEqual(result, expectedResult)

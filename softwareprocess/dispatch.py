@@ -4,7 +4,7 @@ def dispatch(values=None):
 
     #Validate parm
     if(values == None):
-        values['error'] = 'parameter is missing'
+        return {'error':'parameter is missing'}
         return values
     if(not(isinstance(values,dict))):
         return {'error':'parameter is not a dictionary'}
@@ -15,7 +15,7 @@ def dispatch(values=None):
     #Perform designated function
     if(values['op'] == 'adjust'):
         if(not('observation' in values) or (values['observation'] == '')):
-            values['error'] = 'mandatory information is mission'
+            values['error'] = 'mandatory information is missing'
             return values
         if('altitude' in values):
             values['error'] = 'altitude already exists'
