@@ -51,3 +51,9 @@ class dispatchTest(unittest.TestCase):
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'parameter is not a dictionary'}
         self.assertDictEqual(result, expectedResult)
+
+    def test900_040_shouldReturnErrorNoOp(self):
+        sighting = {'height':'100'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error':'no op is specified'}
+        elf.assertDictEqual(result, expectedResult)
