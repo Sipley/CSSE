@@ -162,3 +162,9 @@ class dispatchTest(unittest.TestCase):
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'height is invalid','op':'adjust','observation':'0d0.1','height':'string'}
         self.assertDictEqual(result, expectedResult)
+
+    def test900_190_shouldReturnErrorInvalidTemp(self):
+        sighting = {'op':'adjust','observation':'0d0.1','temperature':'-21'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','height':'string'}
+        self.assertDictEqual(result, expectedResult)

@@ -35,9 +35,13 @@ def dispatch(values=None):
             if not(re.match('\d+\.*\d*$', values['height'])):
                 values['error'] = 'height is invalid'
         if ('temperature' in values):
-            try: values['temperature'] = int(values['height'])
+            try: values['temperature'] = int(values['temperature'])
             except ValueError:
-                values['error'] = 'height is invalid'
+                values['error'] = 'temperature is invalid'
+            if values['temperature'] >= 120:
+                values['error'] = 'temperature is invalid'
+            elif values['temperautere'] < -20:
+                values['error'] = 'temperature is invalid'
          #   if values['temperature']
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
