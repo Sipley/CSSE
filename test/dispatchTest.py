@@ -256,5 +256,11 @@ class dispatchTest(unittest.TestCase):
     def test900_340_shouldReturnErrorNegHeight(self):
         sighting = {'op':'adjust','observation':'0d0.1','height':'-1'}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
+        expectedResult = {'error':'height is invalid','op':'adjust','observation':'0d0.1','height':'-1'}
+        self.assertDictEqual(result, expectedResult)
+
+    def test900_350_shouldReturnErrorDegreeNotFloat(self):
+        sighting = {'op':adjust','obervation':'0d1'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error':'height is invalid','op':'adjust','observation':'0d0.1','height':'-1'}
         self.assertDictEqual(result, expectedResult)
