@@ -268,4 +268,5 @@ class dispatchTest(unittest.TestCase):
     def test900_360_shouldReturnErrorDegree2Dec(self):
         sighting = {'op':'adjust','observation':'0d0.59'}
         result = dispatch.dispatch(sighting)
-        expectedResult = 
+        expectedResult = {'error':'observation is invalid','op':'adjust','observation':'0d0.59'}
+        self.assertDictEqual(result, expectedResult)
