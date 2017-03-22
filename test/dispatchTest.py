@@ -56,4 +56,4 @@ class dispatchTest(unittest.TestCase):
         sighting = {'height':'100'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'no op is specified'}
-        elf.assertDictEqual(result, expectedResult)
+        self.assertDictEqual(result, expectedResult)
