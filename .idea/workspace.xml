@@ -63,8 +63,8 @@
       <file leaf-file-name="dispatchTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/dispatchTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="196" column="74" lean-forward="false" selection-start-line="196" selection-start-column="74" selection-end-line="196" selection-end-column="74" />
+            <state relative-caret-position="210">
+              <caret line="202" column="76" lean-forward="false" selection-start-line="202" selection-start-column="76" selection-end-line="202" selection-end-column="76" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -559,9 +559,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 13h 53m 35s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.22 at 13h 54m 10s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -587,6 +584,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 18m 06s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 18m 39s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -858,8 +858,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/dispatchTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="196" column="74" lean-forward="false" selection-start-line="196" selection-start-column="74" selection-end-line="196" selection-end-column="74" />
+        <state relative-caret-position="210">
+          <caret line="202" column="76" lean-forward="false" selection-start-line="202" selection-start-column="76" selection-end-line="202" selection-end-column="76" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
