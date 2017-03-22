@@ -222,3 +222,8 @@ class dispatchTest(unittest.TestCase):
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'horizon is invalid','op':'adjust','observation':'0d0.1','horizon':'1000'}
         self.assertDictEqual(result, expectedResult)
+
+    def test900_290_shouldReturnErrorDupAlt(self):
+        sighting = {'altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
+        result = dispatch.dispatch()
+        expectedResult = 
