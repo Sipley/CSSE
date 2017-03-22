@@ -29,8 +29,7 @@ def dispatch(values=None):
 #        if(not('temperature' in values) or (values['temperature'] == '')):
 #            values['temperature'] = '72'
         observation = values['observation']
-        if observation.format('%dd%.1f'):
-            print 'you want this message'
+        if
         altitude = observation.split('d')[0]
         degrees = observation.split('d')[1]
         #if(not(isinstance(altitude, int))):
