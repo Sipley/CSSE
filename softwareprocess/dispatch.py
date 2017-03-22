@@ -42,7 +42,7 @@ def dispatch(values=None):
             except ValueError:
                 values['error'] = 'temperature is invalid'
                 return values
-            if not(-20 <= int(values['temperature']) < 120):
+            if not(-20 <= int(values['temperature']) <= 120):
                 values['error'] = 'temperature is invalid'
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):

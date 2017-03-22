@@ -169,19 +169,19 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'-21'}
         self.assertDictEqual(result, expectedResult)
 
-    def test900_190_shouldReturnErrorInvalidTemp(self):
+    def test900_200_shouldReturnErrorInvalidTemp(self):
         sighting = {'op':'adjust','observation':'0d0.1','temperature':'121'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'121'}
         self.assertDictEqual(result, expectedResult)
 
-     def test900_190_shouldReturnErrorInvalidTemp(self):
+    def test900_210_shouldReturnErrorInvalidTemp(self):
         sighting = {'op':'adjust','observation':'0d0.1','temperature':'72.5'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'72.5'}
         self.assertDictEqual(result, expectedResult)
 
-     def test900_190_shouldReturnErrorInvalidTemp(self):
+    def test900_220_shouldReturnErrorInvalidTemp(self):
         sighting = {'op':'adjust','observation':'0d0.1','temperature':'string'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'string'}
