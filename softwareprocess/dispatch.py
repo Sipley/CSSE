@@ -39,10 +39,7 @@ def dispatch(values=None):
                 values['error'] = 'observation is invalid'
         else:
             values('error') = 'observation is invalid'
- #           elif(altitude >= 90):
- #               values['error'] = 'observation is invalid'
- #       else:
- #           values['error'] = 'observation is invalid'
+
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
