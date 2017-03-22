@@ -1,3 +1,4 @@
+'''
 import unittest
 import softwareprocess.Sample as SM
 import math
@@ -364,3 +365,4 @@ class SampleTest(unittest.TestCase):
             self.assertAlmostEquals(expectResult, mySample.integrate(lowBound, highBound, self.nominalN, f), 3)
 
 #NOTE:  needed to adjust argument names again (add in lowerBound; change 0, t in 34)
+'''
