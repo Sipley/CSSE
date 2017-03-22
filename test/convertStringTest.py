@@ -1,3 +1,4 @@
+'''
 from unittest import TestCase
 import urllib
 
@@ -141,3 +142,4 @@ class convertString2DictionaryTest(TestCase):
         encodedString = urllib.quote("key1=value,key2=")
         self.assertDictEqual(cs2d.convertString2Dictionary(encodedString), self.errorDict,
                              "Major defect:  does not return proper result on mix of valid and invalid items")
+'''
