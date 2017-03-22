@@ -49,9 +49,9 @@ class dispatchTest(unittest.TestCase):
     #    self.assertEquals(degrees, expectedDegrees)
 
     def test100_030_shouldReturnDefaultParameters(self):
-        sighting = {'op':'adjust','observation':'test'}
+        sighting = {'op':'adjust','observation':'50d50.0'}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'op':'adjust','observation':'test','height':'0','pressure':'1010','temperature':'72'}
+        expectedResult = {'op':'adjust','observation':'test','height':'0','pressure':'1010','temperature':'72','horizon':'natural'}
         self.assertDictEqual(result, expectedResult)
 
 # SAD PATH
