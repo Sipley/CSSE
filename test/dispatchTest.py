@@ -48,11 +48,11 @@ class dispatchTest(unittest.TestCase):
     #    self.assertEquals(altitude, expectedAltitude)
     #    self.assertEquals(degrees, expectedDegrees)
 
-    def test100_030_shouldReturnDefaultParameters(self):
-        sighting = {'op':'adjust','observation':'50d50.0'}
-        result = dispatch.dispatch(sighting)
-        expectedResult = {'op':'adjust','observation':'50d50.0','height':'0','pressure':'1010','temperature':'72','horizon':'natural'}
-        self.assertDictEqual(result, expectedResult)
+  #  def test100_030_shouldReturnDefaultParameters(self):
+  #      sighting = {'op':'adjust','observation':'50d50.0'}
+  #      result = dispatch.dispatch(sighting)
+  #      expectedResult = {'op':'adjust','observation':'50d50.0','height':'0','pressure':'1010','temperature':'72','horizon':'natural'}
+  #      self.assertDictEqual(result, expectedResult)
 
 # SAD PATH
 
@@ -109,8 +109,13 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'error':'altitude already exists','altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
         self.assertDictEqual(result, expectedResult)
 
-    def test900_100_shouldReturnErrorBadObsFormat(self):
+    def test900_100_shouldReturnErrorInvalidObsInt(self):
         sighting = {'op':'adjust','observation':'80.1d0.0'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'observation is invalid','op':'adjust','observation':'80.1d0.0'}
         self.assertDictEqual(result, expectedResult)
+
+    def test900_1100_shouldReturnErrorInvalidObsString(self):
+        sighting = {'op':'adjust','observation':'string'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = 

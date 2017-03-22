@@ -16,6 +16,7 @@ def dispatch(values=None):
     if(values['op'] == 'adjust'):
         if(not('observation' in values) or (values['observation'] == '')):
             values['error'] = 'mandatory information is missing'
+            return values
         if('altitude' in values):
             values['error'] = 'altitude already exists'
             return values
