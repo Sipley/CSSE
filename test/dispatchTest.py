@@ -42,7 +42,7 @@ class dispatchTest(unittest.TestCase):
         self.assertDictEqual(result, expectedResult)
 
     def test900_020_shouldReturnErrorNotDict(self):
-        sighting =
+        sighting = hello
         result = dispatch.dispatch(sighting)
         expectedResult = {'error': 'parameter is not a dictionary'}
 
