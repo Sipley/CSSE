@@ -32,11 +32,13 @@ def dispatch(values=None):
         observation = values['observation']
         if not(re.match('\d+d\d+\.\d', observation)):
             values['error'] = 'observation is invalid'
+            print 'errorRegex'
         else:
             altitude = observation.split('d')[0]
             degrees = observation.split('d')[1]
             if(not(altitude >= 0 and altitude < 90)):
                 values['error'] = 'observation is invalid'
+                print 'errorRange'
         #if(not(isinstance(altitude, int))):
         #    values['error'] = 'observation is invalid'
         #if(not(isinstance(degrees, float))):
