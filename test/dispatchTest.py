@@ -82,8 +82,13 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'error':'mandatory information is missing'}
         self.assertDictEqual(result, expectedResult)
 
-    def test900_080_shouldReturnError(self):
+    def test900_080_shouldReturnErrorNoObs(self):
         sighting = {'op':'adjust','observation':''}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'mandatory information is missing'}
         self.assertDictEqual(result, expectedResult)
+
+    def test900_090_shouldReturnErrorAltExists(self):
+        sighting = {'altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = 
