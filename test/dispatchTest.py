@@ -40,9 +40,9 @@ class dispatchTest(unittest.TestCase):
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'no op is specified'}
         self.assertDictEqual(result, expectedResult)
-'''
+
     def test900_020_shouldReturnErrorNotDict(self):
-        sighting = hello
+        sighting = notADictionary
         result = dispatch.dispatch(sighting)
         expectedResult = {'error': 'parameter is not a dictionary'}
-'''
+
