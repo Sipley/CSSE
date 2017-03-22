@@ -29,12 +29,14 @@ def dispatch(values=None):
 #        if(not('temperature' in values) or (values['temperature'] == '')):
 #            values['temperature'] = '72'
         observation = values['observation']
+        if observation.format('%dd%.1f'):
+            print 'you want this message'
         altitude = observation.split('d')[0]
         degrees = observation.split('d')[1]
-        if(not(isinstance(altitude, int))):
-            values['error'] = 'observation is invalid'
-        if(not(isinstance(degrees, float)):
-            values['error'] = 'observation is invalid'
+        #if(not(isinstance(altitude, int))):
+        #    values['error'] = 'observation is invalid'
+        #if(not(isinstance(degrees, float))):
+        #    values['error'] = 'observation is invalid'
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
