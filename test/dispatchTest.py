@@ -202,12 +202,12 @@ class dispatchTest(unittest.TestCase):
     def test900_250_shouldReturnErrorInvalidP(self):
         sighting = {'op':'adjust','observation':'0d0.1','pressure':'1010.5'}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'string'}
+        expectedResult = {'error':'pressure is invalid','op':'adjust','observation':'0d0.1','pressure':'1010.5'}
         self.assertDictEqual(result, expectedResult)
-    '''
+
     def test900_260_shouldReturnErrorInvalidP(self):
-        sighting = {'op':'adjust','observation':'0d0.1','temperature':'string'}
+        sighting = {'op':'adjust','observation':'0d0.1','pressure':'string'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'string'}
         self.assertDictEqual(result, expectedResult)
-'   '''
+'
