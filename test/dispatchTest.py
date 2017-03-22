@@ -253,4 +253,5 @@ class dispatchTest(unittest.TestCase):
         test900_370_shouldReturnErrorInvH(self):
         sighting = {'observation': '45d15.2', 'height':''}
         result = dispatch.dispatch(sighting)
-        expectedResult = 
+        expectedResult = {'observation':'45d15.2','height':'', 'error':'height is invalid'}
+        self.assertDictEqual(result, expectedResult)
