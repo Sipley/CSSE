@@ -31,6 +31,9 @@ def dispatch(values=None):
             if(not(0 <= degrees < 60)):
                 values['error'] = 'observation is invalid'
                 return values
+            if(altitude == degrees == 0):
+                values['error'] = 'observation is invalid'
+                return values
         else:
             values['error'] = 'observation is invalid'
         if ('height' in values):
