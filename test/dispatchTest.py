@@ -28,8 +28,15 @@ class dispatchTest(unittest.TestCase):
 #
 # If input {'op': 'predict'}, return {'op': 'predict'}
 
-    def test100_010_shouldReturnResultOfPredict(self):
-        sighting = {'op':'adjust', 'observation':'015d04.9', 'height':'6.0', 'temperature':'72','pressure':'1010', 'horizon':'artificial'}
-        result = dispatch.dispatch(sighting)
-        self.assertDictEqual(sighting, result)
+ #   def test100_010_shouldReturnResultOfAdjust(self):
+ #       sighting = {'op':'adjust', 'observation':'015d04.9', 'height':'6.0', 'temperature':'72','pressure':'1010', 'horizon':'artificial'}
+ #       result = dispatch.dispatch(sighting)
+ #       self.assertDictEqual(sighting, result)
 
+# SAD PATH
+
+    def test900_010_shouldReturnErrorEmptyDict(self):
+        sighting = {}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error'}
+        self.assertDictEqual(result)
