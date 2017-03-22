@@ -40,7 +40,12 @@ class dispatchTest(unittest.TestCase):
         self.assertDictEqual(result, expectedResult)
 
     def test100_020_shouldReturnSplitObservation(self):
-        sighting = {'op':'adjust','observation'='100d10.5'}
+        sighting = {'op':'adjust','observation'='25d50.0'}
+        expectedAltitude = 25
+        expectedDegrees = 50.0
+        self.assertEquals(altitude, expectedAltitude)
+        self.assertEquals(degrees, expectedDegrees)
+
 
 # SAD PATH
 
