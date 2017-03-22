@@ -111,10 +111,6 @@ class dispatchTest(unittest.TestCase):
 
     def test900_100_shouldReturnErrorBadObsFormat(self):
         sighting = {'op':'adjust','observation':'80.1d0.0'}
-        observation = sighting['observation']
-        amplitude = observation.split('d')[0]
-        degrees = observation.split('d')[1]
-        self.assert
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'observation is invalid','op':'adjust','observation':'80.1d0.0'}
         self.assertDictEqual(result, expectedResult)
