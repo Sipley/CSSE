@@ -33,8 +33,6 @@ def dispatch(values=None):
             values['error'] = 'observation is invalid'
         if ('height' in values):
             if not(re.match('\d+\.*\d*$', values['height'])):
-                values['height'] = 'height is invalid'
-            if values['height'] < 0:
                 values['error'] = 'height is invalid'
         if ('temperature' in values):
             try: values['temperature'] = int(values['height'])
