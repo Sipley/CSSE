@@ -59,7 +59,9 @@ class dispatchTest(unittest.TestCase):
         self.assertDictEqual(result, expectedResult)
 
     def test900_050_shouldReturnErrorIllegalOp(self):
-        sighting =
+        sighting = {'op':'unknown'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'op':'unknown','error':'op is not a legal operation'}
         self.assertDictEqual(result, expectedResult)
+
+ 
