@@ -1,5 +1,4 @@
-
-From unittest import TestCase
+import unittest
 import math
 
 import softwareprocess.dispatch as dispatch
