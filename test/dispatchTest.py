@@ -38,16 +38,15 @@ class dispatchTest(unittest.TestCase):
         result = dispatch.dispatch(sighting)
         expectedResult = {'op':'predict'}
         self.assertDictEqual(result, expectedResult)
-'''
-    def test100_020_shouldReturnSplitObservation(self):
-        sighting = {'op':'adjust','observation':'25d50.0'}
-        expectedAltitude = 25
-        expectedDegrees = 50.0
-        altitude = altitude.get(dispatch.dispatch(sighting))
-        degrees = degrees.get(dispatch.dispatch(sighting))
-        self.assertEquals(altitude, expectedAltitude)
-        self.assertEquals(degrees, expectedDegrees)
-'''
+
+    #def test100_020_shouldReturnSplitObservation(self):
+    #    sighting = {'op':'adjust','observation':'25d50.0'}
+    #    expectedAltitude = 25
+    #    expectedDegrees = 50.0
+    #    altitude = altitude.get(dispatch.dispatch(sighting))
+    #    degrees = degrees.get(dispatch.dispatch(sighting))
+    #    self.assertEquals(altitude, expectedAltitude)
+    #    self.assertEquals(degrees, expectedDegrees)
 
     def test100_030_shouldReturnDefaultParameters(self):
         sighting = {'op':'adjust','observation':'test'}
