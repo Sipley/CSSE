@@ -1,10 +1,10 @@
 
-'''
+
 import softwareprocess.dispatch as dispatch
-sighting = {'op':'adjust','observation':'12d12'}
+sighting = {'op':'adjust','observation':'15d6.5'}
 result = dispatch.dispatch(sighting)
 print result
-'''
+
 '''
 import re
 observation = '10d1.1'

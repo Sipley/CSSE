@@ -30,19 +30,15 @@ def dispatch(values=None):
 #        if(not('temperature' in values) or (values['temperature'] == '')):
 #            values['temperature'] = '72'
         observation = values['observation']
-        if not(re.match('\d+d\d+\.\d', observation)):
-            values['error'] = 'observation is invalid'
-            print 'errorRegex'
-        else:
-            altitude = observation.split('d')[0]
-            degrees = observation.split('d')[1]
-            if(not(altitude >= 0 and altitude < 90)):
+        if re.match('\d+d\d+\.\d', observation):
+            altitude = int(observation.split('d')[0])
+            degrees = float(observation.split('d')[1])
+            if(not(0 <= altitude < 90)):
                 values['error'] = 'observation is invalid'
-                print 'errorRange'
-        #if(not(isinstance(altitude, int))):
-        #    values['error'] = 'observation is invalid'
-        #if(not(isinstance(degrees, float))):
-        #    values['error'] = 'observation is invalid'
+ #           elif(altitude >= 90):
+ #               values['error'] = 'observation is invalid'
+ #       else:
+ #           values['error'] = 'observation is invalid'
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
