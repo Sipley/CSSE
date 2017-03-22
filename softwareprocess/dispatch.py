@@ -18,6 +18,9 @@ def dispatch(values=None):
         if('altitude' in values):
             values['error'] = 'altitude already exists'
             return values
+        observation = values['observation']
+        altitude = observation.split('d')[0]
+        degrees = observation.split('d')[1]
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
