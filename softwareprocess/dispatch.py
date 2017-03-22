@@ -35,6 +35,7 @@ def dispatch(values=None):
         else:
             altitude = observation.split('d')[0]
             degrees = observation.split('d')[1]
+            if(altitude >= 
         #if(not(isinstance(altitude, int))):
         #    values['error'] = 'observation is invalid'
         #if(not(isinstance(degrees, float))):
