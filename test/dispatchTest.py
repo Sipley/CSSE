@@ -255,3 +255,15 @@ class dispatchTest(unittest.TestCase):
         result = dispatch.dispatch(sighting)
         expectedResult = {'op':'adjust','observation':'45d15.2','height':'', 'error':'height is invalid'}
         self.assertDictEqual(result, expectedResult)
+
+    def test900_380_shouldReturnErrorInvPressure(self):
+        sighting = {'op':'adjust','observation': '45d15.2', 'pressure':''}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'op':'adjust','observation':'45d15.2','pressure':'', 'error':'pressure is invalid'}
+        self.assertDictEqual(result, expectedResult)
+
+    def test900_380_shouldReturnErrorInvPressure(self):
+        sighting = {'op':'adjust','observation': '45d15.2', 'pressure':''}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'op':'adjust','observation':'45d15.2','pressure':'', 'error':'pressure is invalid'}
+        self.assertDictEqual(result, expectedResult)
