@@ -40,3 +40,4 @@ class dispatchTest(unittest.TestCase):
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'no op is specified'}
         self.assertDictEqual(result, expectedResult)
+
