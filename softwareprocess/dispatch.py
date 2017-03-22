@@ -18,6 +18,15 @@ def dispatch(values=None):
         if('altitude' in values):
             values['error'] = 'altitude already exists'
             return values
+        if(not('height' in values) or (values['height'] == '')):
+            values['height'] = '0'
+        if(not('horizon' in values) or (values['horizon'] != 'natural' or 'artificial')):
+            values['height'] = 'natural'
+        if(not('pressure' in values) or (values['pressure'] == '')):
+            values['pressure'] = '1010'
+        if(not('temperature' in values) or (values['temperature'] == '')):
+            values['temperature'] = '0'
+
         observation = values['observation']
         altitude = observation.split('d')[0]
         degrees = observation.split('d')[1]
