@@ -4,11 +4,10 @@ def dispatch(values=None):
 
     #Validate parm
     if(values == None):
-        values['error'] = 'parameter is mission'
+        values['error'] = 'parameter is missing'
         return values
     if(not(isinstance(values,dict))):
-        values['error'] = 'parameter is not a dictionary'
-        return values
+        return {'error':'parameter is not a dictionary'
     if(not('op' in values)):
         values['error'] = 'no op is specified'
         return values
