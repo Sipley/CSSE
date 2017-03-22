@@ -79,5 +79,5 @@ class dispatchTest(unittest.TestCase):
     def test900_070_shouldReturnValuesNoObs(self):
         sighting = {'op':'adjust'}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'op':'predict'}
+        expectedResult = {'error':'mandatory information is missing','op':'adjust'}
         self.assertDictEqual(result, expectedResult)
