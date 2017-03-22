@@ -26,4 +26,9 @@ class dispatchTest(TestCase):
 #
 # HAPPY PATH
 #
-# 
+# If input {'op': 'predict'}, return {'op': 'predict'}
+
+    def test100_010_shouldReturnResultOfPredict:
+        input = {'op':'predict'}
+        expectedResult = {'op':'predict'}
+        self.assertDictEqual(dispatch(input), expectedResult)
