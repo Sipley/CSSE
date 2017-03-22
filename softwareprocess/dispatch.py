@@ -32,9 +32,15 @@ def dispatch(values=None):
         else:
             values['error'] = 'observation is invalid'
         if ('height' in values):
-            try: values['height'] = int(values['height'])
+            if not(re.match('\d+\.*\d*$', values['height'])):
+                values['height'] = 'height is invalid'
+            if values['height'] < 0:
+                values['error'] = 'height is invalid'
+        if ('temperature' in values):
+            try: values['temperature'] = int(values['height'])
             except ValueError:
                 values['error'] = 'height is invalid'
+         #   if values['temperature']
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
