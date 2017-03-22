@@ -3,7 +3,7 @@ import math
 
 import softwareprocess.dispatch as dispatch
 
-class dispatchTest(TestCase):
+class dispatchTest(self):
 
 ########ACCEPTANCE TESTS###########
 # dictionary containing 1(+) key-value pairs
