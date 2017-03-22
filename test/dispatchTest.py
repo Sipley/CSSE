@@ -152,7 +152,7 @@ class dispatchTest(unittest.TestCase):
         self.assertDictEqual(result, expectedResult)
 
     def test900_170_shouldReturnErrorObsMinBig(self):
-        sighting = {'op':'adjust','observation':'5d60.0'}
+        sighting = {'op':'adjust','observation':'5d6.0'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'observation is invalid','op':'adjust','observation':'5d60.0'}
         self.assertDictEqual(result, expectedResult)
