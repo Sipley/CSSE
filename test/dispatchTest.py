@@ -136,5 +136,11 @@ class dispatchTest(unittest.TestCase):
     def test900_140_shouldReturnErrorObsWhiteSpace(self):
         sighting = {'op':'adjust','observation':'059.0'}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'error':'observation is invalid','op':'adjust','observation':'-1d0.0'}
+        expectedResult = {'error':'observation is invalid','op':'adjust','observation':'059.0'}
+        self.assertDictEqual(result, expectedResult)
+
+    def test900_150_shouldReturnErrorObsMinNeg(self):
+        sighting = {'op':'adjust','observation':'0d-1.0'}
+        result = dispatch.dispatch(sighting)
+
         self.assertDictEqual(result, expectedResult)
