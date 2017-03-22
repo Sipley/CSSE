@@ -39,21 +39,6 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'op':'predict'}
         self.assertDictEqual(result, expectedResult)
 
-    #def test100_020_shouldReturnSplitObservation(self):
-    #    sighting = {'op':'adjust','observation':'25d50.0'}
-    #    expectedAltitude = 25
-    #    expectedDegrees = 50.0
-    #    altitude = altitude.get(dispatch.dispatch(sighting))
-    #    degrees = degrees.get(dispatch.dispatch(sighting))
-    #    self.assertEquals(altitude, expectedAltitude)
-    #    self.assertEquals(degrees, expectedDegrees)
-
-  #  def test100_030_shouldReturnDefaultParameters(self):
-  #      sighting = {'op':'adjust','observation':'50d50.0'}
-  #      result = dispatch.dispatch(sighting)
-  #      expectedResult = {'op':'adjust','observation':'50d50.0','height':'0','pressure':'1010','temperature':'72','horizon':'natural'}
-  #      self.assertDictEqual(result, expectedResult)
-
 # SAD PATH
 
     def test900_010_shouldReturnErrorNoOp(self):
@@ -221,12 +206,6 @@ class dispatchTest(unittest.TestCase):
         sighting = {'op':'adjust','observation':'0d0.1','horizon':'1000'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'horizon is invalid','op':'adjust','observation':'0d0.1','horizon':'1000'}
-        self.assertDictEqual(result, expectedResult)
-
-    def test900_290_shouldReturnErrorDupAlt(self):
-        sighting = {'altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
-        result = dispatch.dispatch(sighting)
-        expectedResult = {'error':'altitude already exists','altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
         self.assertDictEqual(result, expectedResult)
 
     def test900_300_shouldResturnErrorObsNothing(self):
