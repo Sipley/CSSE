@@ -31,5 +31,5 @@ class dispatchTest(unittest.TestCase):
     def test100_010_shouldReturnResultOfPredict(self):
         sighting = {'op':'adjust', 'observation':'015d04.9', 'height':'6.0', 'temperature':'72','pressure':'1010', 'horizon':'artificial'}
         result = dispatch.dispatch(sighting)
-        self.assertDictEqual(sighting, expectedResult)
+        self.assertDictEqual(sighting, result)
 
