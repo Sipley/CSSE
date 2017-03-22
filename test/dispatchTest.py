@@ -35,9 +35,14 @@ class dispatchTest(unittest.TestCase):
 
 # SAD PATH
 
-    def test900_010_shouldReturnErrorEmptyDict(self):
+    def test900_010_shouldReturnErrorNoOp(self):
         sighting = {}
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'no op is specified'}
         self.assertDictEqual(result, expectedResult)
+
+    def test900_020_shouldReturnErrorNotDict(self):
+        sighting =
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error': 'parameter is not a dictionary'}
 
