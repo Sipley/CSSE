@@ -1,4 +1,5 @@
-from unittest import TestCase
+'''
+From unittest import TestCase
 import math
 
 import softwareprocess.dispatch as dispatch
@@ -32,3 +33,4 @@ class dispatchTest(TestCase):
         input = {'op':'predict'}
         expectedResult = {'op':'predict'}
         self.assertDictEqual(dispatch(input), expectedResult)
+'''
