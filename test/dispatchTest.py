@@ -225,6 +225,11 @@ class dispatchTest(unittest.TestCase):
 
     def test900_290_shouldReturnErrorDupAlt(self):
         sighting = {'altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
-        result = dispatch.dispatch()
+        result = dispatch.dispatch(sighting)
         expectedResult = {'error':'altitude already exists','altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
-        self.assertDictEqual(result, expectResult)
+        self.assertDictEqual(result, expectedResult)
+
+    def test900_300_shouldResturnErrorObsNothing(self):
+        sighting = {'op':'adjust','observation':'0d0.0'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = 
