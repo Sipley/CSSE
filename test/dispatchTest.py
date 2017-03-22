@@ -38,7 +38,7 @@ class dispatchTest(unittest.TestCase):
     def test900_010_shouldReturnErrorNoOp(self):
         sighting = {}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'error':'no op is specified'}
+        expectedResult = {'error':'somethingTest'}
         self.assertDictEqual(result, expectedResult)
 
     def test900_020_shouldReturnErrorNotDict(self):
