@@ -44,6 +44,13 @@ def dispatch(values=None):
                 return values
             if not(-20 <= int(values['temperature']) <= 120):
                 values['error'] = 'temperature is invalid'
+        if ('pressure' in values):
+            try: int(values['pressure'])
+            except ValueError:
+                values['error'] = 'pressure is invalid'
+                return values
+            if not(100 <= int(values['pressure']) <= 1100):
+                values['error'] = 'pressure is invalid'
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out

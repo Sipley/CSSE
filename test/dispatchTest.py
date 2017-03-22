@@ -186,3 +186,28 @@ class dispatchTest(unittest.TestCase):
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'string'}
         self.assertDictEqual(result, expectedResult)
+
+    def test900_230_shouldReturnErrorInvalidP(self):
+        sighting = {'op':'adjust','observation':'0d0.1','pressure':'99'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'string'}
+        self.assertDictEqual(result, expectedResult)
+    '''
+    def test900_240_shouldReturnErrorInvalidP(self):
+        sighting = {'op':'adjust','observation':'0d0.1','temperature':'string'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'string'}
+        self.assertDictEqual(result, expectedResult)
+
+    def test900_250_shouldReturnErrorInvalidP(self):
+        sighting = {'op':'adjust','observation':'0d0.1','temperature':'string'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'string'}
+        self.assertDictEqual(result, expectedResult)
+
+    def test900_260_shouldReturnErrorInvalidP(self):
+        sighting = {'op':'adjust','observation':'0d0.1','temperature':'string'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = {'error':'temperature is invalid','op':'adjust','observation':'0d0.1','temperature':'string'}
+        self.assertDictEqual(result, expectedResult)
+'   '''
