@@ -39,6 +39,11 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'op':'predict'}
         self.assertDictEqual(result, expectedResult)
 
+    def test100_020_shouldReturnAlt(self):
+        sighting = {'observation': '42d0.0',  'op': 'adjust'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = 
+
 # SAD PATH
 
     def test900_010_shouldReturnErrorNoOp(self):
@@ -262,8 +267,8 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'op':'adjust','observation':'45d15.2','pressure':'', 'error':'pressure is invalid'}
         self.assertDictEqual(result, expectedResult)
 
-    def test900_380_shouldReturnErrorInvPressure(self):
-        sighting = {'op':'adjust','observation': '45d15.2', 'pressure':''}
+    def test900_380_shouldReturnErrorInvTemp(self):
+        sighting = {'op':'adjust','observation': '45d15.2', 'temperature':''}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'op':'adjust','observation':'45d15.2','pressure':'', 'error':'pressure is invalid'}
+        expectedResult = {'op':'adjust','observation':'45d15.2','temperature':'', 'error':'temperature is invalid'}
         self.assertDictEqual(result, expectedResult)
