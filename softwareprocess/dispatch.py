@@ -31,8 +31,9 @@ def dispatch(values=None):
                 values['error'] = 'observation is invalid'
         else:
             values['error'] = 'observation is invalid'
-        if not(isinstance(values['height'], int)):
-            values['error'] = 'height is invalid'
+        if isinstance(values['height']):
+            if not(isinstance(values['height'], int)):
+                values['error'] = 'height is invalid'
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
