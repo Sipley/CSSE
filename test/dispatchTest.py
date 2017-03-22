@@ -234,3 +234,8 @@ class dispatchTest(unittest.TestCase):
         result = dispatch.dispatch(sighting)
         expectedResult = {'error':'observation is invalid','op':'adjust','observation':'0d0.0'}
         self.assertDictEqual(result, expectedResult)
+
+    def test900_310_shouldReturnErrorObsBig(self):
+        sighting = {'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
+        result = dispatch.dispatch(sighting)
+        expectedResult = 
