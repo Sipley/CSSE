@@ -25,7 +25,7 @@ def dispatch(values=None):
         if(not('pressure' in values) or (values['pressure'] == '')):
             values['pressure'] = '1010'
         if(not('temperature' in values) or (values['temperature'] == '')):
-            values['temperature'] = '0'
+            values['temperature'] = '72'
 
         #observation = values['observation']
         #altitude = observation.split('d')[0]
