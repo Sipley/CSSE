@@ -39,6 +39,7 @@ def dispatch(values=None):
                     return values
                 if not(-20 <= int(values['temperature']) <= 120):
                     values['error'] = 'temperature is invalid'
+                    return values
             if ('pressure' in values):
                 try: int(values['pressure'])
                 except ValueError:
@@ -101,7 +102,7 @@ def dispatch(values=None):
     #    refraction3 = tan(altitude)
     #    refraction = refraction1/refraction2/refraction3
     #    values['altitude'] = refraction
-    
+
         #return values    #<-------------- replace this with your implementation
 
     elif(values['op'] == 'predict'):
