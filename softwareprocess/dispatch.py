@@ -83,10 +83,10 @@ def dispatch(values=None):
             altitudeAdjustedDegrees = round(split.altitudeAdjusted('.')[1] * 60,1)
             altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
             values['altitude'] = altitudeRounded
-            '''
+
         else:
             values['error'] = 'observation is invalid'
-
+    '''
     #    if values['horizon'] == ('artificial' or 'Artificial'):
     #        dip = 0
     #    if 'horizon' not in values:
@@ -104,6 +104,7 @@ def dispatch(values=None):
     #    refraction3 = tan(altitude)
     #    refraction = refraction1/refraction2/refraction3
     #    values['altitude'] = refraction
+    '''
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
