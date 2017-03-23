@@ -52,23 +52,20 @@ def dispatch(values=None):
             if ('horizon' in values) and (values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
                 values['error'] = 'horizon is invalid'
                 return values
-            if values['horizon'] == ('artificial' or 'Artificial'):
-                dip = 0
-            if not(values['height']):
-                height = '0'
-            else:
+
+            height = 0
+            if 'height' in values:
                 height = values['height']
-            if (values['horizon'] == ('natural' or 'Natural')) or not('horizon' in values):
-                dip = -0.97 * math.sqrt(height)/60
+            dip = -0.97 * math.sqrt(height)/60
+            if ('horizon' in values) and (values['horizon'] == ('artificial' or 'Artificial')):
+                dip = 0
             print dip
             print height
-            if not('pressure' in values):
-                pressure = '1010'
-            else:
+            pressure = '1010'
+            if 'pressure' in values:
                 pressure = values['pressure']
-            if not('temperature' in values):
-                temperature = '72'
-            else:
+            temperature = '72'
+            if 'temperature' in values:
                 temperature = values['temperature']
             refraction1 = -0.00452 * pressure
             refraction2 = 272 + temperature
