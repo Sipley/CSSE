@@ -56,7 +56,8 @@ def dispatch(values=None):
                 #if (values['horizon']  == ('natural' or 'Natural')) or not('horizon' in values):
                 #    dip = -0.97 * sqrt(values['height'])/60
             elif not('horizon' in values):
-                #dip = -0.97 * sqrt(values['height'])/60
+                pass
+                dip = -0.97 * sqrt(values['height'])/60
 
                 #if ('pressure' in values):
                 #    pressure = values['horizon']
