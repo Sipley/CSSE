@@ -61,13 +61,13 @@ def dispatch(values=None):
                 return values
         if values['horizon'] == ('artificial' or 'Artificial'):
             dip = 0
-        if 'horizon' not in values:
+        if not('horizon' in values):
             values['horizon'] == 'natural'
-        if 'height' not in values:
+        if not('height' in values):
             values['height'] == '0'
-        if 'pressure' not in values:
+        if not('pressure' in values):
             values['pressure'] == '1010'
-        if 'temperature' not in values:
+        if not('temperature' in values):
             values['temperature'] == '72'
         if values['horizon'] == ('natural' or 'Natural'):
             dip = -0.97 * sqrt(values['height'])/60
