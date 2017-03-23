@@ -59,8 +59,6 @@ def dispatch(values=None):
             dip = -0.97 * math.sqrt(height)/60
             if ('horizon' in values) and (values['horizon'] == ('artificial' or 'Artificial')):
                 dip = 0
-            print dip
-            print height
             pressure = '1010'
             if 'pressure' in values:
                 pressure = values['pressure']
@@ -71,13 +69,12 @@ def dispatch(values=None):
             refraction2 = 272 + int(temperature)
             refraction3 = math.tan(altitude)
             refraction = refraction1/ refraction2 / refraction3
-            altitudeAdjusted = str(altitude + (degrees/60) + dip + refraction)
-            print altitudeAdjusted
-            #altitudeAdjustedNew = int(split.altitudeAdjusted('.'))[0]
-            #altitudeAdjustedDegrees = round(float(split.altitudeAdjusted('.'))[1] * 60,1)
-            #altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
-            #values['altitude'] = altitudeRounded
-
+            altitudeAdjusted = altitude + (degrees/60) + dip + refraction
+            altitudeAdjustedNew = int(altitudeAdjusted // 1)
+            altitudeAdjustedDegrees = round(float((altitudeAdjusted % 1)*60),1)
+            altitudeRounded = str(altitudeAdjustedNew)+'d'+str(altitudeAdjustedDegrees)
+            values['altitude'] = altitudeRounded
+            return values
         else:
             values['error'] = 'observation is invalid'
         return values
