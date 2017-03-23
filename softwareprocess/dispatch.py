@@ -50,7 +50,6 @@ def dispatch(values=None):
             if ('horizon' in values) and (values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
                 values['error'] = 'horizon is invalid'
                 return values
-            '''
             if values['horizon'] == ('artificial' or 'Artificial'):
                 dip = 0
             if (values['horizon'] == ('natural' or 'Natural')) or (not('horizon' in values)):
