@@ -55,26 +55,25 @@ def dispatch(values=None):
                 dip = 0
             elif (values['horizon']  == ('natural' or 'Natural')) or not('horizon' in values):
                 dip = -0.97 * sqrt(values['height'])/60
-                else:
-                    values['error'] = 'horizon is invalid'
-                    return values
-                if ('pressure' in values):
-                    pressure = values['horizon']
-                if ('height' in values):
-                    height = values['height']
-                if ('temperature' in values):
-                    temperature = values['temperature']
-                refraction1 = -0.00452 * pressure
-                refraction2 = 272 + temperature
-                refraction3 = tan(altitude)
-                refraction = refraction1/ refraction2 / refraction3
-                altitudeAdjusted = altitude + (degrees/60) + dip + refraction
-                altitudeAdjustedNew = split.altitudeAdjusted('.')[0]
-                altitudeAdjustedDegrees = round(split.altitudeAdjusted('.')[1] * 60,1)
-                altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
-                values['altitude'] = altitudeRounded
+
+                #if ('pressure' in values):
+                #    pressure = values['horizon']
+                #if ('height' in values):
+                #    height = values['height']
+                #if ('temperature' in values):
+                #    temperature = values['temperature']
+                #refraction1 = -0.00452 * pressure
+                #refraction2 = 272 + temperature
+                #refraction3 = tan(altitude)
+                #refraction = refraction1/ refraction2 / refraction3
+                #altitudeAdjusted = altitude + (degrees/60) + dip + refraction
+                #altitudeAdjustedNew = split.altitudeAdjusted('.')[0]
+                #altitudeAdjustedDegrees = round(split.altitudeAdjusted('.')[1] * 60,1)
+                #altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
+                #values['altitude'] = altitudeRounded
             else:
-                values['error'] = 'horizonreturn values
+                values['error'] = 'horizon is invalid'
+                return values
         else:
             values['error'] = 'observation is invalid'
 
