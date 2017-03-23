@@ -33,17 +33,17 @@ class dispatchTest(unittest.TestCase):
  #       result = dispatch.dispatch(sighting)
  #       self.assertDictEqual(sighting, result)
 
-    def test100_010_shouldReturnValuesOpPredict(self):
-        sighting = {'op':'predict'}
-        result = dispatch.dispatch(sighting)
-        expectedResult = {'op':'predict'}
-        self.assertDictEqual(result, expectedResult)
+    #def test100_010_shouldReturnValuesOpPredict(self):
+    #    sighting = {'op':'predict'}
+    #    result = dispatch.dispatch(sighting)
+    #    expectedResult = {'op':'predict'}
+    #    self.assertDictEqual(result, expectedResult)
 
-    def test100_020_shouldReturnAlt(self):
-        sighting = {'observation': '42d0.0',  'op': 'adjust'}
-        result = dispatch.dispatch(sighting)
-        expectedResult = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
-        self.assertDictEqual(result, expectedResult)
+    #def test100_020_shouldReturnAlt(self):
+    #    sighting = {'observation': '42d0.0',  'op': 'adjust'}
+    #    result = dispatch.dispatch(sighting)
+    #    expectedResult = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
+    #    self.assertDictEqual(result, expectedResult)
 
     def test100_030_shouldReturnSameAlt(self):
         sighting = {'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
