@@ -55,9 +55,9 @@ def dispatch(values=None):
                 #    dip = 0
                 #if (values['horizon']  == ('natural' or 'Natural')) or not('horizon' in values):
                 #    dip = -0.97 * sqrt(values['height'])/60
-            elif not('horizon' in values):
-                pass
-                dip = -0.97 * sqrt(values['height'])/60
+            #elif not('horizon' in values):
+            #    pass
+            #    dip = -0.97 * sqrt(values['height'])/60
 
                 #if ('pressure' in values):
                 #    pressure = values['horizon']
@@ -74,9 +74,9 @@ def dispatch(values=None):
                 #altitudeAdjustedDegrees = round(split.altitudeAdjusted('.')[1] * 60,1)
                 #altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
                 #values['altitude'] = altitudeRounded
-            else:
-                values['error'] = 'horizon is invalid'
-                return values
+            #else:
+            #    values['error'] = 'horizon is invalid'
+            #    return values
         else:
             values['error'] = 'observation is invalid'
 
