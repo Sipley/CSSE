@@ -66,14 +66,14 @@ class dispatchTest(unittest.TestCase):
     def test100_060_shouldReturnCorrectAltFromCorrection(self):
         sighting = {'op':'adjust','observation':'10d0.0','height':'6','horizon':'artificial','pressure':'1010','temperature':'72'}
         result = dispatch.dispatch(sighting)
-        expectedResult =
+        expectedResult = {'altitude':'9d54.7','op':'adjust','observation':'10d0.0','height':'6','horizon':'artificial','pressure':'1010','temperature':'72'}
         self.assertDictEqual(result, expectedResult)
 
-    def test100_060_lastHappyTestttttt(self):
-        sighting = {'op':'adjust','observation':'10d0.0','height':'6','horizon':'artificial','pressure':'1010','temperature':'72'}
-        result = dispatch.dispatch(sighting)
-        expectedResult =
-        self.assertDictEqual(result, expectedResult)
+    #def test100_060_lastHappyTestttttt(self):
+    #    sighting = {'op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
+    #    result = dispatch.dispatch(sighting)
+    #    expectedResult = {'altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
+    #    self.assertDictEqual(result, expectedResult)
 
 # SAD PATH
 
