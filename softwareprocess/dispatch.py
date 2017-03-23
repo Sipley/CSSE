@@ -50,8 +50,9 @@ def dispatch(values=None):
             if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
                 values['error'] = 'horizon is invalid'
                 return values
+            '''
             if values['horizon'] == ('artificial' or 'Artificial'):
-                horizon = 'artificial'
+                dip = 0
             if (values['horizon'] == ('natural' or 'Natural')) or (not('horizon' in values)):
                 horizon = 'natural'
             if horizon == 'artificial':
@@ -83,6 +84,7 @@ def dispatch(values=None):
             altitudeAdjustedDegrees = round(split.altitudeAdjusted('.')[1] * 60,1)
             altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
             values['altitude'] = altitudeRounded
+            '''
         else:
             values['error'] = 'observation is invalid'
 
