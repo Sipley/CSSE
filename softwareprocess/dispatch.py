@@ -32,19 +32,23 @@ def dispatch(values=None):
                 if not(re.match('\d+\.*\d*$', values['height'])):
                     values['error'] = 'height is invalid'
                     return values
+            if ('temperature' in values):
+                try: int(values['temperature'])
+                except ValueError:
+                    values['error'] = 'temperature is invalid'
+                    return values
+                if not(-20 <= int(values['temperature']) <= 120):
+                    values['error'] = 'temperature is invalid'
         else:
             values['error'] = 'observation is invalid'
-        #if ('height' in values):
-        #    if not(re.match('\d+\.*\d*$', values['height'])):
-        #        values['error'] = 'height is invalid'
-        #        return values
-        if ('temperature' in values):
-            try: int(values['temperature'])
-            except ValueError:
-                values['error'] = 'temperature is invalid'
-                return values
-            if not(-20 <= int(values['temperature']) <= 120):
-                values['error'] = 'temperature is invalid'
+
+       # if ('temperature' in values):
+       #     try: int(values['temperature'])
+       #     except ValueError:
+       #         values['error'] = 'temperature is invalid'
+       #         return values
+       #     if not(-20 <= int(values['temperature']) <= 120):
+       #         values['error'] = 'temperature is invalid'
         if ('pressure' in values):
             try: int(values['pressure'])
             except ValueError:
