@@ -59,7 +59,12 @@ def dispatch(values=None):
                 else:
                     values['error'] = 'horizon is invalid'
                     return values
-                #if ('pressure' in values)
+                if ('pressure' in values):
+                    pressure = values['horizon']
+                if ('height' in values):
+                    height = values['height']
+                if ('temperature' in values):
+                    temperature = values['temperature']
         else:
             values['error'] = 'observation is invalid'
 
