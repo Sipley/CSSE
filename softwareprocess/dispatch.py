@@ -51,11 +51,10 @@ def dispatch(values=None):
                 if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
                     values['error'] = 'horizon is invalid'
                     return values
-            def adjust(altitude, degrees, height = '0', horizon = 'natural', pressure = '1010', temperature = '72'):
-                if values['horizon'] == ('artificial' or 'Artificial'):
-                    dip = 0
-                elif (values['horizon'] or pressure) == ('natural' or 'Natural'):
-                    dip = -0.97 * sqrt(values['height'])/60
+            if values['horizon'] == ('artificial' or 'Artificial'):
+                dip = 0
+            elif (values['horizon']  == ('natural' or 'Natural')) or not('horizon' in values):
+                dip = -0.97 * sqrt(values['height'])/60
                 else:
                     values['error'] = 'horizon is invalid'
                     return values
@@ -70,11 +69,12 @@ def dispatch(values=None):
                 refraction3 = tan(altitude)
                 refraction = refraction1/ refraction2 / refraction3
                 altitudeAdjusted = altitude + (degrees/60) + dip + refraction
-                altitudeAdjustedNew = split.altitude('.')[0]
-                altitudeAdjustedDegrees = round(split.altitude('.')[1] * 60,1)
+                altitudeAdjustedNew = split.altitudeAdjusted('.')[0]
+                altitudeAdjustedDegrees = round(split.altitudeAdjusted('.')[1] * 60,1)
                 altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
                 values['altitude'] = altitudeRounded
-            return values
+            else:
+                values['error'] = 'horizonreturn values
         else:
             values['error'] = 'observation is invalid'
 
