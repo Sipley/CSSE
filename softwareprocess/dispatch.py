@@ -65,6 +65,11 @@ def dispatch(values=None):
                     height = values['height']
                 if ('temperature' in values):
                     temperature = values['temperature']
+                refraction1 = -0.00452 * pressure
+                refraction2 = 272 + temperature
+                refraction3 = tan(altitude)
+                refraction = refraction1/ refraction2 / refraction3 
+                altitude = observation + dip + refraction
         else:
             values['error'] = 'observation is invalid'
 
