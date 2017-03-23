@@ -57,7 +57,7 @@ def dispatch(values=None):
                     pass
                 elif values['horizon'] == 'Artificial':
                     pass
-                else:''''''natural|Natural|artificial|Artificial':
+                else:
                     values['error'] = 'horizon is invalid'
                     return values
 
@@ -74,16 +74,15 @@ def dispatch(values=None):
             if 'temperature' in values:
                 temperature = values['temperature']
             refraction1 = -0.00452 * float(pressure)
-            #-4.5652
             refraction2 = 273 + int(temperature)
-            #345
             refraction3 = math.tan(math.radians(altitude + (degrees/60)))
-            print refraction3
             refraction = refraction1/ refraction2 / refraction3
-            print refraction
             altitudeAdjusted = altitude + dip + refraction
-            altitudeAdjustedNew = int(altitudeAdjusted // 1)
+            print altitudeAdjusted
+            altitudeAdjustedNew = int(round(altitudeAdjusted,1) // 1)
+            print altitudeAdjustedNew
             altitudeAdjustedDegrees = round(float((altitudeAdjusted % 1)*60),1)
+            print altitudeAdjustedDegrees
             altitudeRounded = str(altitudeAdjustedNew)+'d'+str(altitudeAdjustedDegrees)
             values['altitude'] = altitudeRounded
             return values
