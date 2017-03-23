@@ -51,7 +51,7 @@ def dispatch(values=None):
             if 'horizon' in values:
                 if (not(values['horizon'])) == ('artificial' or 'Artificial' or 'natural' or 'Natural'):
                     values['error'] = 'horizon is invalid'
-                return values
+                    return values
 
             height = 0
             if 'height' in values:
