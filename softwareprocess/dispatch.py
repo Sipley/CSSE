@@ -67,7 +67,7 @@ def dispatch(values=None):
             temperature = '72'
             if 'temperature' in values:
                 temperature = values['temperature']
-            refraction1 = -0.00452 * pressure
+            refraction1 = -0.00452 * float(pressure)
             refraction2 = 272 + temperature
             refraction3 = math.tan(altitude)
             refraction = refraction1/ refraction2 / refraction3
