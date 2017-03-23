@@ -42,7 +42,7 @@ class dispatchTest(unittest.TestCase):
     def test100_020_shouldReturnAlt(self):
         sighting = {'observation': '42d0.0',  'op': 'adjust'}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
+        expectedResult = {'altitude':'41d59.1', 'observation': '42d0.0',  'op': 'adjust'}
         self.assertDictEqual(result, expectedResult)
 
     def test100_030_shouldReturnSameAlt(self):
