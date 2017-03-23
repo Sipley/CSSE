@@ -51,12 +51,12 @@ def dispatch(values=None):
                 if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
                     values['error'] = 'horizon is invalid'
                     return values
-                if values['horizon'] == ('artificial' or 'Artificial'):
-                    dip = 0
-                if (values['horizon']  == ('natural' or 'Natural')) or not('horizon' in values):
-                    dip = -0.97 * sqrt(values['height'])/60
+                #if values['horizon'] == ('artificial' or 'Artificial'):
+                #    dip = 0
+                #if (values['horizon']  == ('natural' or 'Natural')) or not('horizon' in values):
+                #    dip = -0.97 * sqrt(values['height'])/60
             elif not('horizon' in values):
-                dip = -0.97 * sqrt(values['height'])/60
+                #dip = -0.97 * sqrt(values['height'])/60
 
                 #if ('pressure' in values):
                 #    pressure = values['horizon']
