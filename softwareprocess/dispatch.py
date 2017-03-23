@@ -4,6 +4,7 @@ import re
 def dispatch(values=None):
 
     #Validate parm
+    global dip, dip
     if(values == None):
         return {'error':'parameter is missing'}
         return values
@@ -53,16 +54,14 @@ def dispatch(values=None):
                 return values
             if values['horizon'] == ('artificial' or 'Artificial'):
                 dip = 0
-            if (values['horizon'] == ('natural' or 'Natural')) or (not('horizon' in values)):
-                horizon = 'natural'
-            if horizon == 'artificial':
-                dip = 0
             if not(values['height']):
                 height = '0'
             else:
                 height = values['height']
-            if horizon == 'natural':
+            if (values['horizon'] == ('natural' or 'Natural')) or not('horizon' in values):
                 dip = -0.97 * math.sqrt(height)/60
+            print dip
+            print height
             if not('pressure' in values):
                 pressure = '1010'
             else:
