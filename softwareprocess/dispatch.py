@@ -59,6 +59,21 @@ def dispatch(values=None):
             if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
                 values['error'] = 'horizon is invalid'
                 return values
+        if values['horizon'] == ('artificial' or 'Artificial'):
+            dip = 0
+        if 'horizon' not in values:
+            values['horizon'] == 'natural'
+        if 'height' not in values:
+            values['height'] == '0'
+        if 'pressure' not in values:
+            values['pressure'] == '1010'
+        if 'temperature' not in values:
+            values['temperature'] == '72'
+        if values['horizon'] == ('natural' or 'Natural'):
+            dip = -0.97 * sqrt(values['height'])/60
+        refraction1 = -0.00452 * values['pressure']
+        refraction2 = 273 + values['temperature']
+        refraction3 = tan(observation)
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
