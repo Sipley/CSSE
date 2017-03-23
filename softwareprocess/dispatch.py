@@ -69,7 +69,8 @@ def dispatch(values=None):
                 refraction2 = 272 + temperature
                 refraction3 = tan(altitude)
                 refraction = refraction1/ refraction2 / refraction3
-                altitude = observation + dip + refraction
+                altitude = altitude + (degrees/60) + dip + refraction
+                altitudeNew = split.altitude('.')[1]
                 values['altitude'] = altitude
         else:
             values['error'] = 'observation is invalid'
