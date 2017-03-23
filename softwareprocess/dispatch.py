@@ -73,13 +73,13 @@ def dispatch(values=None):
             temperature = '72'
             if 'temperature' in values:
                 temperature = values['temperature']
-            refraction1 = -0.00452 * float(pressure)
+            refraction1 = -0.00452 * int(pressure)
             refraction2 = 273 + int(temperature)
             refraction3 = math.tan(math.radians(altitude + (degrees/60)))
             refraction = refraction1/ refraction2 / refraction3
             altitudeAdjusted = altitude + dip + refraction
             print altitudeAdjusted
-            altitudeAdjustedNew = int(round(altitudeAdjusted,1) // 1)
+            altitudeAdjustedNew = int(altitudeAdjusted // 1)
             print altitudeAdjustedNew
             altitudeAdjustedDegrees = round(float((altitudeAdjusted % 1)*60),1)
             print altitudeAdjustedDegrees
