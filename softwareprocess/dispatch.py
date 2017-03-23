@@ -66,10 +66,6 @@ def dispatch(values=None):
                 pressure = '1010'
             else:
                 pressure = values['pressure']
-            if not('height' in values):
-                height = '0'
-            else:
-                height = values['height']
             if not('temperature' in values):
                 temperature = '72'
             else:
@@ -79,14 +75,14 @@ def dispatch(values=None):
             refraction3 = math.tan(altitude)
             refraction = refraction1/ refraction2 / refraction3
             altitudeAdjusted = altitude + (degrees/60) + dip + refraction
-            altitudeAdjustedNew = split.altitudeAdjusted('.')[0]
-            altitudeAdjustedDegrees = round(split.altitudeAdjusted('.')[1] * 60,1)
+            altitudeAdjustedNew = altitudeAdjusted.split('.')[0]
+            altitudeAdjustedDegrees = round(altitudeAdjusted.split('.')[1] * 60,1)
             altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
             values['altitude'] = altitudeRounded
 
         else:
             values['error'] = 'observation is invalid'
-            return values
+        return values
     '''
     #    if values['horizon'] == ('artificial' or 'Artificial'):
     #        dip = 0
@@ -107,6 +103,7 @@ def dispatch(values=None):
     #    values['altitude'] = refraction
     '''
         #return values    #<-------------- replace this with your implementation
+
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
