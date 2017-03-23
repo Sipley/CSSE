@@ -70,7 +70,9 @@ def dispatch(values=None):
                 refraction3 = tan(altitude)
                 refraction = refraction1/ refraction2 / refraction3
                 altitude = altitude + (degrees/60) + dip + refraction
-                altitudeNew = split.altitude('.')[1]
+                altitudeNew = split.altitude('.')[0]
+                degreesNew = round(split.altitude('.')[1] * 60,1)
+                altitude = 'altitudeNew'd'degreesNew'
                 values['altitude'] = altitude
         else:
             values['error'] = 'observation is invalid'
