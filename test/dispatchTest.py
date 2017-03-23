@@ -72,7 +72,7 @@ class dispatchTest(unittest.TestCase):
     def test100_070_lastHappyTestttttt(self):
         sighting = {'op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
         result = dispatch.dispatch(sighting)
-        expectedResult = {'altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
+        expectedResult = {'altitude':'45d12.0','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
         self.assertDictEqual(result, expectedResult)
 
 # SAD PATH
