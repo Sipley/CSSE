@@ -47,21 +47,16 @@ def dispatch(values=None):
                 if not(100 <= int(values['pressure']) <= 1100):
                     values['error'] = 'pressure is invalid'
                     return values
+            if ('horizon' in values):
+                if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
+                    values['error'] = 'horizon is invalid'
+                    return values
         else:
             values['error'] = 'observation is invalid'
-
-       # if ('pressure' in values):
-       #     try: int(values['pressure'])
-       #     except ValueError:
-       #         values['error'] = 'pressure is invalid'
-       #         return values
-       #     if not(100 <= int(values['pressure']) <= 1100):
-       #         values['error'] = 'pressure is invalid'
-       #         return values
-        if ('horizon' in values):
-            if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
-                values['error'] = 'horizon is invalid'
-                return values
+    #    if ('horizon' in values):
+    #        if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
+    #            values['error'] = 'horizon is invalid'
+    #            return values
     #    if values['horizon'] == ('artificial' or 'Artificial'):
     #        dip = 0
     #    if 'horizon' not in values:
