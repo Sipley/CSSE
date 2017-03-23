@@ -51,7 +51,8 @@ def dispatch(values=None):
                 if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
                     values['error'] = 'horizon is invalid'
                     return values
-            else values['horizon'] = 'natural'
+            else:
+                values['horizon'] = 'natural'
         else:
             values['error'] = 'observation is invalid'
 
