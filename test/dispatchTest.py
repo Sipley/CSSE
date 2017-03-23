@@ -54,7 +54,7 @@ class dispatchTest(unittest.TestCase):
     def test100_040_shouldReturnAltWithParm(self):
         sighting = {'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         result = dispatch.dispatch(sighting)
-        expectedResult =
+        expectedResult = {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', A11:H103 '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         self.assertDictEqual(result, expectedResult)
 
 # SAD PATH
