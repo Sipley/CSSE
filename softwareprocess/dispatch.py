@@ -49,7 +49,15 @@ def dispatch(values=None):
                     values['error'] = 'pressure is invalid'
                     return values
             if 'horizon' in values:
-                if values['horizon'] != 'natural|Natural|artificial|Artificial'):
+                if values['horizon'] == 'natural':
+                    pass
+                elif values['horizon'] == 'Natural':
+                    pass
+                elif values['horizon'] == 'artificial':
+                    pass
+                elif values['horizon'] == 'Artificial':
+                    pass
+                else:''''''natural|Natural|artificial|Artificial':
                     values['error'] = 'horizon is invalid'
                     return values
 
