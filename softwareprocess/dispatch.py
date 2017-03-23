@@ -55,7 +55,7 @@ def dispatch(values=None):
             height = 0
             if 'height' in values:
                 height = values['height']
-            dip = -0.97 * math.sqrt(height)/60
+            dip = -0.97 * math.sqrt(float(height))/60
             if ('horizon' in values) and (values['horizon'] == ('artificial' or 'Artificial')):
                 dip = 0
             pressure = '1010'
