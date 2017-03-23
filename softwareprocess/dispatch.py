@@ -51,34 +51,39 @@ def dispatch(values=None):
                 if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
                     values['error'] = 'horizon is invalid'
                     return values
-                if values['horizon'] == ('artificial' or 'Artificial'):
-                    dip = 0
-                if values['horizon']  == ('natural' or 'Natural'):
-                    dip = -0.97 * math.sqrt(values['height'])/60
-            if not('horizon' in values):
-                dip = -0.97 * math.sqrt(values['height'])/60
-            #elif not('horizon' in values):
-            #    pass
-            #    dip = -0.97 * sqrt(values['height'])/60
-
-                #if ('pressure' in values):
-                #    pressure = values['horizon']
-                #if ('height' in values):
-                #    height = values['height']
-                #if ('temperature' in values):
-                #    temperature = values['temperature']
-                #refraction1 = -0.00452 * pressure
-                #refraction2 = 272 + temperature
-                #refraction3 = tan(altitude)
-                #refraction = refraction1/ refraction2 / refraction3
-                #altitudeAdjusted = altitude + (degrees/60) + dip + refraction
-                #altitudeAdjustedNew = split.altitudeAdjusted('.')[0]
-                #altitudeAdjustedDegrees = round(split.altitudeAdjusted('.')[1] * 60,1)
-                #altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
-                #values['altitude'] = altitudeRounded
-            #else:
-            #    values['error'] = 'horizon is invalid'
-            #    return values
+            if values['horizon'] == ('artificial' or 'Artificial'):
+                horizon = 'artificial'
+            if (values['horizon'] == ('natural' or 'Natural')) or (not('horizon' in values)):
+                horizon = 'natural'
+            if horizon == 'artificial':
+                dip = 0
+            if not(values['height']):
+                height = '0'
+            else:
+                height = values['height']
+            if horizon == 'natural':
+                dip = -0.97 * math.sqrt(height)/60
+            if not('pressure' in values):
+                pressure = '1010'
+            else:
+                pressure = values['pressure']
+            if not('height' in values):
+                height = '0'
+            else:
+                height = values['height']
+            if not('temperature' in values):
+                temperature = '72'
+            else:
+                temperature = values['temperature']
+            refraction1 = -0.00452 * pressure
+            refraction2 = 272 + temperature
+            refraction3 = math.tan(altitude)
+            refraction = refraction1/ refraction2 / refraction3
+            altitudeAdjusted = altitude + (degrees/60) + dip + refraction
+            altitudeAdjustedNew = split.altitudeAdjusted('.')[0]
+            altitudeAdjustedDegrees = round(split.altitudeAdjusted('.')[1] * 60,1)
+            altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
+            values['altitude'] = altitudeRounded
         else:
             values['error'] = 'observation is invalid'
 
