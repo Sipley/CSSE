@@ -78,11 +78,8 @@ def dispatch(values=None):
             refraction3 = math.tan(math.radians(altitude + (degrees/60)))
             refraction = refraction1/ refraction2 / refraction3
             altitudeAdjusted = (altitude + (degrees/60)) + dip + refraction
-            print altitudeAdjusted
             altitudeAdjustedNew = int(altitudeAdjusted // 1)
-            print altitudeAdjustedNew
             altitudeAdjustedDegrees = round(float((altitudeAdjusted % 1)*60),1)
-            print altitudeAdjustedDegrees
             altitudeRounded = str(altitudeAdjustedNew)+'d'+str(altitudeAdjustedDegrees)
             values['altitude'] = altitudeRounded
             return values
