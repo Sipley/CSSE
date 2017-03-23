@@ -86,6 +86,7 @@ def dispatch(values=None):
 
         else:
             values['error'] = 'observation is invalid'
+            return values
     '''
     #    if values['horizon'] == ('artificial' or 'Artificial'):
     #        dip = 0
@@ -105,7 +106,7 @@ def dispatch(values=None):
     #    refraction = refraction1/refraction2/refraction3
     #    values['altitude'] = refraction
     '''
-        return values    #<-------------- replace this with your implementation
+        #return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
