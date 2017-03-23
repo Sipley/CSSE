@@ -47,16 +47,18 @@ def dispatch(values=None):
                 if not(100 <= int(values['pressure']) <= 1100):
                     values['error'] = 'pressure is invalid'
                     return values
-            if ('horizon' in values):
-                if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
-                    values['error'] = 'horizon is invalid'
-                    return values
+            #if ('horizon' in values):
+            #    if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
+            #        values['error'] = 'horizon is invalid'
+            #        return values
             def adjust(altitude, degrees, height = '0', horizon = 'natural', pressure = '1010', temperature = '72'):
                 if values['horizon'] == ('artificial' or 'Artificial'):
                     dip = 0
-                if values['horizon'] == ('natural' or 'Natural'):
+                elif values['horizon'] == ('natural' or 'Natural'):
                     dip = -0.97 * sqrt(values['height'])/60
-
+                else:
+                    values['error'] = 'horizon is invalid'
+                    return values
         else:
             values['error'] = 'observation is invalid'
 
