@@ -39,24 +39,25 @@ def dispatch(values=None):
                     return values
                 if not(-20 <= int(values['temperature']) <= 120):
                     values['error'] = 'temperature is invalid'
+            if ('pressure' in values):
+                try: int(values['pressure'])
+                except ValueError:
+                    values['error'] = 'pressure is invalid'
+                    return values
+                if not(100 <= int(values['pressure']) <= 1100):
+                    values['error'] = 'pressure is invalid'
+                    return values
         else:
             values['error'] = 'observation is invalid'
 
-       # if ('temperature' in values):
-       #     try: int(values['temperature'])
+       # if ('pressure' in values):
+       #     try: int(values['pressure'])
        #     except ValueError:
-       #         values['error'] = 'temperature is invalid'
+       #         values['error'] = 'pressure is invalid'
        #         return values
-       #     if not(-20 <= int(values['temperature']) <= 120):
-       #         values['error'] = 'temperature is invalid'
-        if ('pressure' in values):
-            try: int(values['pressure'])
-            except ValueError:
-                values['error'] = 'pressure is invalid'
-                return values
-            if not(100 <= int(values['pressure']) <= 1100):
-                values['error'] = 'pressure is invalid'
-                return values
+       #     if not(100 <= int(values['pressure']) <= 1100):
+       #         values['error'] = 'pressure is invalid'
+       #         return values
         if ('horizon' in values):
             if(values['horizon'] != ('artificial' or 'Artificial' or 'natural' or 'Natural')):
                 values['error'] = 'horizon is invalid'
