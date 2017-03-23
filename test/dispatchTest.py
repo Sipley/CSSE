@@ -69,7 +69,7 @@ class dispatchTest(unittest.TestCase):
         expectedResult = {'altitude':'9d54.7','op':'adjust','observation':'10d0.0','height':'6','horizon':'artificial','pressure':'1010','temperature':'72'}
         self.assertDictEqual(result, expectedResult)
 
-    def test100_060_lastHappyTestttttt(self):
+    def test100_070_lastHappyTestttttt(self):
         sighting = {'op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
         result = dispatch.dispatch(sighting)
         expectedResult = {'altitude':'45d11.9','op':'adjust','observation':'45d15.2','height':'6','horizon':'natural','pressure':'1010','temperature':'71'}
