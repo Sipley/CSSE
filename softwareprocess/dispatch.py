@@ -53,7 +53,7 @@ def dispatch(values=None):
                     return values
                 if values['horizon'] == ('artificial' or 'Artificial'):
                     dip = 0
-                elif (values['horizon']  == ('natural' or 'Natural')) or not('horizon' in values):
+                if (values['horizon']  == ('natural' or 'Natural')) or not('horizon' in values):
                     dip = -0.97 * sqrt(values['height'])/60
             elif not('horizon' in values):
                 dip = -0.97 * sqrt(values['height'])/60
