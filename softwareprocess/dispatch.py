@@ -73,7 +73,7 @@ def dispatch(values=None):
                 altitudeAdjustedNew = split.altitude('.')[0]
                 altitudeAdjustedDegrees = round(split.altitude('.')[1] * 60,1)
                 altitudeRounded = altitudeAdjustedNew+d+altitudeAdjustedDegrees
-                values['altitudeRounded'] = altitude
+                values['altitude'] = altituderounded
         else:
             values['error'] = 'observation is invalid'
 
