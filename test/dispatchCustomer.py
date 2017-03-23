@@ -1,7 +1,7 @@
 
 
 import softwareprocess.dispatch as dispatch
-sighting = {'observation': '42d0.0',  'op': 'adjust'}
+sighting = {'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
 result = dispatch.dispatch(sighting)
 print result
 
