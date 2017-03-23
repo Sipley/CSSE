@@ -4,7 +4,6 @@ import re
 def dispatch(values=None):
 
     #Validate parm
-    global dip, dip
     if(values == None):
         return {'error':'parameter is missing'}
         return values
