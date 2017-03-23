@@ -73,7 +73,9 @@ def dispatch(values=None):
             dip = -0.97 * sqrt(values['height'])/60
         refraction1 = -0.00452 * values['pressure']
         refraction2 = 273 + values['temperature']
-        refraction3 = tan(observation)
+        refraction3 = tan(altitude)
+        refraction = refraction1/refraction2/refraction3
+        values['altitude'] = refraction
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
