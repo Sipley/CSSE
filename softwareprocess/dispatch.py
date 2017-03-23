@@ -54,9 +54,9 @@ def dispatch(values=None):
                 if values['horizon'] == ('artificial' or 'Artificial'):
                     dip = 0
                 if values['horizon']  == ('natural' or 'Natural'):
-                    dip = -0.97 * sqrt(values['height'])/60
+                    dip = -0.97 * math.sqrt(values['height'])/60
             if not('horizon' in values):
-                dip = -0.97 * sqrt(values['height'])/60
+                dip = -0.97 * math.sqrt(values['height'])/60
             #elif not('horizon' in values):
             #    pass
             #    dip = -0.97 * sqrt(values['height'])/60
