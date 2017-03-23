@@ -45,11 +45,11 @@ class dispatchTest(unittest.TestCase):
     #    expectedResult = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
     #    self.assertDictEqual(result, expectedResult)
 
-    def test100_030_shouldReturnSameAlt(self):
-        sighting = {'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
-        result = dispatch.dispatch()
-        expectedResult = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
-        self.assertDictEqual(result, expectedResult)
+    #def test100_030_shouldReturnSameAlt(self):
+    #    sighting = {'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
+    #    result = dispatch.dispatch()
+    #    expectedResult = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
+    #    self.assertDictEqual(result, expectedResult)
 
 # SAD PATH
 
