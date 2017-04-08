@@ -60,5 +60,5 @@ while amtRot > 360:
 GHAariesTotal = convertAngleToDeg(GHAariesObs + amtRot)
 print GHAariesTotal
 
-
+GHAstar = GHAariesTotal + SHA
 
