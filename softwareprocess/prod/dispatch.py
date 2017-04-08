@@ -74,6 +74,12 @@ def calcAmtRot(values):
         amtRot = amtRot - 360
     return amtRot
 
+def calcAmtRotAries(values):
+    GHAaries = '100d42.6'
+    GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
+    GHAariesTotal = GHAariesObs + calcAmtRot(values)
+    return GHAariesTotal
+
 def dispatch(values=None):
     #Validate parm
     if(values == None):
@@ -187,15 +193,9 @@ def dispatch(values=None):
         index = Stars.stars.index(body)
         latitude = Stars.declination[index]
         values['lat'] = latitude
-
         SHA = Stars.siderealHour[index]
 
-        GHAaries = '100d42.6'
-        GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
-
-        GHAariesTotal = GHAariesObs + calcAmtRot(values)
-
-        GHAstar = GHAariesTotal + convertAngleFromDeg(SHA)
+        GHAstar = calcAmtRotAries(values) + convertAngleFromDeg(SHA)
         while GHAstar > 360:
             GHAstar = GHAstar - 360
         values['long'] = convertAngleToDeg(GHAstar)
