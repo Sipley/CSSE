@@ -15,8 +15,6 @@ class Paramaters():
     def __init__(self):
         pass
 
-    date = values['date']
-
 def convertAngleFromDeg(angle):
     degree = angle.split('d')[0]
     arcminute = float(angle.split('d')[1])/60
@@ -35,7 +33,7 @@ def convertAngleToDeg(angle):
 def calcCumProgression():
     GHAariesAnnualDecrease = '-0d14.31667'
     refYear = 2001
-    date = Paramaters.date
+    date = values['date']
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
     diffYear = obsYear - refYear
     cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
