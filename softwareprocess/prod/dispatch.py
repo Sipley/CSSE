@@ -67,6 +67,13 @@ def calcTotalSeconds(values):
     deltaSeconds = (obsDateDate-refDateDate).total_seconds()
     return deltaSeconds
 
+def calcAmtRot(values):
+    rotPeriod = 86164.1
+    amtRot = calcTotalSeconds(values)/rotPeriod * 360
+    while amtRot > 360:
+        amtRot = amtRot - 360
+    return amtRot
+
 def dispatch(values=None):
     #Validate parm
     if(values == None):
@@ -182,17 +189,11 @@ def dispatch(values=None):
         values['lat'] = latitude
 
         SHA = Stars.siderealHour[index]
-        GHAaries = '100d42.6'
 
+        GHAaries = '100d42.6'
         GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
 
-        rotPeriod = 86164.1
-
-        amtRot = calcTotalSeconds(values)/rotPeriod * 360
-        while amtRot > 360:
-            amtRot = amtRot - 360
-
-        GHAariesTotal = GHAariesObs + amtRot
+        GHAariesTotal = GHAariesObs + calcAmtRot(values)
 
         GHAstar = GHAariesTotal + convertAngleFromDeg(SHA)
         while GHAstar > 360:
