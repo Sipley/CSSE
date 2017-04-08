@@ -111,12 +111,14 @@ def dispatch(values=None):
                 datetime.datetime.strptime(date,'%Y-%m-%d')
             except ValueError:
                 values['error'] = 'invalid date'
+                return values
         if 'time' in values:
             time = values['time']
             try:
                 datetime.datetime.strptime(time,'%H:%M:%S')
             except ValueError:
                 values['error'] = 'invalid time'
+                return values
         if ('lat' or 'long') in values:
             values['error'] = 'lat and/or long already in dict'
             return values
