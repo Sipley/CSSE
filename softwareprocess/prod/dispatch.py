@@ -15,11 +15,10 @@ class Stars():
 
 class Paramaters():
     def __init__(self):
+        self.time = values['time']
+        self.date = values['date']
+        self.body = values['body']
         pass
-
-    date = values['date']
-    time = values['time']
-    body = values['body']
 
 def convertAngleFromDeg(angle):
     degree = angle.split('d')[0]
@@ -39,7 +38,7 @@ def convertAngleToDeg(angle):
 def calcCumProgression(values):
     GHAariesAnnualDecrease = '-0d14.31667'
     refYear = 2001
-    date = Paramaters.date
+    date = values['date']
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
     diffYear = obsYear - refYear
     cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
