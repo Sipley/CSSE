@@ -39,6 +39,7 @@ def calcCumProgression(values):
 
 def calcNumLeapYear(values):
     refYear = 2001
+    date = values['date']
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
     numLeapYear = 0
     for year in range(refYear,obsYear):
