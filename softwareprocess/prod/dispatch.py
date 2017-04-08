@@ -1,7 +1,7 @@
 import math
 import re
 
-class Stars(objects):
+class Stars():
     def __init__(self, Name, SiderealHourAngle, Declination):
         self.Name = Name
         self.SiderealHourAngle = SiderealHourAngle
