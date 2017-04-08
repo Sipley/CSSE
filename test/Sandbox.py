@@ -4,3 +4,7 @@ class Paramaters():
     def __init__(self, values):
         pass
 
+    date = values['date']
+    print date
+
+print Paramaters.date
