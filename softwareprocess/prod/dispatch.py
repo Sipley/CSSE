@@ -155,7 +155,10 @@ def dispatch(values=None):
         GHAaries = '100d42.6'
 
         refYear = 2001
+        obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
+
         numLeapYear = 0
+
         for year in range(refYear,obsYear):
             if calendar.isleap(year):
                 numLeapYear += 1
