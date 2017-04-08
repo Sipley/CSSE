@@ -37,8 +37,8 @@ class dispatchPredict(unittest.TestCase):
 
     def test900_020_shouldReturnErrorInvalidStar(self):
         values={'op':'predict','body':'unknown','date':'2016-01-17','time':'03:15:42'}
-        expectedResult={}
-        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+        expectedResult={'op':'predict','body':'unknown','date':'2016-01-17','time':'03:15:42','error':'star not in catalog'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
 
 if __name__ == '__main__':
     unittest.main()
