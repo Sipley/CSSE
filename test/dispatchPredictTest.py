@@ -53,7 +53,8 @@ class dispatchPredict(unittest.TestCase):
 
     def test900_040_shouldReturnErrorLatLongInDict(self):
         values={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42','long':'75d53.6','lat':'7d24.3'}
-        expectedResult=
+        expectedResult={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42','long':'75d53.6','lat':'7d24.3','error':'lat and/or long already in dict'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
 
 if __name__ == '__main__':
     unittest.main()
