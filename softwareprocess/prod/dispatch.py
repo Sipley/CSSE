@@ -13,9 +13,6 @@ class Stars():
 
 class Paramaters():
     def __init__(self, values):
-        self.time = values['time']
-        self.date = values['date']
-        self.body = values['body']
         pass
 
 def convertAngleFromDeg(angle):
