@@ -130,7 +130,7 @@ def dispatch(values=None):
         if ('lat' or 'long') in values:
             values['error'] = 'lat and/or long already in dict'
             return values
-        values['lat'] = Angle.findAngRelAries(body)
+        values['lat'] = Angle.findAngRelAries()
         return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
