@@ -37,6 +37,14 @@ def calcCumProgression(values):
     cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
     return cumProgression
 
+def calcNumLeapYear(values):
+    refYear = 2001
+    obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
+    numLeapYear = 0
+    for year in range(refYear,obsYear):
+        if calendar.isleap(year):
+            numLeapYear += 1
+
 def dispatch(values=None):
     #Validate parm
     if(values == None):
@@ -156,12 +164,6 @@ def dispatch(values=None):
 
         refYear = 2001
         obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
-
-        numLeapYear = 0
-
-        for year in range(refYear,obsYear):
-            if calendar.isleap(year):
-                numLeapYear += 1
 
         rotPeriod = 86164.1
         clockPeriod = 86400
