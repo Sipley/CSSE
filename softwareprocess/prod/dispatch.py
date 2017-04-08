@@ -44,6 +44,7 @@ def calcNumLeapYear(values):
     for year in range(refYear,obsYear):
         if calendar.isleap(year):
             numLeapYear += 1
+    return numLeapYear
 
 def dispatch(values=None):
     #Validate parm
@@ -169,7 +170,7 @@ def dispatch(values=None):
         clockPeriod = 86400
         dailyDeg = convertAngleFromDeg('360d0.00')
         dailyRot = abs(dailyDeg-(rotPeriod/clockPeriod*dailyDeg))
-        totalLeapProg = numLeapYear * dailyRot
+        totalLeapProg = calcNumLeapYear(values) * dailyRot
 
         GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + totalLeapProg
 
