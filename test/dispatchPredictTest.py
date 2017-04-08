@@ -33,7 +33,8 @@ class dispatchPredict(unittest.TestCase):
 
     def test900_010_shouldReturnErrorMissingInfo(self):
         values={'op':'predict'}
-        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+        expectedResult={'op':'predict','error':'mandatory information is missing'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
 
     def test900_020_shouldReturnErrorInvalidStar(self):
         values={'op':'predict','body':'unknown','date':'2016-01-17','time':'03:15:42'}
