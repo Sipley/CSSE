@@ -30,7 +30,7 @@ def convertAngleToDeg(angle):
     convertedAngle = str(degree)+'d'+str(arcminute)
     return convertedAngle
 
-def calcCumProgression():
+def calcCumProgression(values):
     GHAariesAnnualDecrease = '-0d14.31667'
     refYear = 2001
     date = values['date']
