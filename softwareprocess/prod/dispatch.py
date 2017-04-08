@@ -26,10 +26,10 @@ def convertAngleToDeg(angle):
     convertedAngle = str(degree)+'d'+str(arcminute)
     return convertedAngle
 
-class calcuation(values):
+class calcuation():
     def __init__(self):
         pass
-    
+
 def calcCumProgression(values):
     GHAariesAnnualDecrease = '-0d14.31667'
     date = values['date']
