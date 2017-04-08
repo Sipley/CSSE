@@ -96,7 +96,7 @@ def dispatch(values=None):
             values['error'] = 'observation is invalid'
         return values
     elif(values['op'] == 'predict'):
-        if 'lat' in values:
+        if ('lat' or 'long') in values:
             values['error'] = 'lat and/or long already in dict'
             return values
         if not('body' in values):
