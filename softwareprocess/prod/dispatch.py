@@ -1,6 +1,7 @@
 import math
 import re
 import datetime
+import calendar
 
 class Stars():
     def __init__(self, body, siderealHour, declination):
