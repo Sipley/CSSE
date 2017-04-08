@@ -32,7 +32,8 @@ class dispatchPredict(unittest.TestCase):
 ####happy path
     def test100_010_shouldReturnPredictLatLong(self):
         values={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
-        expectedResult=
+        expectedResult={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42','long':'75d53.6','lat':'7d24.3'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
 
 ####sad path
 
