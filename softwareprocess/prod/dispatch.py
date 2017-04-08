@@ -7,8 +7,17 @@ class Stars(objects):
         self.'Name' = Name
         self.'Sidereal Hour Angle' = SiderealHourAngle
         self.'Declination' = Declination
-        
 
+    stars = load_workbook('~/Desktop/Auburn/softwareProcess/201720Assignment5.xlsx')
+    header = [cell.value for cell in stars[1]]
+
+    for row in stars.row[2:]:
+        values = {}
+        for key, cell in zip(header, row):
+            values[key] = cell.value
+        star = Stars(**values)
+        star.append(star)
+        
 def dispatch(values=None):
 
     #Validate parm
