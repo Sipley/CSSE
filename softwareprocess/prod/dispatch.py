@@ -169,7 +169,7 @@ def dispatch(values=None):
         dailyRot = abs(dailyDeg-(rotPeriod/clockPeriod*dailyDeg))
         totalLeapProg = numLeapYear * dailyRot
 
-        GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression() + totalLeapProg
+        GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + totalLeapProg
 
         refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
         obsDate = date + ' ' + time
