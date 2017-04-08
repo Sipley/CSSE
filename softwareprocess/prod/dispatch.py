@@ -1,23 +1,15 @@
 import math
 import re
-from openpyxl import load_workbook
 
 class Stars(objects):
-    def __init__(self, 'Name', 'Sidereal Hour Angle', 'Declination'):
-        self.'Name' = Name
-        self.'Sidereal Hour Angle' = SiderealHourAngle
-        self.'Declination' = Declination
+    def __init__(self, Name, SiderealHourAngle, Declination):
+        self.Name = Name
+        self.SiderealHourAngle = SiderealHourAngle
+        self.Declination = Declination
 
-    stars = load_workbook('~/Desktop/Auburn/softwareProcess/201720Assignment5.xlsx')
+    stars = {}
     header = [cell.value for cell in stars[1]]
 
-    for row in stars.row[2:]:
-        values = {}
-        for key, cell in zip(header, row):
-            values[key] = cell.value
-        star = Stars(**values)
-        star.append(star)
-        
 def dispatch(values=None):
 
     #Validate parm
