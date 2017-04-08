@@ -38,7 +38,7 @@ def convertAngleToDeg(angle):
 def calcCumProgression(values):
     GHAariesAnnualDecrease = '-0d14.31667'
     refYear = 2001
-    date = values['date']
+    date = Paramaters.date
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
     diffYear = obsYear - refYear
     cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
