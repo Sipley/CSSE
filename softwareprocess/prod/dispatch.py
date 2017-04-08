@@ -105,7 +105,7 @@ def dispatch(values=None):
             return values
         if 'date' in values:
             try:
-                datetime.datetime.strptime(date_string,format='%Y-%m-%d')
+                datetime.datetime.strptime()
             except ValueError:
                 values['error'] = 'invalid date'
 
