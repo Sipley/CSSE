@@ -107,7 +107,8 @@ def dispatch(values=None):
             try:
                 datetime.datetime.strptime(date_string='date',format='%Y-%m-%d')
             except ValueError:
-                raise ValueError("Invalid date")
+                values['error' = 'invalid date']
+
         return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
