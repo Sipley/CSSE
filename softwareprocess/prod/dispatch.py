@@ -130,10 +130,11 @@ def dispatch(values=None):
         latitude = dec
         SHA = Stars.siderealHour[index]
         values['lat'] = latitude
-        GHAaries = 100d42.6
-        GHAariesAnnualDecrease = 0d14.31667
+        GHAaries = '100d42.6'
+        GHAariesAnnualDecrease = '0d14.31667'
         refYear = 2001
-        obsYear = datetime.datetime.year(date)
+        obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
+        diffYear = obsYear - refYear
         return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
