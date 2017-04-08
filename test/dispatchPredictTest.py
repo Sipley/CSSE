@@ -31,9 +31,13 @@ class dispatchPredict(unittest.TestCase):
 
 ####sad path
 
-    def test900_010_shouldReturnErrorInvalidStar(self):
+    def test900_010_shouldReturnErrorMissingInfo(self):
         values={'op':'predict'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
 
+    def test900_020_shouldReturnErrorInvalidStar(self):
+        values=
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+    
 if __name__ == '__main__':
     unittest.main()
