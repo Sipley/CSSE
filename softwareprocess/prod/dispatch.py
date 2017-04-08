@@ -97,9 +97,11 @@ def dispatch(values=None):
     elif(values['op'] == 'predict'):
         if not('body' in values):
             values['error'] = 'mandatory information is missing'
+            return values
         body = values['body']
         if not(body in Stars.stars):
             values['error'] = 'star not in catalog'
+            return values
         return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out

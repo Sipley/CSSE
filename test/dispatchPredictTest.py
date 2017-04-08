@@ -41,5 +41,9 @@ class dispatchPredict(unittest.TestCase):
         expectedResult={'op':'predict','body':'unknown','date':'2016-01-17','time':'03:15:42','error':'star not in catalog'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test900_030_shouldReturnErrorInvalidDate(self):
+        values={'op':'predict','body':'Betelgeuse','date':'2016-99-17','time':'03:15:42'}
+        expectedResult=
+
 if __name__ == '__main__':
     unittest.main()
