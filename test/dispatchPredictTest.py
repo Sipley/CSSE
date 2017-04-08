@@ -48,7 +48,7 @@ class dispatchPredict(unittest.TestCase):
 
     def test900_040_shouldReturnErrorInvalidTime(self):
         values={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:99:42'}
-        expectedResult=
+        expectedResult={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:99:42','error':'invalid time'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
 if __name__ == '__main__':

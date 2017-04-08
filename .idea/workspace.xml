@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f3c3800-46e7-4165-a279-545d97e2d7ce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/dispatchPredictTest.py" afterPath="$PROJECT_DIR$/test/dispatchPredictTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="110" column="28" lean-forward="false" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
+            <state relative-caret-position="142">
+              <caret line="114" column="39" lean-forward="false" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="39" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#1104#1164#0" expanded="false" />
@@ -80,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatchPredictTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dispatchPredictTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/dispatchPredictTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="49" column="89" lean-forward="false" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
+            <state relative-caret-position="304">
+              <caret line="50" column="120" lean-forward="false" selection-start-line="50" selection-start-column="120" selection-end-line="50" selection-end-column="120" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -184,14 +185,14 @@
         <option value="$PROJECT_DIR$/test/dispatchTest.py" />
         <option value="$PROJECT_DIR$/test/DispatchTest_Instructor.py" />
         <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
         <option value="$PROJECT_DIR$/test/dispatchPredictTest.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="393" />
-    <option name="y" value="23" />
+    <option name="x" value="471" />
+    <option name="y" value="27" />
     <option name="width" value="1035" />
     <option name="height" value="773" />
   </component>
@@ -660,9 +661,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 04h 29m 00s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.08 at 04h 32m 02s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -690,9 +688,12 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.08 at 04h 41m 42s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 04h 44m 21s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="393" y="23" width="1035" height="773" extended-state="0" />
+    <frame x="471" y="27" width="1035" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21499014" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1129,10 +1130,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/dispatchPredictTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="50" column="120" lean-forward="false" selection-start-line="50" selection-start-column="120" selection-end-line="50" selection-end-column="120" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="110" column="28" lean-forward="false" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
+        <state relative-caret-position="142">
+          <caret line="114" column="39" lean-forward="false" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="39" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#1104#1164#0" expanded="false" />
@@ -1143,16 +1154,6 @@
             <element signature="e#2783#2856#0" expanded="false" />
             <element signature="e#2909#3323#0" expanded="false" />
             <element signature="e#3251#3323#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/dispatchPredictTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="49" column="89" lean-forward="false" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -109,6 +109,10 @@ def dispatch(values=None):
                 datetime.datetime.strptime(date,'%Y-%m-%d')
             except ValueError:
                 values['error'] = 'invalid date'
+        if 'time' in values:
+            time = values['time']
+            try:
+                datetime.datetime.strptime(time,'%I:%M:%S')
 
         return values
     elif(values['op'] == 'correct'):
