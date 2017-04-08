@@ -51,5 +51,9 @@ class dispatchPredict(unittest.TestCase):
         expectedResult={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:99:42','error':'invalid time'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test900_040_shouldReturnErrorLatLongInDict(self):
+        values={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42','long':'75d53.6','lat':'7d24.3'}
+        expectedResult=
+
 if __name__ == '__main__':
     unittest.main()
