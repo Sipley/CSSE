@@ -15,10 +15,11 @@ class Stars():
 
 class Paramaters():
     def __init__(self):
-        self.time = values['time']
-        self.date = values['date']
-        self.body = values['body']
         pass
+
+    date = values['date']
+    time = values['time']
+    body = values['body']
 
 def convertAngleFromDeg(angle):
     degree = angle.split('d')[0]
