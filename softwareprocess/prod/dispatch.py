@@ -18,7 +18,7 @@ class Angle():
     latitude = dec
     SHA = Stars.siderealHour[index]
     def findAngRelAries(body):
-        return latitude    
+        return latitude
 
 def dispatch(values=None):
 
@@ -130,7 +130,7 @@ def dispatch(values=None):
         if ('lat' or 'long') in values:
             values['error'] = 'lat and/or long already in dict'
             return values
-        values['lat'] =
+        values['lat'] = Angle.findAngRelAries(body)
         return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
