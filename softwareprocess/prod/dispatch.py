@@ -1,5 +1,13 @@
 import math
 import re
+from openpyxl import load_workbook
+
+class Stars(objects):
+    def __init__(self, 'Name', 'Sidereal Hour Angle', 'Declination'):
+        self.'Name' = Name
+        self.'Sidereal Hour Angle' = SiderealHourAngle
+        self.'Declination' = Declination
+        
 
 def dispatch(values=None):
 
