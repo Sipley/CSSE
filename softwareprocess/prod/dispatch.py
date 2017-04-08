@@ -30,22 +30,22 @@ class calcuation():
     def __init__(self):
         pass
 
-def calcCumProgression(values):
-    GHAariesAnnualDecrease = '-0d14.31667'
-    date = values['date']
-    obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
-    diffYear = obsYear - 2001
-    cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
-    return cumProgression
+    def calcCumProgression(values):
+        GHAariesAnnualDecrease = '-0d14.31667'
+        date = values['date']
+        obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
+        diffYear = obsYear - 2001
+        cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
+        return cumProgression
 
-def calcNumLeapYear(values):
-    date = values['date']
-    obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
-    numLeapYear = 0
-    for year in range(2001,obsYear):
-        if calendar.isleap(year):
-            numLeapYear += 1
-    return numLeapYear
+    def calcNumLeapYear(values):
+        date = values['date']
+        obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
+        numLeapYear = 0
+        for year in range(2001,obsYear):
+            if calendar.isleap(year):
+                numLeapYear += 1
+        return numLeapYear
 
 def calcTotalLeapProg(values):
     rotPeriod = 86164.1
