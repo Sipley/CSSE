@@ -32,7 +32,7 @@ class dispatchPredict(unittest.TestCase):
 ####sad path
 
     def test900_010_shouldReturnErrorInvalidStar(self):
-        values=
+        values={'op':'predict'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
 
 if __name__ == '__main__':
