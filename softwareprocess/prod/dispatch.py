@@ -176,7 +176,10 @@ def dispatch(values=None):
 
         GHAariesTotal = GHAariesObs + amtRot
 
-        GHAstar = convertAngleToDeg(GHAariesTotal + convertAngleFromDeg(SHA))
+        GHAstar = GHAariesTotal + convertAngleFromDeg(SHA)
+        while GHAstar > 360:
+            GHAstar = GHAstar - 360
+        values['long'] = convertAngleToDeg(GHAstar)
 
         return values
     elif(values['op'] == 'correct'):
