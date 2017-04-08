@@ -1,5 +1,6 @@
 import math
 import re
+import datetime
 
 class Stars():
     def __init__(self, Name, SiderealHourAngle, Declination):
@@ -102,6 +103,11 @@ def dispatch(values=None):
         if not(body in Stars.stars):
             values['error'] = 'star not in catalog'
             return values
+        if 'date' in values:
+            try:
+                datetime.datetime.strptime(date_string='date',format='%Y-%m-%d')
+            except ValueError:
+                raise ValueError("Invalid date")
         return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
