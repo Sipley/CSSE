@@ -3,12 +3,11 @@ import re
 import datetime
 
 class Stars():
-    def __init__(self, Name, SiderealHourAngle, Declination):
-        self.Name = Name
-        self.SiderealHourAngle = SiderealHourAngle
-        self.Declination = Declination
+    def __init__(self):
 
     stars = {'Alpheratz', 'Ankaa', 'Schedar', 'Diphda', 'Achernar', 'Hamal', 'Polaris', 'Akamar', 'Menkar', 'Mirfak', 'Aldebaran', 'Rigel', 'Capella', 'Bellatrix', 'Elnath','Alnilam','Betelgeuse','Canopus','Sirius','Adara','Procyon','Pollux','Avior','Suhail','Miaplacidus','Alphard','Regulus','Dubhe','Denebola','Gienah','Acrux','Gacrux','Alioth','Spica','Alcaid','Hadar','Menkent','Arcturus','Rigil Kent.','Zubenelg.','Kochab','Alphecca','Antares','Atria','Sabik','Shaula','Rasalhague','Etamin','Kaus Aust.','Vega','Nunki','Altair','Peacock','Deneb','Enif','Alnair','Fomalhaut','Scheat','Markab'}
+
+   # def findAngRelAries(body)
 
 def dispatch(values=None):
 
@@ -126,3 +125,5 @@ def dispatch(values=None):
     else:
         values['error'] = 'op is not a legal operation'
         return values
+
+

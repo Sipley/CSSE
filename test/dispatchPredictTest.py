@@ -30,10 +30,11 @@ class dispatchPredict(unittest.TestCase):
 #if lat &/or long exist, return error
 
 ####happy path
-    def test100_010_shouldReturnPredictLatLong(self):
-        values={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
-        expectedResult={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42','long':'75d53.6','lat':'7d24.3'}
-        self.assertDictEqual(DP.dispatch(values),expectedResult)
+#    def test100_010_shouldReturnPredictLatLong(self):
+#        values={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
+#        expectedResult={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42','long':'75d53.6','lat':'7d24.3'}
+#        self.assertDictEqual(DP.dispatch(values),expectedResult)
+
 
 ####sad path
 
