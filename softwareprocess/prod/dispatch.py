@@ -149,7 +149,7 @@ def dispatch(values=None):
         refYear = 2001
         obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
         diffYear = obsYear - refYear
-        cumProgression = convertAngleToDeg(diffYear * convertAngleFromDeg(GHAariesAnnualDecrease))
+        cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
 
         numLeapYear = 0
         for year in range(refYear,obsYear):
