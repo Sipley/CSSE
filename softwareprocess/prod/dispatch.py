@@ -154,6 +154,7 @@ def dispatch(values=None):
         SHA = Stars.siderealHour[index]
         GHAaries = '100d42.6'
 
+        refYear = 2001
         numLeapYear = 0
         for year in range(refYear,obsYear):
             if calendar.isleap(year):
