@@ -17,7 +17,6 @@ def findAngRelAries(body):
     dec = Stars.declination[index]
     latitude = dec
     SHA = Stars.siderealHour[index]
-    values['lat'] = latitude
 
 def dispatch(values=None):
 
@@ -129,6 +128,7 @@ def dispatch(values=None):
         if ('lat' or 'long') in values:
             values['error'] = 'lat and/or long already in dict'
             return values
+        values['lat'] = 
         return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
