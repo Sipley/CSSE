@@ -55,6 +55,17 @@ def calcTotalLeapProg(values):
     totalLeapProg = calcNumLeapYear(values) * dailyRot
     return totalLeapProg
 
+def calcTotalSeconds(values):
+    refYear = 2001
+    date = values['date']
+    obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
+    refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
+    obsDate = date + ' ' + time
+    refDateDate = datetime.datetime.strptime(refDate, '%Y-%m-%d %H:%M:%S')
+    obsDateDate = datetime.datetime.strptime(obsDate, '%Y-%m-%d %H:%M:%S')
+    deltaSeconds = (obsDateDate-refDateDate).total_seconds()
+    return deltaSeconds
+
 def dispatch(values=None):
     #Validate parm
     if(values == None):
@@ -172,20 +183,11 @@ def dispatch(values=None):
         SHA = Stars.siderealHour[index]
         GHAaries = '100d42.6'
 
-        refYear = 2001
-        obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
-
         GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
-
-        refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
-        obsDate = date + ' ' + time
-        refDateDate = datetime.datetime.strptime(refDate, '%Y-%m-%d %H:%M:%S')
-        obsDateDate = datetime.datetime.strptime(obsDate, '%Y-%m-%d %H:%M:%S')
-        deltaSeconds = (obsDateDate-refDateDate).total_seconds()
 
         rotPeriod = 86164.1
 
-        amtRot = deltaSeconds/rotPeriod * 360
+        amtRot = calcTotalSeconds(values)/rotPeriod * 360
         while amtRot > 360:
             amtRot = amtRot - 360
 
