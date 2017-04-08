@@ -7,8 +7,7 @@ class Stars(objects):
         self.SiderealHourAngle = SiderealHourAngle
         self.Declination = Declination
 
-    stars = {}
-    header = [cell.value for cell in stars[1]]
+    stars = {Alpheratz, Ankaa, Schedar, Diphda, Achernar, Hamal, Polaris, Akamar, Menkar, Mirfak, Aldebaran, Rigel, Capella, Bellatrix, Elnath,Alnilam,Betelgeuse,Canopus,Sirius,Adara,Procyon,Pollux,Avior,Suhail,Miaplacidus,Alphard,Regulus,Dubhe,Denebola,Gienah,Acrux,Gacrux,Alioth,Spica,Alcaid,Hadar,Menkent,Arcturus,Rigil Kent.,Zubenelg.,Kochab,Alphecca,Antares,Atria,Sabik,Shaula,Rasalhague,Etamin,Kaus Aust.,Vega,Nunki,Altair,Peacock,Deneb,Enif,Alnair,Fomalhaut,Scheat,Markab}
 
 def dispatch(values=None):
 
@@ -99,6 +98,8 @@ def dispatch(values=None):
         if not('body' in values):
             values['error'] = 'mandatory information is missing'
         return values
+        if not(values['body'] in Stars.stars):
+            values['error'] = 'star not in catalog'
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
