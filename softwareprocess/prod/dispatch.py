@@ -139,8 +139,7 @@ def dispatch(values=None):
             return values
 
         index = Stars.stars.index(body)
-        dec = Stars.declination[index]
-        latitude = dec
+        latitude = Stars.declination[index]
         SHA = Stars.siderealHour[index]
         values['lat'] = latitude
 
