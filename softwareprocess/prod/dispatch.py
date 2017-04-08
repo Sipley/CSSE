@@ -123,7 +123,7 @@ def dispatch(values=None):
             values['error'] = 'lat and/or long already in dict'
             return values
         index = Stars.stars.index('Betelgeuse')
-        dec = Stars.stars.declination[index]
+        dec = Stars.declination[index]
         latitude = dec
         values['lat'] = latitude
         return values
