@@ -28,6 +28,15 @@ def convertAngleToDeg(angle):
     convertedAngle = str(degree)+'d'+str(arcminute)
     return convertedAngle
 
+def calcCumProgression(values):
+    GHAariesAnnualDecrease = '-0d14.31667'
+    refYear = 2001
+    date = values['date']
+    obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
+    diffYear = obsYear - refYear
+    cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
+    return cumProgression
+
 def dispatch(values=None):
     #Validate parm
     if(values == None):
@@ -140,15 +149,10 @@ def dispatch(values=None):
 
         index = Stars.stars.index(body)
         latitude = Stars.declination[index]
-        SHA = Stars.siderealHour[index]
         values['lat'] = latitude
 
+        SHA = Stars.siderealHour[index]
         GHAaries = '100d42.6'
-        GHAariesAnnualDecrease = '-0d14.31667'
-        refYear = 2001
-        obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
-        diffYear = obsYear - refYear
-        cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
 
         numLeapYear = 0
         for year in range(refYear,obsYear):
@@ -161,7 +165,7 @@ def dispatch(values=None):
         dailyRot = abs(dailyDeg-(rotPeriod/clockPeriod*dailyDeg))
         totalLeapProg = numLeapYear * dailyRot
 
-        GHAariesObs = convertAngleFromDeg(GHAaries) + cumProgression + totalLeapProg
+        GHAariesObs = convertAngleFromDeg(GHAaries) + cumProgression() + totalLeapProg
 
         refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
         obsDate = date + ' ' + time
