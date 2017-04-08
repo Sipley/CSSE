@@ -58,6 +58,7 @@ def calcTotalLeapProg(values):
 def calcTotalSeconds(values):
     refYear = 2001
     date = values['date']
+    time = values['time']
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
     refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
     obsDate = date + ' ' + time
