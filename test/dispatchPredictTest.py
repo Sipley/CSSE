@@ -40,6 +40,11 @@ class dispatchPredict(unittest.TestCase):
         expectedResult={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42','lat':'7d24.3'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test100_020_shouldReturnPredictLat(self):
+        values={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
+        expectedResult={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42','lat':'7d24.3'}
+        self.assertDictEqual(DP.dispatch(),expectedResult)
+
 ####sad path
 
     def test900_010_shouldReturnErrorMissingInfo(self):
