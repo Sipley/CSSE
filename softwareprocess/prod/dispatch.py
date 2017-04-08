@@ -183,6 +183,8 @@ def dispatch(values=None):
         obsDateDate = datetime.datetime.strptime(obsDate, '%Y-%m-%d %H:%M:%S')
         deltaSeconds = (obsDateDate-refDateDate).total_seconds()
 
+        rotPeriod = 86164.1
+
         amtRot = deltaSeconds/rotPeriod * 360
         while amtRot > 360:
             amtRot = amtRot - 360
