@@ -47,6 +47,14 @@ def calcNumLeapYear(values):
             numLeapYear += 1
     return numLeapYear
 
+def calcTotalLeapProg(values):
+    rotPeriod = 86164.1
+    clockPeriod = 86400
+    dailyDeg = convertAngleFromDeg('360d0.00')
+    dailyRot = abs(dailyDeg-(rotPeriod/clockPeriod*dailyDeg))
+    totalLeapProg = calcNumLeapYear(values) * dailyRot
+    return totalLeapProg
+
 def dispatch(values=None):
     #Validate parm
     if(values == None):
@@ -167,13 +175,7 @@ def dispatch(values=None):
         refYear = 2001
         obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
 
-        rotPeriod = 86164.1
-        clockPeriod = 86400
-        dailyDeg = convertAngleFromDeg('360d0.00')
-        dailyRot = abs(dailyDeg-(rotPeriod/clockPeriod*dailyDeg))
-        totalLeapProg = calcNumLeapYear(values) * dailyRot
-
-        GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + totalLeapProg
+        GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
 
         refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
         obsDate = date + ' ' + time
