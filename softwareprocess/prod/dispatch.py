@@ -47,38 +47,38 @@ class calcuation():
                 numLeapYear += 1
         return numLeapYear
 
-def calcTotalLeapProg(values):
-    rotPeriod = 86164.1
-    clockPeriod = 86400
-    dailyDeg = convertAngleFromDeg('360d0.00')
-    dailyRot = abs(dailyDeg-(rotPeriod/clockPeriod*dailyDeg))
-    totalLeapProg = calcNumLeapYear(values) * dailyRot
-    return totalLeapProg
+    def calcTotalLeapProg(values):
+        rotPeriod = 86164.1
+        clockPeriod = 86400
+        dailyDeg = convertAngleFromDeg('360d0.00')
+        dailyRot = abs(dailyDeg-(rotPeriod/clockPeriod*dailyDeg))
+        totalLeapProg = calcNumLeapYear(values) * dailyRot
+        return totalLeapProg
 
-def calcTotalSeconds(values):
-    refYear = 2001
-    date = values['date']
-    time = values['time']
-    obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
-    refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
-    obsDate = date + ' ' + time
-    refDateDate = datetime.datetime.strptime(refDate, '%Y-%m-%d %H:%M:%S')
-    obsDateDate = datetime.datetime.strptime(obsDate, '%Y-%m-%d %H:%M:%S')
-    deltaSeconds = (obsDateDate-refDateDate).total_seconds()
-    return deltaSeconds
+    def calcTotalSeconds(values):
+        refYear = 2001
+        date = values['date']
+        time = values['time']
+        obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
+        refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
+        obsDate = date + ' ' + time
+        refDateDate = datetime.datetime.strptime(refDate, '%Y-%m-%d %H:%M:%S')
+        obsDateDate = datetime.datetime.strptime(obsDate, '%Y-%m-%d %H:%M:%S')
+        deltaSeconds = (obsDateDate-refDateDate).total_seconds()
+        return deltaSeconds
 
-def calcAmtRot(values):
-    rotPeriod = 86164.1
-    amtRot = calcTotalSeconds(values)/rotPeriod * 360
-    while amtRot > 360:
-        amtRot = amtRot - 360
-    return amtRot
+    def calcAmtRot(values):
+        rotPeriod = 86164.1
+        amtRot = calcTotalSeconds(values)/rotPeriod * 360
+        while amtRot > 360:
+            amtRot = amtRot - 360
+        return amtRot
 
-def calcAmtRotAries(values):
-    GHAaries = '100d42.6'
-    GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
-    GHAariesTotal = GHAariesObs + calcAmtRot(values)
-    return GHAariesTotal
+    def calcAmtRotAries(values):
+        GHAaries = '100d42.6'
+        GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
+        GHAariesTotal = GHAariesObs + calcAmtRot(values)
+        return GHAariesTotal
 
 def dispatch(values=None):
     #Validate parm
@@ -194,7 +194,7 @@ def dispatch(values=None):
         latitude = Stars.declination[index]
         values['lat'] = latitude
         SHA = Stars.siderealHour[index]
-        GHAstar = calcAmtRotAries(values) + convertAngleFromDeg(SHA)
+        GHAstar = calcuation.calcAmtRotAries(values) + convertAngleFromDeg(SHA)
         while GHAstar > 360:
             GHAstar = GHAstar - 360
         values['long'] = convertAngleToDeg(GHAstar)
