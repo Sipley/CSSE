@@ -3,3 +3,12 @@ declination= ['29d10.9','-42d13.4','56d37.7','-17d54.1','-57d09.7','23d32.3','89
 
 print stars
 print stars.index('Ankaa')
+
+values = {'date':'2016-01-15'}
+if 'date' in values:
+    date = values['date']
+    GHAaries = '100d42.6'
+    GHAariesAnnualDecrease = '0d14.31667'
+    refYear = '2001'
+    obsYear = datetime.datetime.year(date)
+    return obsYear
