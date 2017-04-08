@@ -96,9 +96,6 @@ def dispatch(values=None):
             values['error'] = 'observation is invalid'
         return values
     elif(values['op'] == 'predict'):
-        if ('lat' or 'long') in values:
-            values['error'] = 'lat and/or long already in dict'
-            return values
         if not('body' in values):
             values['error'] = 'mandatory information is missing'
             return values
@@ -118,6 +115,9 @@ def dispatch(values=None):
                 datetime.datetime.strptime(time,'%H:%M:%S')
             except ValueError:
                 values['error'] = 'invalid time'
+        if ('lat' or 'long') in values:
+            values['error'] = 'lat and/or long already in dict'
+            return values
         return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out

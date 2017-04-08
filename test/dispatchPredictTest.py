@@ -29,6 +29,11 @@ class dispatchPredict(unittest.TestCase):
 #
 #if lat &/or long exist, return error
 
+####happy path
+    def test100_010_shouldReturnPredictLatLong(self):
+        values={'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
+        expectedResult=
+
 ####sad path
 
     def test900_010_shouldReturnErrorMissingInfo(self):
