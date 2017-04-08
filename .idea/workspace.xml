@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3c3800-46e7-4165-a279-545d97e2d7ce" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/201720Assignment5.xlsx" afterPath="$PROJECT_DIR$/201720Assignment5.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,28 +53,38 @@
       <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="124" column="40" lean-forward="false" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+            <state relative-caret-position="146">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#1547#1608#0" expanded="false" />
-                <element signature="e#1741#1801#0" expanded="false" />
-                <element signature="e#1878#5191#0" expanded="false" />
-                <element signature="e#1957#2035#0" expanded="false" />
-                <element signature="e#2082#2151#0" expanded="false" />
-                <element signature="e#2258#5100#0" expanded="false" />
-                <element signature="e#2666#2737#0" expanded="false" />
-                <element signature="e#2796#3122#0" expanded="false" />
-                <element signature="e#2883#2959#0" expanded="false" />
-                <element signature="e#3046#3122#0" expanded="false" />
-                <element signature="e#3178#3493#0" expanded="false" />
-                <element signature="e#3262#3335#0" expanded="false" />
-                <element signature="e#3420#3493#0" expanded="false" />
-                <element signature="e#3546#3960#0" expanded="false" />
-                <element signature="e#3888#3960#0" expanded="false" />
-                <element signature="e#5275#5353#0" expanded="false" />
-                <element signature="e#5433#5498#0" expanded="false" />
+                <element signature="e#2194#2255#0" expanded="false" />
+                <element signature="e#2388#2448#0" expanded="false" />
+                <element signature="e#2525#5838#0" expanded="false" />
+                <element signature="e#2604#2682#0" expanded="false" />
+                <element signature="e#2729#2798#0" expanded="false" />
+                <element signature="e#2905#5747#0" expanded="false" />
+                <element signature="e#3313#3384#0" expanded="false" />
+                <element signature="e#3443#3769#0" expanded="false" />
+                <element signature="e#3530#3606#0" expanded="false" />
+                <element signature="e#3693#3769#0" expanded="false" />
+                <element signature="e#3825#4140#0" expanded="false" />
+                <element signature="e#3909#3982#0" expanded="false" />
+                <element signature="e#4067#4140#0" expanded="false" />
+                <element signature="e#4193#4607#0" expanded="false" />
+                <element signature="e#4535#4607#0" expanded="false" />
+                <element signature="e#5922#6000#0" expanded="false" />
+                <element signature="e#6080#6145#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sandbox.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Sandbox.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,8 +102,8 @@
       <file leaf-file-name="dispatchPredictTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/dispatchPredictTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="600">
+              <caret line="40" column="47" lean-forward="false" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -137,8 +148,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -171,6 +182,7 @@
       <find>altitude</find>
       <find>try</find>
       <find>''</find>
+      <find>star</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,6 +206,7 @@
         <option value="$PROJECT_DIR$/test/DispatchTest_Instructor.py" />
         <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/test/dispatchPredictTest.py" />
+        <option value="$PROJECT_DIR$/test/Sandbox.py" />
         <option value="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
       </list>
     </option>
@@ -296,24 +309,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in MyTestCase">
-    <configuration default="false" name="convertStringCustomer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CSSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/convertStringCustomer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.Sandbox">
     <configuration default="false" name="dispatchCustomer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -385,6 +381,23 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Sandbox" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSSE" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/Sandbox.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -644,20 +657,20 @@
       <item index="1" class="java.lang.String" itemvalue="Python tests.All Tests (TDD)" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.SampleTest.py" />
       <item index="3" class="java.lang.String" itemvalue="Python.SampleTest" />
-      <item index="4" class="java.lang.String" itemvalue="Python.convertStringCustomer" />
-      <item index="5" class="java.lang.String" itemvalue="Python.dispatchCustomer" />
-      <item index="6" class="java.lang.String" itemvalue="Python.dispatch" />
-      <item index="7" class="java.lang.String" itemvalue="Python.test.url" />
-      <item index="8" class="java.lang.String" itemvalue="Python tests.Unittests in DispatchTest_Instructor" />
-      <item index="9" class="java.lang.String" itemvalue="Python tests.Unittests in MyTestCase" />
+      <item index="4" class="java.lang.String" itemvalue="Python.dispatchCustomer" />
+      <item index="5" class="java.lang.String" itemvalue="Python.dispatch" />
+      <item index="6" class="java.lang.String" itemvalue="Python.test.url" />
+      <item index="7" class="java.lang.String" itemvalue="Python tests.Unittests in DispatchTest_Instructor" />
+      <item index="8" class="java.lang.String" itemvalue="Python tests.Unittests in MyTestCase" />
+      <item index="9" class="java.lang.String" itemvalue="Python.Sandbox" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in MyTestCase" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test.url" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dispatchCustomer" />
-        <item index="3" class="java.lang.String" itemvalue="Python.dispatch" />
-        <item index="4" class="java.lang.String" itemvalue="Python.convertStringCustomer" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Sandbox" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in MyTestCase" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test.url" />
+        <item index="3" class="java.lang.String" itemvalue="Python.dispatchCustomer" />
+        <item index="4" class="java.lang.String" itemvalue="Python.dispatch" />
       </list>
     </recent_temporary>
   </component>
@@ -668,24 +681,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 04h 57m 31s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 04h 57m 33s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 04h 59m 55s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 02m 32s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 09m 17s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 10m 08s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 27m 13s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -698,16 +693,34 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 29m 34s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 30m 49s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 33m 14s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 33m 54s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 34m 10s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 34m 22s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 05h 34m 32s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1731533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3058985" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.081001475" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32235938" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39643347" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32098764" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39643347" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -775,16 +788,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test.url.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1139,37 +1142,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/dispatchPredictTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="600">
+          <caret line="40" column="47" lean-forward="false" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/Sandbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="124" column="40" lean-forward="false" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+        <state relative-caret-position="146">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1547#1608#0" expanded="false" />
-            <element signature="e#1741#1801#0" expanded="false" />
-            <element signature="e#1878#5191#0" expanded="false" />
-            <element signature="e#1957#2035#0" expanded="false" />
-            <element signature="e#2082#2151#0" expanded="false" />
-            <element signature="e#2258#5100#0" expanded="false" />
-            <element signature="e#2666#2737#0" expanded="false" />
-            <element signature="e#2796#3122#0" expanded="false" />
-            <element signature="e#2883#2959#0" expanded="false" />
-            <element signature="e#3046#3122#0" expanded="false" />
-            <element signature="e#3178#3493#0" expanded="false" />
-            <element signature="e#3262#3335#0" expanded="false" />
-            <element signature="e#3420#3493#0" expanded="false" />
-            <element signature="e#3546#3960#0" expanded="false" />
-            <element signature="e#3888#3960#0" expanded="false" />
-            <element signature="e#5275#5353#0" expanded="false" />
-            <element signature="e#5433#5498#0" expanded="false" />
+            <element signature="e#2194#2255#0" expanded="false" />
+            <element signature="e#2388#2448#0" expanded="false" />
+            <element signature="e#2525#5838#0" expanded="false" />
+            <element signature="e#2604#2682#0" expanded="false" />
+            <element signature="e#2729#2798#0" expanded="false" />
+            <element signature="e#2905#5747#0" expanded="false" />
+            <element signature="e#3313#3384#0" expanded="false" />
+            <element signature="e#3443#3769#0" expanded="false" />
+            <element signature="e#3530#3606#0" expanded="false" />
+            <element signature="e#3693#3769#0" expanded="false" />
+            <element signature="e#3825#4140#0" expanded="false" />
+            <element signature="e#3909#3982#0" expanded="false" />
+            <element signature="e#4067#4140#0" expanded="false" />
+            <element signature="e#4193#4607#0" expanded="false" />
+            <element signature="e#4535#4607#0" expanded="false" />
+            <element signature="e#5922#6000#0" expanded="false" />
+            <element signature="e#6080#6145#0" expanded="false" />
           </folding>
         </state>
       </provider>
