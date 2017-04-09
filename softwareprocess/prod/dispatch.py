@@ -157,14 +157,18 @@ def convertAngleToDeg(angle):
 
 def calcCumProgression(values):
     GHAariesAnnualDecrease = '-0d14.31667'
-    date = values['date']
+    date = '2001-01-01'
+    if 'date' in values:
+        date = values['date']
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
     diffYear = obsYear - 2001
     cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
     return cumProgression
 
 def calcNumLeapYear(values):
-    date = values['date']
+    date = '2001-01-01'
+    if 'date' in values:
+        date = values['date']
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
     numLeapYear = 0
     for year in range(2001,obsYear):
@@ -182,7 +186,10 @@ def calcTotalLeapProg(values):
 
 def calcTotalSeconds(values):
     refYear = 2001
-    date = values['date']
+
+    date = '2001-01-01'
+    if 'date' in values:
+        date = values['date']
     time = values['time']
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
     refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
