@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f3c3800-46e7-4165-a279-545d97e2d7ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
-    </list>
+    <list default="true" id="4f3c3800-46e7-4165-a279-545d97e2d7ce" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,22 +50,22 @@
       <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="76" column="30" lean-forward="false" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="30" />
+            <state relative-caret-position="246">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#4450#4511#0" expanded="false" />
-                <element signature="e#4644#4704#0" expanded="false" />
-                <element signature="e#4781#8094#0" expanded="false" />
-                <element signature="e#5569#5640#0" expanded="false" />
-                <element signature="e#5699#6025#0" expanded="false" />
-                <element signature="e#5786#5862#0" expanded="false" />
-                <element signature="e#5949#6025#0" expanded="false" />
-                <element signature="e#6081#6396#0" expanded="false" />
-                <element signature="e#6165#6238#0" expanded="false" />
-                <element signature="e#6323#6396#0" expanded="false" />
-                <element signature="e#6449#6863#0" expanded="false" />
-                <element signature="e#6791#6863#0" expanded="false" />
+                <element signature="e#4282#4343#0" expanded="false" />
+                <element signature="e#4476#4536#0" expanded="false" />
+                <element signature="e#4613#7926#0" expanded="false" />
+                <element signature="e#5401#5472#0" expanded="false" />
+                <element signature="e#5531#5857#0" expanded="false" />
+                <element signature="e#5618#5694#0" expanded="false" />
+                <element signature="e#5781#5857#0" expanded="false" />
+                <element signature="e#5913#6228#0" expanded="false" />
+                <element signature="e#5997#6070#0" expanded="false" />
+                <element signature="e#6155#6228#0" expanded="false" />
+                <element signature="e#6281#6695#0" expanded="false" />
+                <element signature="e#6623#6695#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -149,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
       <find>upper</find>
       <find>t =</find>
       <find>constant</find>
@@ -179,6 +176,7 @@
       <find>star</find>
       <find>date</find>
       <find>convertan</find>
+      <find>convertAngle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -648,7 +646,24 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <list size="10">
+    <configuration default="false" name="refactorAttempt" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/softwareprocess/prod" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSSE" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="11">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.All Tests (TDD)" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.SampleTest.py" />
@@ -659,6 +674,7 @@
       <item index="7" class="java.lang.String" itemvalue="Python tests.Unittests in DispatchTest_Instructor" />
       <item index="8" class="java.lang.String" itemvalue="Python tests.Unittests in MyTestCase" />
       <item index="9" class="java.lang.String" itemvalue="Python.Sandbox" />
+      <item index="10" class="java.lang.String" itemvalue="Python.refactorAttempt" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -677,15 +693,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 18h 47m 02s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 18h 47m 59s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 18h 49m 04s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.08 at 18h 49m 15s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -705,6 +712,15 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.08 at 19h 05m 51s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 19h 08m 53s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 19h 11m 09s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 19h 13m 03s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -1156,22 +1172,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="76" column="30" lean-forward="false" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="30" />
+        <state relative-caret-position="246">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#4450#4511#0" expanded="false" />
-            <element signature="e#4644#4704#0" expanded="false" />
-            <element signature="e#4781#8094#0" expanded="false" />
-            <element signature="e#5569#5640#0" expanded="false" />
-            <element signature="e#5699#6025#0" expanded="false" />
-            <element signature="e#5786#5862#0" expanded="false" />
-            <element signature="e#5949#6025#0" expanded="false" />
-            <element signature="e#6081#6396#0" expanded="false" />
-            <element signature="e#6165#6238#0" expanded="false" />
-            <element signature="e#6323#6396#0" expanded="false" />
-            <element signature="e#6449#6863#0" expanded="false" />
-            <element signature="e#6791#6863#0" expanded="false" />
+            <element signature="e#4282#4343#0" expanded="false" />
+            <element signature="e#4476#4536#0" expanded="false" />
+            <element signature="e#4613#7926#0" expanded="false" />
+            <element signature="e#5401#5472#0" expanded="false" />
+            <element signature="e#5531#5857#0" expanded="false" />
+            <element signature="e#5618#5694#0" expanded="false" />
+            <element signature="e#5781#5857#0" expanded="false" />
+            <element signature="e#5913#6228#0" expanded="false" />
+            <element signature="e#5997#6070#0" expanded="false" />
+            <element signature="e#6155#6228#0" expanded="false" />
+            <element signature="e#6281#6695#0" expanded="false" />
+            <element signature="e#6623#6695#0" expanded="false" />
           </folding>
         </state>
       </provider>
