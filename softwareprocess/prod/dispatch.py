@@ -113,7 +113,7 @@ def dispatch(values=None):
             values['error'] = 'lat and/or long already in dict'
             return values
 
-        index = Stars.starsInsensitive.index(body)
+        index = Stars.starsInsensitive.index(body.lower())
         latitude = Stars.declination[index]
         values['lat'] = latitude
         SHA = Stars.siderealHour[index]
