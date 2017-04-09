@@ -62,18 +62,9 @@ class dispatchPredict(unittest.TestCase):
 
     def test100_060_shouldReturnDiffSeconds(self):
         values = {'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
-        expectedResult = 
-        def calcTotalSeconds(values):
-    refYear = 2001
-    date = values['date']
-    time = values['time']
-    obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
-    refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
-    obsDate = date + ' ' + time
-    refDateDate = datetime.datetime.strptime(refDate, '%Y-%m-%d %H:%M:%S')
-    obsDateDate = datetime.datetime.strptime(obsDate, '%Y-%m-%d %H:%M:%S')
-    deltaSeconds = (obsDateDate-refDateDate).total_seconds()
-    return deltaSeconds
+        expectedResult = 1394142
+        self.assertEqual(DP.calcTotalSeconds(values),expectedResult)
+    
 
 ####sad path
 
