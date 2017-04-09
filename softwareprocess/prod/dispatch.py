@@ -45,9 +45,7 @@ def calcNumLeapYear(values):
 
 def calcTotalLeapProg(values):
     rotPeriod = 86164.1
-    clockPeriod = 86400
-    dailyDeg = convertAngleFromDeg('360d0.00')
-    dailyRot = abs(dailyDeg-(rotPeriod/clockPeriod*dailyDeg))
+    dailyRot = abs(convertAngleFromDeg('360d0.00') - (rotPeriod / 86400 * convertAngleFromDeg('360d0.00')))
     totalLeapProg = calcNumLeapYear(values) * dailyRot
     return totalLeapProg
 
