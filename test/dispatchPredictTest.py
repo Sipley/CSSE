@@ -58,7 +58,7 @@ class dispatchPredict(unittest.TestCase):
     def test100_050_shouldReturnTotalLeapProg(self):
         values = {'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
         expectedResult = 2.94875
-        self.assertAlmostEqual(DP.calcTotalLeapProg(values),expectedResult,5)
+        self.assertAlmostEqual(DP.calcTotalLeapProg(values),expectedResult,6)
 
 ####sad path
 
