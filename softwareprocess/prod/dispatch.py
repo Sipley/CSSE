@@ -26,7 +26,7 @@ def convertAngleToDeg(angle):
     convertedAngle = str(degree)+'d'+str(arcminute)
     return convertedAngle
 
-class calcuation():
+class Calculation():
     def __init__(self):
         pass
 
@@ -194,7 +194,7 @@ def dispatch(values=None):
         latitude = Stars.declination[index]
         values['lat'] = latitude
         SHA = Stars.siderealHour[index]
-        GHAstar = calcuation.calcAmtRotAries(values) + convertAngleFromDeg(SHA)
+        GHAstar = Calculation.calcAmtRotAries(values) + convertAngleFromDeg(SHA)
         while GHAstar > 360:
             GHAstar = GHAstar - 360
         values['long'] = convertAngleToDeg(GHAstar)
