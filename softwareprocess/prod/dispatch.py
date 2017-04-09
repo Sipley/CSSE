@@ -14,7 +14,6 @@ class Stars():
 class AngleConversion():
     def __init__(self):
         pass
-
     def convertAngleFromDeg(angle):
         degree = angle.split('d')[0]
         arcminute = float(angle.split('d')[1])/60
@@ -75,7 +74,7 @@ def calcAmtRot(values):
     return amtRot
 
 def calcAmtRotAries(values):
-    GHAaries = '100d42.6'
+    isinstance(AngleConversion)
     GHAariesObs = AngleConversion.convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
     GHAariesTotal = GHAariesObs + calcAmtRot(values)
     return GHAariesTotal
