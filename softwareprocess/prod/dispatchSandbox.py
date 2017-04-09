@@ -171,7 +171,7 @@ def dispatch(values=None):
             amtRot = amtRot - 360
 
         GHAaries = '100d42.6'
-        GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
+        GHAariesObs = convertAngleFromDeg(GHAaries) + cumProgression + totalLeapProg
         GHAariesTotal = GHAariesObs + amtRot
 
         index = Stars.stars.index(body)
