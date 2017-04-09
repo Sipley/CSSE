@@ -56,9 +56,8 @@ def calcTotalSeconds(values):
     date = values['date']
     time = values['time']
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
-    refDate = str(obsYear) + '-01-01' + ' ' + '00:00:00'
     obsDate = date + ' ' + time
-    refDateDate = datetime.datetime.strptime(refDate, '%Y-%m-%d %H:%M:%S')
+    refDateDate = datetime.datetime.strptime(str(obsYear) + '-01-01' + ' ' + '00:00:00', '%Y-%m-%d %H:%M:%S')
     obsDateDate = datetime.datetime.strptime(obsDate, '%Y-%m-%d %H:%M:%S')
     deltaSeconds = (obsDateDate-refDateDate).total_seconds()
     return deltaSeconds
