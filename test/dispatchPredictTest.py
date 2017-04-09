@@ -50,6 +50,12 @@ class dispatchPredict(unittest.TestCase):
         expectedResult = -3.5791675
         self.assertEqual(DP.calcCumProgression(values),expectedResult)
 
+    def test100_040_shouldReturnNumLeapYear(self):
+        values = {'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
+        expectedResult = 3
+        self.assertEqual(DP.calcNumLeapYear(values),expectedResult)
+
+
 ####sad path
 
     def test900_010_shouldReturnErrorMissingInfo(self):
