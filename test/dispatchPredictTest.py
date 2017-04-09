@@ -64,7 +64,11 @@ class dispatchPredict(unittest.TestCase):
         values = {'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
         expectedResult = 1394142
         self.assertEqual(DP.calcTotalSeconds(values),expectedResult)
-    
+
+    def test100_070_shouldReturnAmtRot(self):
+        values = {'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
+        expectedResult = 64.82866995
+        self.assertEqual(DP.calcAmtRot(values),expectedResult)
 
 ####sad path
 
