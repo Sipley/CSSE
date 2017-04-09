@@ -1,6 +1,6 @@
 import unittest
 
-import softwareprocess.prod.dispatchSandbox as DP
+import softwareprocess.prod.dispatch as DP
 
 class dispatchPredict(unittest.TestCase):
 
