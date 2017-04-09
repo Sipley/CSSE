@@ -70,6 +70,12 @@ class dispatchPredict(unittest.TestCase):
         expectedResult = 64.82866995
         self.assertAlmostEqual(DP.calcAmtRot(values),expectedResult)
 
+    def test100_080_shouldReturnAmtRotAries(self):
+        values = {'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
+        expectedResult = 164.9082525
+        self.assertEqual(DP.calcAmtRotAries(values),expectedResult)
+
+
 ####sad path
 
     def test900_010_shouldReturnErrorMissingInfo(self):
