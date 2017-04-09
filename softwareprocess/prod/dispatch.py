@@ -71,7 +71,7 @@ def calcAmtRot(values):
     return amtRot
 
 def calcAmtRotAries(values):
-    isinstance(AngleConversion)
+    GHAaries = '100d42.6'
     GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
     GHAariesTotal = GHAariesObs + calcAmtRot(values)
     return GHAariesTotal
