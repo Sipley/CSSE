@@ -46,15 +46,9 @@ class dispatchPredict(unittest.TestCase):
         self.assertEqual(DP.convertAngleToDeg(angle),expectedResult)
 
     def test100_030_shouldReturnCumProg(self):
-        values = 
-
-    calcCumProgression(values):
-    GHAariesAnnualDecrease = '-0d14.31667'
-    date = values['date']
-    obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
-    diffYear = obsYear - 2001
-    cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
-    return cumProgression
+        values = {'op':'predict','body':'Betelgeuse','date':'2016-01-17','time':'03:15:42'}
+        expectedResult = -3.5791675
+        self.assertEqual(DP.calcCumProgression(values),expectedResult)
 
 ####sad path
 
