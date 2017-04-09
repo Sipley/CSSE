@@ -190,7 +190,7 @@ def calcTotalSeconds(values):
     date = '2001-01-01'
     if 'date' in values:
         date = values['date']
-    time = 00:00:00
+    time = '00:00:00'
     if 'time' in values:
         time = values['time']
     obsYear = datetime.datetime.strptime(date,'%Y-%m-%d').year
