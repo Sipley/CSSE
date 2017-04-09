@@ -178,7 +178,7 @@ def dispatch(values=None):
         latitude = Stars.declination[index]
         values['lat'] = latitude
         SHA = Stars.siderealHour[index]
-        GHAstar = GHAariesTotal(values) + convertAngleFromDeg(SHA)
+        GHAstar = GHAariesTotal + convertAngleFromDeg(SHA)
         while GHAstar > 360:
             GHAstar = GHAstar - 360
         values['long'] = convertAngleToDeg(GHAstar)
