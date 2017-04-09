@@ -37,7 +37,7 @@ class dispatchPredict(unittest.TestCase):
 
     def test100_010_shouldReturnAngleConvertedFromDeg(self):
         angle = '100d42.6'
-        expectedResult = '100.71'
+        expectedResult = 100.71
         self.assertEqual(DP.convertAngleFromDeg(angle),expectedResult)
 
 ####sad path
