@@ -128,10 +128,11 @@ def dispatch(values=None):
             values['error'] = 'mandatory information is missing'
         lat = values['lat']
         try:
-            degree = lat.split('d')[0]
+            degree = int(lat.split('d')[0])
             arcminute = float(lat.split('d')[1])/60
-            int(degree)
-            float(arcminute,1)
+        except ValueError:
+            values['error'] = 'invalid lat'
+
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
