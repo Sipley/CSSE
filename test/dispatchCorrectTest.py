@@ -87,26 +87,33 @@ class MyTestCase(unittest.TestCase):
         expectedResult={'op':'correct', 'lat': '8960.0', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid lat'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test900_180_shouldReturnErrorInvAlt(self):
         values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'1342.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'1342.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'invalid altitude'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test900_190_shouldReturnErrorInvAlt(self):
         values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'0d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'0d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'invalid altitude'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test900_200_shouldReturnErrorInvAlt(self):
         values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'90d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'90d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'invalid altitude'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test900_210_shouldReturnErrorInvAlt(self):
         values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13.0d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13.0d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid altitude'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test900_220_shouldReturnErrorInvAlt(self):
         values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d-1.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d-1.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid altitude'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test900_230_shouldReturnErrorInvAlt(self):
+        values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d60.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d60.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid altitude'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
