@@ -24,7 +24,7 @@ class MyTestCase(unittest.TestCase):
 
     def test100_050_shouldReturnErrorNoLong(self):
         values={'op':'correct', 'lat': '16d32.3', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
-        expectedResult=
+        expectedResult={'op':'correct', 'lat': '16d32.3', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'mandatory information is missing'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
 if __name__ == '__main__':
