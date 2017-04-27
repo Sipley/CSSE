@@ -133,8 +133,8 @@ def dispatch(values=None):
         assumedLat = values['assumedLat']
         assumedLong = values['assumedLong']
         try:
-            degreeLat = int(lat.split('d')[0])
-            arcminuteLat = float(lat.split('d')[1])
+            degreeLat = lat.split('d')[0]
+            arcminuteLat = lat.split('d')[1]
         except ValueError:
             values['error'] = 'invalid lat'
             return values
@@ -149,8 +149,8 @@ def dispatch(values=None):
             values['error'] = 'invalid lat'
             return values
         try:
-            degreeLong = int(long.split('d')[0])
-            arcminuteLong = float(long.split('d')[1])
+            degreeLong = long.split('d')[0]
+            arcminuteLong = long.split('d')[1]
         except ValueError:
             values['error'] = 'invalid long'
             return values
@@ -162,8 +162,8 @@ def dispatch(values=None):
             values['error'] = 'invalid long'
             return values
         try:
-            degreeAlt = int(altitude.split('d')[0])
-            arcminuteAlt = float(altitude.split('d')[1])
+            degreeAlt = altitude.split('d')[0]
+            arcminuteAlt = altitude.split('d')[1]
         except ValueError:
             values['error'] = 'invalid altitude'
             return values
@@ -178,8 +178,8 @@ def dispatch(values=None):
             values['error'] = 'invalid altitude'
             return values
         try:
-            degreeAssumedLat = int(assumedLat.split('d')[0])
-            arcminuteAssumedLat = float(assumedLat.split('d')[1])
+            degreeAssumedLat = assumedLat.split('d')[0]
+            arcminuteAssumedLat = assumedLat.split('d')[1]
         except ValueError:
             values['error'] = 'invalid assumedLat'
             return values
@@ -194,8 +194,8 @@ def dispatch(values=None):
             values['error'] = 'invalid assumedLat'
             return values
         try:
-            degreeAssumedLong = int(assumedLong.split('d')[0])
-            arcminuteAssumedLong = float(assumedLong.split('d')[1])
+            degreeAssumedLong = assumedLong.split('d')[0]
+            arcminuteAssumedLong = assumedLong.split('d')[1]
         except ValueError:
             values['error'] = 'invalid assumedLong'
             return values
