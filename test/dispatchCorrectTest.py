@@ -114,7 +114,7 @@ class MyTestCase(unittest.TestCase):
 
     def test900_230_shouldReturnErrorInvAlt(self):
         values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d90.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
-        expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d90.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid altitude'}
+        expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d90.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
 if __name__ == '__main__':
