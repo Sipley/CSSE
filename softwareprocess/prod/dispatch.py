@@ -164,8 +164,10 @@ def dispatch(values=None):
             return values
         if not(0 < degreeAlt < 90):
             values['error'] = 'invalid altitude'
+            return values
         if not(0 <= arcminuteAlt < 60.0):
             values['error'] = 'invalid altitude'
+            return values
         try:
             degreeAssumedLat = int(assumedLat.split('d')[0])
             arcminuteAssumedLat = float(assumedLat.split('d')[1])/60
