@@ -78,13 +78,36 @@ class MyTestCase(unittest.TestCase):
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
     def test900_160_shouldReturnErrorInvLat(self):
-        values={'op':'correct', 'lat': '89d60.0', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
-        expectedResult={'op':'correct', 'lat': '89d60.0', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid lat'}
+        values={'op':'correct', 'lat': '90d60.0', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult={'op':'correct', 'lat': '90d60.0', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid lat'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
     def test900_170_shouldReturnErrorInvLat(self):
         values={'op':'correct', 'lat': '8960.0', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult={'op':'correct', 'lat': '8960.0', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid lat'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
+
+        values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'1342.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'1342.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'invalid altitude'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
+
+        values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'0d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'0d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'invalid altitude'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
+
+        values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'90d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'90d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'invalid altitude'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
+
+        values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13.0d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13.0d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid altitude'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
+
+        values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d-1.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d-1.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid altitude'}
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
+
+        expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d60.0', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3','error':'invalid altitude'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
 if __name__ == '__main__':

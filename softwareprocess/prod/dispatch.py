@@ -156,6 +156,17 @@ def dispatch(values=None):
             values['error'] = 'invalid long'
             return values
         try:
+            degreeAlt = int(altitude.split('d')[0])
+            arcminuteAlt = float(altitude.split('d')[1])/60
+            int(arcminuteAlt * 10)
+        except ValueError:
+            values['error'] = 'invalid altitude'
+            return values
+        if not(0 < degreeAlt < 90):
+            values['error'] = 'invalid altitude'
+        if not(0 < arcminuteAlt < 60.0):
+            values['error'] = 'invalid altitude'
+        try:
             degreeAssumedLat = int(assumedLat.split('d')[0])
             arcminuteAssumedLat = float(assumedLat.split('d')[1])/60
             int(arcminuteAssumedLat * 10)
@@ -168,7 +179,19 @@ def dispatch(values=None):
         if not(0 <= arcminuteAssumedLat < 60.0):
             values['error'] = 'invalid assumedLat'
             return values
-
+        try:
+            degreeAssumedLong = int(assumedLong.split('d')[0])
+            arcminuteAssumedLong = float(assumedLong.split('d')[1])/60
+            int(arcminuteAssumedLong * 10)
+        except ValueError:
+            values['error'] = 'invalid assumedLong'
+            return values
+        if not(-90 < degreeAssumedLong < 90):
+            values['error'] = 'invalid assumedLong'
+            return values
+        if not(0 <= arcminuteAssumedLong < 60.0):
+            values['error'] = 'invalid assumedLong'
+            return values
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
