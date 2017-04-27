@@ -181,7 +181,7 @@ def dispatch(values=None):
             values['error'] = 'invalid altitude'
             return values
 
-        if not(re.match('\d+d\d+\.\d$', assumedLat)):
+        if not(re.match('\-*\d+d\d+\.\d$', assumedLat)):
             values['error'] = 'invalid assumedLat'
             return values
         degreeAssumedLat = int(assumedLat.split('d')[0])
