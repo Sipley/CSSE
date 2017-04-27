@@ -138,12 +138,14 @@ def dispatch(values=None):
             int(arcminuteLat * 10)
         except ValueError:
             values['error'] = 'invalid lat'
+            return values
         try:
             degreeLong = int(long.split('d')[0])
             arcminuteLong = float(long.split('d')[1])/60
             int(arcminuteLong * 10)
         except ValueError:
             values['error'] = 'invalid lat'
+            return values
         if not(0 <= degreeLong < 360):
             values['error'] = 'invalid long'
             return values
