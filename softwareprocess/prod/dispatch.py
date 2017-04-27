@@ -140,8 +140,10 @@ def dispatch(values=None):
             return values
         if not(isinstance(degreeLat, int)):
             values['error'] = 'invalid lat'
+            return values
         if not(isinstance(arcminuteLat, float)):
             values['error'] = 'invalid lat'
+            return values
         if not(-90 < degreeLat < 90):
             values['error'] = 'invalid lat'
             return values
@@ -156,8 +158,10 @@ def dispatch(values=None):
             return values
         if not(isinstance(degreeLong, int)):
             values['error'] = 'invalid long'
+            return values
         if not(isinstance(arcminuteLong, float)):
             values['error'] = 'invalid long'
+            return values
         if not(0 <= degreeLong < 360):
             values['error'] = 'invalid long'
             return values
@@ -169,8 +173,10 @@ def dispatch(values=None):
             return values
         if not(isinstance(degreeAlt, int)):
             values['error'] = 'invalid altitude'
+            return values
         if not(isinstance(arcminuteAlt, float)):
             values['error'] = 'invalid altitude'
+            return values
         if not(0 < degreeAlt < 90):
             values['error'] = 'invalid altitude'
             return values
@@ -185,8 +191,10 @@ def dispatch(values=None):
             return values
         if not(isinstance(degreeAssumedLat, int)):
             values['error'] = 'invalid assumedLat'
+            return values
         if not(isinstance(arcminuteAssumedLat, float)):
             values['error'] = 'invalid assumedLat'
+            return values
         if not(-90 < degreeAssumedLat < 90):
             values['error'] = 'invalid assumedLat'
             return values
@@ -201,8 +209,10 @@ def dispatch(values=None):
             return values
         if not(isinstance(degreeAssumedLong, int)):
             values['error'] = 'invalid assumedLong'
+            return values
         if not(isinstance(arcminuteAssumedLong, float)):
             values['error'] = 'invalid assumedLong'
+            return values
         if not(0 < degreeAssumedLong < 360):
             values['error'] = 'invalid assumedLong'
             return values

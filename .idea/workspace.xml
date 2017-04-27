@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="204" column="50" lean-forward="false" selection-start-line="204" selection-start-column="50" selection-end-line="204" selection-end-column="50" />
+            <state relative-caret-position="100">
+              <caret line="134" column="11" lean-forward="false" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="11" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#1252#1323#0" expanded="false" />
@@ -80,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatchCorrectTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dispatchCorrectTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/dispatchCorrectTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="156" column="141" lean-forward="true" selection-start-line="156" selection-start-column="141" selection-end-line="156" selection-end-column="141" />
+            <state relative-caret-position="240">
+              <caret line="85" column="46" lean-forward="false" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -148,7 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>exception</find>
       <find>lowerBound</find>
       <find>lowerBoun</find>
       <find>mandatory</find>
@@ -174,10 +173,11 @@
       <find>time</find>
       <find>time = values</find>
       <find>degree</find>
-      <find>try</find>
       <find>valuee</find>
       <find>altitude</find>
       <find>assumedlong</find>
+      <find>assumed</find>
+      <find>try</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -700,12 +700,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 16m 50s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 18m 13s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 19m 07s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -728,6 +722,12 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 52m 12s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 54m 54s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 58m 10s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -1104,14 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="13" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-932">
@@ -1130,10 +1122,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dispatchCorrectTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="85" column="46" lean-forward="false" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="204" column="50" lean-forward="false" selection-start-line="204" selection-start-column="50" selection-end-line="204" selection-end-column="50" />
+        <state relative-caret-position="100">
+          <caret line="134" column="11" lean-forward="false" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="11" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#1252#1323#0" expanded="false" />
@@ -1144,16 +1154,6 @@
             <element signature="e#2006#2079#0" expanded="false" />
             <element signature="e#2132#2546#0" expanded="false" />
             <element signature="e#2474#2546#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/dispatchCorrectTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="156" column="141" lean-forward="true" selection-start-line="156" selection-start-column="141" selection-end-line="156" selection-end-column="141" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
