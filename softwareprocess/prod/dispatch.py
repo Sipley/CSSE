@@ -127,12 +127,15 @@ def dispatch(values=None):
         if not(all(key in values for key in ['lat','long','altitude','assumedLat','assumedLong'])):
             values['error'] = 'mandatory information is missing'
             return values
+        #if key in values for key in ['correctedDistance','correctedAzimuth']:
+        #    values['error'] = 'correctedDistance and/or correctedAzimuth already present'
+        #    return values
         lat = values['lat']
         long = values['long']
         altitude = values['altitude']
         assumedLat = values['assumedLat']
         assumedLong = values['assumedLong']
-        if not(re.match('\d+d\d+\.\d$', lat)):
+        if not(re.match('\-*\d+d\d+\.\d$', lat)):
             values['error'] = 'invalid lat'
             return values
         degreeLat = int(lat.split('d')[0])
@@ -180,7 +183,6 @@ def dispatch(values=None):
         if not(0 <= arcminuteAlt < 60.0):
             values['error'] = 'invalid altitude'
             return values
-
         if not(re.match('\-*\d+d\d+\.\d$', assumedLat)):
             values['error'] = 'invalid assumedLat'
             return values
@@ -198,7 +200,6 @@ def dispatch(values=None):
         if not(0 <= arcminuteAssumedLat < 60.0):
             values['error'] = 'invalid assumedLat'
             return values
-
         if not(re.match('\d+d\d+\.\d$', assumedLong)):
             values['error'] = 'invalid assumedLong'
             return values
@@ -216,7 +217,6 @@ def dispatch(values=None):
         if not(0 <= arcminuteAssumedLong < 60.0):
             values['error'] = 'invalid assumedLong'
             return values
-
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
