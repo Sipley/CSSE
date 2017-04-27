@@ -124,12 +124,26 @@ def dispatch(values=None):
 
         return values
     elif(values['op'] == 'correct'):
+        if not('lat' in values) or (not '' != values["lat"]):
+            values['error'] = 'mandatory information is missing'
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
     else:
         values['error'] = 'op is not a legal operation'
         return values
+
+class Values(object):
+    def __init__(self, long, lat, altitude, assumedLat, assumedLong):
+        self.long = long
+        self.lat = lat
+        self.altitude = altitude
+        self.assumedLat = assumedLat
+        self.assumedLong = assumedLong
+
+    isinstance(object, Values):
+        print 'okay something happened'
+
 
 class Stars():
     def __init__(self):
