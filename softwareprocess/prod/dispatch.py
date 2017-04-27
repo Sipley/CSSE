@@ -127,9 +127,9 @@ def dispatch(values=None):
         if not(all(key in values for key in ['lat','long','altitude','assumedLat','assumedLong'])):
             values['error'] = 'mandatory information is missing'
             return values
-        #if key in values for key in ['correctedDistance','correctedAzimuth']:
-        #    values['error'] = 'correctedDistance and/or correctedAzimuth already present'
-        #    return values
+        if key in values for key in ['correctedDistance','correctedAzimuth']:
+            values['error'] = 'correctedDistance and/or correctedAzimuth already present'
+            return values
         lat = values['lat']
         long = values['long']
         altitude = values['altitude']
