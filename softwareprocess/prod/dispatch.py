@@ -134,7 +134,7 @@ def dispatch(values=None):
         assumedLong = values['assumedLong']
         try:
             degreeLat = int(lat.split('d')[0])
-            arcminuteLat = float(lat.split('d')[1])/60
+            arcminuteLat = float(lat.split('d')[1])
             int(arcminuteLat * 10)
         except ValueError:
             values['error'] = 'invalid lat'
@@ -147,7 +147,7 @@ def dispatch(values=None):
             return values
         try:
             degreeLong = int(long.split('d')[0])
-            arcminuteLong = float(long.split('d')[1])/60
+            arcminuteLong = float(long.split('d')[1])
             int(arcminuteLong * 10)
         except ValueError:
             values['error'] = 'invalid long'
@@ -157,7 +157,7 @@ def dispatch(values=None):
             return values
         try:
             degreeAlt = int(altitude.split('d')[0])
-            arcminuteAlt = float(altitude.split('d')[1])/60
+            arcminuteAlt = float(altitude.split('d')[1])
             int(arcminuteAlt * 10)
         except ValueError:
             values['error'] = 'invalid altitude'
@@ -170,7 +170,7 @@ def dispatch(values=None):
             return values
         try:
             degreeAssumedLat = int(assumedLat.split('d')[0])
-            arcminuteAssumedLat = float(assumedLat.split('d')[1])/60
+            arcminuteAssumedLat = float(assumedLat.split('d')[1])
             int(arcminuteAssumedLat * 10)
         except ValueError:
             values['error'] = 'invalid assumedLat'
@@ -183,7 +183,7 @@ def dispatch(values=None):
             return values
         try:
             degreeAssumedLong = int(assumedLong.split('d')[0])
-            arcminuteAssumedLong = float(assumedLong.split('d')[1])/60
+            arcminuteAssumedLong = float(assumedLong.split('d')[1])
             int(arcminuteAssumedLong * 10)
         except ValueError:
             values['error'] = 'invalid assumedLong'
