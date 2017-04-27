@@ -180,7 +180,7 @@ def dispatch(values=None):
         if not(0 <= arcminuteAlt < 60.0):
             values['error'] = 'invalid altitude'
             return values
-        '''
+
         if not(re.match('\d+d\d+\.\d$', assumedLat)):
             values['error'] = 'invalid assumedLat'
             return values
@@ -198,7 +198,7 @@ def dispatch(values=None):
         if not(0 <= arcminuteAssumedLat < 60.0):
             values['error'] = 'invalid assumedLat'
             return values
-        '''
+
         if not(re.match('\d+d\d+\.\d$', assumedLong)):
             values['error'] = 'invalid assumedLong'
             return values
