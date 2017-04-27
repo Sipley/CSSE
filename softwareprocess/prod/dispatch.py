@@ -135,10 +135,13 @@ def dispatch(values=None):
         try:
             degreeLat = int(lat.split('d')[0])
             arcminuteLat = float(lat.split('d')[1])
-            int(arcminuteLat * 10)
         except ValueError:
             values['error'] = 'invalid lat'
             return values
+        if not(isinstance(degreeLat, int)):
+            values['error'] = 'invalid lat'
+        if not(isinstance(arcminuteLat, float)):
+            values['error'] = 'invalid lat'
         if not(-90 < degreeLat < 90):
             values['error'] = 'invalid lat'
             return values
@@ -148,20 +151,26 @@ def dispatch(values=None):
         try:
             degreeLong = int(long.split('d')[0])
             arcminuteLong = float(long.split('d')[1])
-            int(arcminuteLong * 10)
         except ValueError:
             values['error'] = 'invalid long'
             return values
+        if not(isinstance(degreeLong, int)):
+            values['error'] = 'invalid long'
+        if not(isinstance(arcminuteLong, float)):
+            values['error'] = 'invalid long'
         if not(0 <= degreeLong < 360):
             values['error'] = 'invalid long'
             return values
         try:
             degreeAlt = int(altitude.split('d')[0])
             arcminuteAlt = float(altitude.split('d')[1])
-            int(arcminuteAlt * 10)
         except ValueError:
             values['error'] = 'invalid altitude'
             return values
+        if not(isinstance(degreeAlt, int)):
+            values['error'] = 'invalid altitude'
+        if not(isinstance(arcminuteAlt, float)):
+            values['error'] = 'invalid altitude'
         if not(0 < degreeAlt < 90):
             values['error'] = 'invalid altitude'
             return values
@@ -171,10 +180,13 @@ def dispatch(values=None):
         try:
             degreeAssumedLat = int(assumedLat.split('d')[0])
             arcminuteAssumedLat = float(assumedLat.split('d')[1])
-            int(arcminuteAssumedLat * 10)
         except ValueError:
             values['error'] = 'invalid assumedLat'
             return values
+        if not(isinstance(degreeAssumedLat, int)):
+            values['error'] = 'invalid assumedLat'
+        if not(isinstance(arcminuteAssumedLat, float)):
+            values['error'] = 'invalid assumedLat'
         if not(-90 < degreeAssumedLat < 90):
             values['error'] = 'invalid assumedLat'
             return values
@@ -184,10 +196,13 @@ def dispatch(values=None):
         try:
             degreeAssumedLong = int(assumedLong.split('d')[0])
             arcminuteAssumedLong = float(assumedLong.split('d')[1])
-            int(arcminuteAssumedLong * 10)
         except ValueError:
             values['error'] = 'invalid assumedLong'
             return values
+        if not(isinstance(degreeAssumedLong, int)):
+            values['error'] = 'invalid assumedLong'
+        if not(isinstance(arcminuteAssumedLong, float)):
+            values['error'] = 'invalid assumedLong'
         if not(0 < degreeAssumedLong < 360):
             values['error'] = 'invalid assumedLong'
             return values
