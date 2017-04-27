@@ -133,18 +133,6 @@ def dispatch(values=None):
         values['error'] = 'op is not a legal operation'
         return values
 
-class Values(object):
-    def __init__(self, long, lat, altitude, assumedLat, assumedLong):
-        self.long = long
-        self.lat = lat
-        self.altitude = altitude
-        self.assumedLat = assumedLat
-        self.assumedLong = assumedLong
-
-    isinstance(object, Values):
-        print 'okay something happened'
-
-
 class Stars():
     def __init__(self):
         pass
