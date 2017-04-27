@@ -142,7 +142,7 @@ def dispatch(values=None):
         if not(-90 < degreeLat < 90):
             values['error'] = 'invalid lat'
             return values
-        if not(0 <= arcminuteLong < 60.0):
+        if not(0 <= arcminuteLat < 60.0):
             values['error'] = 'invalid lat'
             return values
         try:
