@@ -128,12 +128,24 @@ def dispatch(values=None):
             values['error'] = 'mandatory information is missing'
             return values
         lat = values['lat']
+        long = values['long']
+        altitude = values['altitude']
+        assumedLat = values['assumedLat']
+        assumedLong = values['assumedLong']
         try:
             degreeLat = int(lat.split('d')[0])
             arcminuteLat = float(lat.split('d')[1])/60
         except ValueError:
             values['error'] = 'invalid lat'
-        assumedLat = values['assumedLat']
+        try:
+            degreeLong = int(long.split('d')[0])
+            arcminuteLong = float(long.split('d')[1])/60
+        except ValueError:
+            values['error'] = 'invalid lat'
+        if not(0 <= degreeLong < 360):
+            values['error'] = 'invalid long'
+            return values
+        if not()
         try:
             degreeAssumedLat = int(assumedLat.split('d')[0])
             arcminuteAssumedLat = float(assumedLat.split('d')[1])/60
