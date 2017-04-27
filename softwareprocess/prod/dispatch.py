@@ -124,7 +124,7 @@ def dispatch(values=None):
 
         return values
     elif(values['op'] == 'correct'):
-        if not 'lat' in values or values['lat'] != '':
+        if not('lat' in values):
             values['error'] = 'mandatory information is missing'
         lat = values['lat']
         try:
