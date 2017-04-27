@@ -22,5 +22,10 @@ class MyTestCase(unittest.TestCase):
         expectedResult={'op':'correct','lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-153d38.4', 'assumedLong':'74d35.3', 'error':'invalid assumedLat'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test100_050_shouldReturnErrorNoLong(self):
+        values={'op':'correct', 'lat': '16d32.3', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult=
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
+
 if __name__ == '__main__':
     unittest.main()

@@ -129,10 +129,27 @@ def dispatch(values=None):
             return values
         lat = values['lat']
         try:
-            degree = int(lat.split('d')[0])
-            arcminute = float(lat.split('d')[1])/60
+            degreeLat = int(lat.split('d')[0])
+            arcminuteLat = float(lat.split('d')[1])/60
         except ValueError:
             values['error'] = 'invalid lat'
+        if not('assumedLat' in values):
+            values['error'] = 'mandatory information is missing'
+            return values
+        assumedLat = values['assumedLat']
+        try:
+            degreeAssumedLat = int(assumedLat.split('d')[0])
+            arcminuteAssumedLat = float(assumedLat.split('d')[1])/60
+        except ValueError:
+            values['error'] = 'invalid assumedLat'
+            return values
+        if not(-90 < degreeAssumedLat < 90):
+            values['error'] = 'invalid assumedLat'
+            return values
+        if not(0 <= arcminuteAssumedLat < 60.0):
+            values['error'] = 'invalid assumedLat'
+            return values
+
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
