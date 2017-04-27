@@ -188,7 +188,7 @@ def dispatch(values=None):
         except ValueError:
             values['error'] = 'invalid assumedLong'
             return values
-        if not(-90 < degreeAssumedLong < 90):
+        if not(0 < degreeAssumedLong < 360):
             values['error'] = 'invalid assumedLong'
             return values
         if not(0 <= arcminuteAssumedLong < 60.0):
