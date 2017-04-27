@@ -184,17 +184,17 @@ class MyTestCase(unittest.TestCase):
 
     def test900_370_shouldReturnErrorAlreadyThere(self):
         values={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3','correctedDistance':'93d209.1'}
-        expectedResult={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3','correctedDistance':'93d209.1','correctedDistance and/or correctedAzimuth already present'}
+        expectedResult={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3','correctedDistance':'93d209.1','error':'correctedDistance and/or correctedAzimuth already present'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
     def test900_380_shouldReturnErrorAlreadyThere(self):
         values={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3','correctedAzimuth':'93d209.1'}
-        expectedResult={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3','correctedAzimuth':'93d209.1','correctedDistance and/or correctedAzimuth already present'}
+        expectedResult={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3','correctedAzimuth':'93d209.1','error':'correctedDistance and/or correctedAzimuth already present'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
     def test900_390_shouldReturnErrorAlreadyThere(self):
         values={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3','correctedAzimuth':'93d209.1','correctedDistance':'93d023.1'}
-        expectedResult=
+        expectedResult={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3','correctedAzimuth':'93d209.1','correctedDistance':'93d023.1','error':'correctedDistance and/or correctedAzimuth already present'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
 
