@@ -126,6 +126,7 @@ def dispatch(values=None):
     elif(values['op'] == 'correct'):
         if not('lat' in values):
             values['error'] = 'mandatory information is missing'
+            return values
         lat = values['lat']
         try:
             degree = int(lat.split('d')[0])
