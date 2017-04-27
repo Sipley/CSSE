@@ -27,5 +27,9 @@ class MyTestCase(unittest.TestCase):
         expectedResult={'op':'correct', 'lat': '16d32.3', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'mandatory information is missing'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
+    def test100_060_shouldReturnErrorNoAlt(self):
+        values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult=
+
 if __name__ == '__main__':
     unittest.main()

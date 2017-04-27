@@ -124,7 +124,7 @@ def dispatch(values=None):
 
         return values
     elif(values['op'] == 'correct'):
-        if not(all(key in values for key in ['lat','long'])):
+        if not(all(key in values for key in ['lat','long','assumedLat'])):
             values['error'] = 'mandatory information is missing'
             return values
         lat = values['lat']
@@ -133,9 +133,6 @@ def dispatch(values=None):
             arcminuteLat = float(lat.split('d')[1])/60
         except ValueError:
             values['error'] = 'invalid lat'
-        if not('assumedLat' in values):
-            values['error'] = 'mandatory information is missing'
-            return values
         assumedLat = values['assumedLat']
         try:
             degreeAssumedLat = int(assumedLat.split('d')[0])
