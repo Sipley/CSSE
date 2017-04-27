@@ -40,7 +40,11 @@ class MyTestCase(unittest.TestCase):
     def test900_080_shouldReturnErrorNoAssumedLong(self):
         values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4'}
         expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'error':'mandatory information is missing'}
-        self.assertDictEqual(DP.dispact(values),expectedResult)
+        self.assertDictEqual(DP.dispatch(values),expectedResult)
+
+    def test900_090_shouldReturnErrorInvLong(self):
+        values={'op':'correct','lat':'16d32.3', 'long':'-1d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult=
 
 if __name__ == '__main__':
     unittest.main()
