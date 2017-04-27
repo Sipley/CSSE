@@ -49,7 +49,7 @@ class MyTestCase(unittest.TestCase):
 
     def test900_100_shouldReturnErrorInvLong(self):
         values={'op':'correct','lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
-        expectedResult={'op':'correct','lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'invalid long}
+        expectedResult={'op':'correct','lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'error':'invalid long'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
     def test900_110_shouldReturnErrorInvLong(self):
