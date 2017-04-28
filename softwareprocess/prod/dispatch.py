@@ -311,15 +311,15 @@ def calcAmtRotAries(values):
     return GHAariesTotal
 
 class Values(object):
-    def __init__(self, op='correct', lat=None, long=None, altitude=None, assumedLat=None, assumedLong=None):
-        self.op = values['op']
-        self.lat = values['lat']
-        self.long = values['long']
-        self.altitude = values['altitude']
-        self.assumedLat = values['assumedLat']
-        self.assumedLong = values['assumedLong']
+    def __init__(self, op=None, lat=None, long=None, altitude=None, assumedLat=None, assumedLong=None):
+        self.op = op
+        self.lat = lat
+        self.long = long
+        self.altitude = altitude
+        self.assumedLat = assumedLat
+        self.assumedLong = assumedLong
 
 def checkDict(values):
-    result = Values(values)
-    print result.lat
+    result = Values(**values)
+    return result.lat
 
