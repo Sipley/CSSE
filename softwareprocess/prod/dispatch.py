@@ -346,15 +346,15 @@ class Values(object):
     def __init__(self, op=None, lat=None, long=None, altitude=None, assumedLat=None, assumedLong=None):
         self.op = op
         self.lat = lat
-        self.latDeg = float(convertAngleFromDeg(lat))
+        self.latDeg = convertAngleFromDeg(lat)
         self.long = long
-        self.longDeg = float(convertAngleFromDeg(long))
+        self.longDeg = convertAngleFromDeg(long)
         self.altitude = altitude
-        self.altitudeDeg = float(convertAngleFromDeg(altitude))
+        self.altitudeDeg = convertAngleFromDeg(altitude)
         self.assumedLat = assumedLat
-        self.assumedLatDeg = float(convertAngleFromDeg(assumedLat))
+        self.assumedLatDeg = convertAngleFromDeg(assumedLat)
         self.assumedLong = assumedLong
-        self.assumedLongDeg = float(convertAngleFromDeg(assumedLong))
+        self.assumedLongDeg = convertAngleFromDeg(assumedLong)
 
 
 def checkDict(values):
@@ -368,7 +368,7 @@ def calcLHA(values):
     return LHAdeg
 
 def calcIntDist(values):
-    intDist = ((math.sin(Values(**values).latDeg)) * math.sin(Values(**values).assumedLatDeg)) + (
-    math.cos(Values(**values).latDeg) * math.cos(Values(**values).assumedLatDeg) * math.cos(float(convertAngleFromDeg(calcLHA(values)))))
-    intDistRad = math.radians(intDist)
+    intDist = ((math.sin(math.radians((Values(**values).latDeg))) * math.sin((math.radians(Values(**values).assumedLatDeg))) + (
+    math.cos(math.radians(Values(**values).latDeg)) * math.cos(math.radians(Values(**values).assumedLatDeg) * math.cos(convertAngleFromDeg(calcLHA(values)))))
+    intDistRad = intDist
     return intDistRad
