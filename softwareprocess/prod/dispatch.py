@@ -324,5 +324,5 @@ def checkDict(values):
     return result.lat
 
 def calcLHA(values):
-    LHA =
+    LHA = Values(**values).long + Values(**values).assumedLong
     return LHA
