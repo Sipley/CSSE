@@ -11,24 +11,17 @@ import math
 #result = Values(**values)
 #print result.op
 
-values={'op':'correct','lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+values={'op':'correct','lat':'89d20.1','long':'154d5.4','altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3'}
 
 
 class Values(object):
     def __init__(self, lat, long, altitude, assumedLat, assumedLong, op=None):
         self.op = op
-        self.lat = lat
-        self.long = long
-        self.altitude = altitude
-        self.assumedLat = assumedLat
-        self.assumedLong = assumedLong
-
-    def convert(self):
-        latDeg = convertAngleFromDeg(self.lat)
-        longDeg = convertAngleFromDeg(self.long)
-        altitudeDeg = convertAngleFromDeg(self.altitude)
-        assumedLatDeg = convertAngleFromDeg(self.assumedLat)
-        assumedLongDeg = convertAngleFromDeg(self.assumedLong)
+        self.lat = convertAngleFromDeg(lat)
+        self.long = convertAngleFromDeg(long)
+        self.altitude = convertAngleFromDeg(altitude)
+        self.assumedLat = convertAngleFromDeg(assumedLat)
+        self.assumedLong = convertAngleFromDeg(assumedLong)
 
 #def checkDict(values):
 #    result = Values(**values).lat
@@ -42,17 +35,19 @@ def convertAngleFromDeg(angle):
         convertedAngle = -convertedAngle
     return convertedAngle
 
+def calcLHA(values):
+    LHA = Values(**values).long + Values(**values).assumedLong
+  #  LHAdeg = convertAngleToDeg(LHA)
+    return LHA
+
 def calcIntDist(values):
-    A = math.sin(math.radians(Values(**values).latDeg))
-    B = math.sin(math.radians(Values(**values).assumedLatDeg))
-    C = math.cos(math.radians(Values(**values).latDeg))
-    D = math.cos(math.radians(Values(**values).assumedLatDeg))
-    E = math.cos(convertAngleFromDeg(calcLHA(values)))
-    return A
-    return B
-    return C
-    return D
-    return E
+    A = math.sin(math.radians(Values(**values).lat))
+    B = math.sin(math.radians(Values(**values).assumedLat))
+    C = math.cos(math.radians(Values(**values).lat))
+    D = math.cos(math.radians(Values(**values).assumedLat))
+    E = math.cos(calcLHA(values))
+    intDist = (A * B) + (C * D * E)
+    return intDist
 
 result = calcIntDist(values)
 print result
