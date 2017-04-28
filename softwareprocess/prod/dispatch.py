@@ -321,5 +321,5 @@ class Values(object):
 
 def checkDict(values):
     result = Values(values)
-    print result
+    print result.lat
 
