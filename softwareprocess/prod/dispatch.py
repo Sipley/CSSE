@@ -370,5 +370,4 @@ def calcLHA(values):
 def calcIntDist(values):
     intDist = ((math.sin(math.radians((Values(**values).latDeg))) * math.sin((math.radians(Values(**values).assumedLatDeg))) + (
     math.cos(math.radians(Values(**values).latDeg)) * math.cos(math.radians(Values(**values).assumedLatDeg) * math.cos(convertAngleFromDeg(calcLHA(values)))))
-    intDistRad = intDist
-    return intDistRad
+    return intDist
