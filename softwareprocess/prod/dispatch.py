@@ -311,7 +311,7 @@ def calcAmtRotAries(values):
     return GHAariesTotal
 
 class Values(object):
-    def __init__(self, op, lat, long, altitude, assumedLat, assumedLong, latDeg=None, longDeg=None, altitudeDeg=None,assumedLatDeg=None, assumedLongDeg=None):
+    def __init__(self, op=None, lat=None, long=None, altitude=None, assumedLat=None, assumedLong=None):
         self.op = op
         self.lat = lat
         self.latDeg = convertAngleFromDeg(lat)
@@ -329,6 +329,6 @@ def checkDict(values):
     return result
 
 def calcLHA(values):
-    LHA = Values(**values).longDeg + Values(**values).assumedLongDeg
+    LHA = Values(**values).longDeg) + Values(**values).assumedLongDeg)
     LHAdeg = convertAngleToDeg(LHA)
     return LHAdeg
