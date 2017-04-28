@@ -367,5 +367,5 @@ def calcIntDist(values):
 
 def calcCorrectedAlt(values):
     correctedAlt = math.degrees(math.asin(calcIntDist(values)))
-    correctDistance = (Values(**values).altitude - correctedAlt(values))*60
+    correctDistance = Values(**values).altitude - correctedAlt
     return correctDistance
