@@ -5,6 +5,10 @@ class MyTestCase(unittest.TestCase):
 
 ############happy path tests############
 
+    def shouldReturnLatCheckClass(self):
+        values={'op':'correct','lat':'16.0d32.3', 'long':'95.41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult='16.0d32.3'
+        self.assertEqual(DP.checkDict(values), expectedResult)
 
 
 ############sad path tests##############
