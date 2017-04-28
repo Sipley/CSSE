@@ -21,11 +21,12 @@ class Values(object):
         self.assumedLat = assumedLat
         self.assumedLong = assumedLong
 
-    result = Values(**values)
-    return result.lat
+#result = Values(**values)
+#print result.lat
 
 def checkDict(values):
     result = Values(**values)
     return result.lat
 
-
+result = checkDict(values)
+print result
