@@ -361,7 +361,7 @@ def calcIntDist(values):
     B = math.sin(math.radians(Values(**values).assumedLat))
     C = math.cos(math.radians(Values(**values).lat))
     D = math.cos(math.radians(Values(**values).assumedLat))
-    E = math.cos(convertAngleFromeDeg(calcLHA(values)))
+    E = math.cos(convertAngleFromDeg(calcLHA(values)))
     intDist = (A * B) + (C * D * E)
     return intDist
 
