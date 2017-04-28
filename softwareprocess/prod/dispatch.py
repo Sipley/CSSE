@@ -366,7 +366,7 @@ def calcIntDist(values):
     return intDist
 
 def calcCorrectedAlt(values):
-    correctedAlt = math.asin(calcIntDist(values))
+    correctedAlt = math.degrees(math.asin(calcIntDist(values)))
     return convertAngleToDeg(correctedAlt)
 
 #def calcCorrectDistance(values):
