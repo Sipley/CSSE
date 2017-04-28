@@ -314,15 +314,15 @@ class Values(object):
     def __init__(self, op=None, lat=None, long=None, altitude=None, assumedLat=None, assumedLong=None):
         self.op = op
         self.lat = lat
-        self.latDeg = convertAngleToDeg(lat)
+        self.latDeg = convertAngleFromDeg(lat)
         self.long = long
-        self.longDeg = convertAngleToDeg(long)
+        self.longDeg = convertAngleFromDeg(long)
         self.altitude = altitude
-        self.altitudeDeg = convertAngleToDeg(altitude)
+        self.altitudeDeg = convertAngleFromDeg(altitude)
         self.assumedLat = assumedLat
-        self.assumedLatDeg = convertAngleToDeg(assumedLat)
+        self.assumedLatDeg = convertAngleFromDeg(assumedLat)
         self.assumedLong = assumedLong
-        self.assumedLongDeg = convertAngleToDeg(assumedLong)
+        self.assumedLongDeg = convertAngleFromDeg(assumedLong)
 
 def checkDict(values):
     result = Values(**values)
