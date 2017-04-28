@@ -372,4 +372,6 @@ def calcIntDist(values):
     math.cos(math.radians(Values(**values).latDeg)) * math.cos(math.radians(Values(**values).assumedLatDeg)) * math.cos(convertAngleFromDeg(calcLHA(values))))
     return intDist
 
-def 
+#def calcCorrectedAlt(values):
+#    correctedAlt = math.arcsin(calcIntDist(values))
+#    return correctedAlt
