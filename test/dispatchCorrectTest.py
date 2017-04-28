@@ -18,7 +18,7 @@ class MyTestCase(unittest.TestCase):
     def test100_020_shouldReturnIntDistance(self):
         values={'op':'correct','lat':'89d20.1','long':'154d5.4','altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3'}
         expectedResult='0.581474846'
-        self.assertAlmostEqual(calcIntDistance(values), expectedResult)
+        self.assertAlmostEqual(DP.calcIntDistance(values), expectedResult)
 
 ############sad path tests##############
 
