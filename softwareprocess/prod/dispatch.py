@@ -374,7 +374,7 @@ def calcIntDist(values):
 
 def calcCorrectedAlt(values):
     correctedAlt = math.asin(calcIntDist(values))
-    return correctedAlt
+    return convertAngleToDet(correctedAlt)
 
 #def calcCorrectDistance(values):
 #    correctDistance = (Values(**values).altitudeDeg - calcCorrectedAlt(values))*60
