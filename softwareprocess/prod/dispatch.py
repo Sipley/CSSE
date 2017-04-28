@@ -373,5 +373,5 @@ def calcIntDist(values):
     return intDist
 
 def calcCorrectedAlt(values):
-    correctedAlt = math.arcsin(calcIntDist(values))
+    correctedAlt = math.asin(calcIntDist(values))
     return correctedAlt
