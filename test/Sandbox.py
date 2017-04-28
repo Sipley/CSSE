@@ -22,8 +22,8 @@ class Values(object):
         self.assumedLong = assumedLong
 
 def checkDict(values):
-    result = Values(**values)
-    return result.lat
+    result = Values(**values).lat
+    return result
 
 result = checkDict(values)
 print result

@@ -323,3 +323,6 @@ def checkDict(values):
     result = Values(**values)
     return result.lat
 
+def calcLHA(values):
+    LHA =
+    return LHA
