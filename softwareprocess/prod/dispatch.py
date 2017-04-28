@@ -310,7 +310,16 @@ def calcAmtRotAries(values):
     GHAariesTotal = GHAariesObs + calcAmtRot(values)
     return GHAariesTotal
 
-class Values(values):
-    def __init__(self,values):
-        self.values = values
+class Values(object):
+    def __init__(self, op, lat, long, altitude, assumedLat, assumedLong):
+        self.op = op
+        self.lat = lat
+        self.long = long
+        self.altitude = altitude
+        self.assumedLat = assumedLat
+        self.assumedLong = assumedLong
+
+def checkDict(values):
+    result = Values(**values)
+    print result.lat
 
