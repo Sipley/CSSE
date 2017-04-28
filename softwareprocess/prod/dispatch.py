@@ -127,7 +127,10 @@ def dispatch(values=None):
         if not(all(key in values for key in ['lat','long','altitude','assumedLat','assumedLong'])):
             values['error'] = 'mandatory information is missing'
             return values
-        if ['correctedDistance','correctedAzimuth'] in values:
+        if 'correctedDistance' in values:
+            values['error'] = 'correctedDistance and/or correctedAzimuth already present'
+            return values
+        if 'correctedAzimuth' in values:
             values['error'] = 'correctedDistance and/or correctedAzimuth already present'
             return values
         lat = values['lat']
@@ -306,4 +309,8 @@ def calcAmtRotAries(values):
     GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
     GHAariesTotal = GHAariesObs + calcAmtRot(values)
     return GHAariesTotal
+
+class Values(values):
+    def __init__(self,values):
+        self.values = values
 
