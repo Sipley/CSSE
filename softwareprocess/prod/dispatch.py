@@ -330,6 +330,6 @@ def checkDict(values):
 
 def calcLHA(values):
 
-    LHA = Values(**values).longDeg + Values(**values).longDeg
+    LHA = Values(**values).longDeg + Values(**values).assumedLongDeg
     LHAdeg = convertAngleToDeg(LHA)
     return LHAdeg
