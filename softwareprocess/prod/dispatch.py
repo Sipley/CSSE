@@ -343,19 +343,13 @@ def calcAmtRotAries(values):
 
 
 class Values(object):
-    def __init__(self, op=None, lat=None, long=None, altitude=None, assumedLat=None, assumedLong=None):
+    def __init__(self, lat, long, altitude, assumedLat, assumedLong, op=None):
         self.op = op
-        self.lat = lat
-        self.latDeg = convertAngleFromDeg(lat)
-        self.long = long
-        self.longDeg = convertAngleFromDeg(long)
-        self.altitude = altitude
-        self.altitudeDeg = convertAngleFromDeg(altitude)
-        self.assumedLat = assumedLat
-        self.assumedLatDeg = convertAngleFromDeg(assumedLat)
-        self.assumedLong = assumedLong
-        self.assumedLongDeg = convertAngleFromDeg(assumedLong)
-
+        self.lat = convertAngleFromDeg(lat)
+        self.long = convertAngleFromDeg(long)
+        self.altitude = convertAngleFromDeg(altitude)
+        self.assumedLat = convertAngleFromDeg(assumedLat)
+        self.assumedLong = convertAngleFromDeg(assumedLong)
 
 def checkDict(values):
     result = Values(**values).lat
