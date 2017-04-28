@@ -368,6 +368,6 @@ def calcLHA(values):
     return LHAdeg
 
 def calcIntDist(values):
-    intDist = ((math.sin(Values(**values).latDeg)) * math.sin(Values(**values).assumedLatDeg)) + (
-    math.cos(Values(**values).latDeg) * math.cos(Values(**values).assumedLatDeg) * math.cos(calcLHA(values)))
+    intDist = float(((math.sin(Values(**values).latDeg)) * math.sin(Values(**values).assumedLatDeg)) + (
+    math.cos(Values(**values).latDeg) * math.cos(Values(**values).assumedLatDeg) * math.cos(calcLHA(values))))
     return intDist
