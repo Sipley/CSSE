@@ -325,11 +325,10 @@ class Values(object):
         self.assumedLongDeg = convertAngleFromDeg(assumedLong)
 
 def checkDict(values):
-    result = Values(**values)
-    return result.lat
+    result = Values(**values).lat
+    return result
 
 def calcLHA(values):
-
     LHA = Values(**values).longDeg + Values(**values).assumedLongDeg
     LHAdeg = convertAngleToDeg(LHA)
     return LHAdeg
