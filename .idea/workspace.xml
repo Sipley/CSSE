@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4f3c3800-46e7-4165-a279-545d97e2d7ce" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/~$201720Assignment5.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/dispatchCorrectTest.py" afterPath="$PROJECT_DIR$/test/dispatchCorrectTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="363" column="33" lean-forward="false" selection-start-line="363" selection-start-column="33" selection-end-line="363" selection-end-column="33" />
+            <state relative-caret-position="378">
+              <caret line="368" column="45" lean-forward="true" selection-start-line="368" selection-start-column="45" selection-end-line="368" selection-end-column="45" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#1271#1342#0" expanded="false" />
@@ -81,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatchCorrectTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dispatchCorrectTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/dispatchCorrectTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+            <state relative-caret-position="240">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -657,12 +656,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.28 at 15h 26m 35s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.28 at 15h 27m 05s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.28 at 16h 09m 42s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -687,16 +680,22 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.28 at 17h 07m 54s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.28 at 17h 12m 19s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.28 at 17h 12m 33s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1680" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13140446" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3058985" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.081001475" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29724208" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40551582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40551582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1079,24 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="363" column="33" lean-forward="false" selection-start-line="363" selection-start-column="33" selection-end-line="363" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1271#1342#0" expanded="false" />
-            <element signature="e#1401#1748#0" expanded="false" />
-            <element signature="e#1672#1748#0" expanded="false" />
-            <element signature="e#1804#2140#0" expanded="false" />
-            <element signature="e#1908#1981#0" expanded="false" />
-            <element signature="e#2067#2140#0" expanded="false" />
-            <element signature="e#2193#2607#0" expanded="false" />
-            <element signature="e#2535#2607#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1107,10 +1088,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/dispatchCorrectTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+        <state relative-caret-position="240">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="368" column="45" lean-forward="true" selection-start-line="368" selection-start-column="45" selection-end-line="368" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1271#1342#0" expanded="false" />
+            <element signature="e#1401#1748#0" expanded="false" />
+            <element signature="e#1672#1748#0" expanded="false" />
+            <element signature="e#1804#2140#0" expanded="false" />
+            <element signature="e#1908#1981#0" expanded="false" />
+            <element signature="e#2067#2140#0" expanded="false" />
+            <element signature="e#2193#2607#0" expanded="false" />
+            <element signature="e#2535#2607#0" expanded="false" />
           </folding>
         </state>
       </provider>
