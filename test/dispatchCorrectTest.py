@@ -10,6 +10,11 @@ class MyTestCase(unittest.TestCase):
         expectedResult='16.0d32.3'
         self.assertEqual(DP.checkDict(values), expectedResult)
 
+    def shouldReturnLHA(self):
+        values={'op':'correct','lat':'89d20.1','long':'154d5.4','altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3'}
+        expectedResult='228d40.7'
+        self.assertEqual(DP.calcLHA(values), expectedResult)
+
 
 ############sad path tests##############
 
