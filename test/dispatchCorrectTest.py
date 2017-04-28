@@ -5,12 +5,12 @@ class MyTestCase(unittest.TestCase):
 
 ############happy path tests############
 
-    def shouldReturnLatCheckClass(self):
+    def test100_010_shouldReturnLatCheckClass(self):
         values={'op':'correct','lat':'16.0d32.3', 'long':'95.41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult='16.0d32.3'
         self.assertEqual(DP.checkDict(values), expectedResult)
 
-    def shouldReturnLHA(self):
+    def test100_020_shouldReturnLHA(self):
         values={'op':'correct','lat':'89d20.1','long':'154d5.4','altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3'}
         expectedResult='228d40.7'
         self.assertEqual(DP.calcLHA(values), expectedResult)
