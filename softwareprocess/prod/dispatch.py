@@ -376,4 +376,5 @@ def calcCorrectedAzimuth(values):
     C = calcIntDist(values)
     D = math.cos(math.radians(Values(**values).assumedLat))
     E = math.cos(math.acos(math.radians(calcIntDist(values))))
-    correctedAzimuth = 'something'
+    correctedAzimuth = math.acos((A - (B * C))/(D * E))
+    return correctedAzimuth
