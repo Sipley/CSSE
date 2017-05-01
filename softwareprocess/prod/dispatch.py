@@ -371,7 +371,7 @@ def calcIntDist(values):
     D = math.cos(math.radians(Values(**values).assumedLat))
     E = math.cos(math.radians(convertAngleFromDeg(calcLHA(values))))
     intDist = (A * B) + (C * D * E)
-    return intDist
+    return A
 
 def calcCorrectedAlt(values):
     correctedAlt = math.degrees(math.asin(calcIntDist(values)))
