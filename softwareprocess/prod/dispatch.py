@@ -271,6 +271,11 @@ def convertAngleFromDeg(angle):
         convertedAngle = -convertedAngle
     return convertedAngle
 
+def convertAngleFromDeg2(angle):
+    degree = angle.split('d')[0]
+    arcminute = float(angle.split('d')[1]) / 60
+    convertedAngle = float(degree) + arcminute
+    return convertedAngle
 
 def convertAngleToDeg(angle):
     angle = str(angle)
@@ -348,11 +353,11 @@ def calcAmtRotAries(values):
 class Values(object):
     def __init__(self, lat, long, altitude, assumedLat, assumedLong, op=None, correctedDistance=None):
         self.op = op
-        self.lat = convertAngleFromDeg(lat)
-        self.long = convertAngleFromDeg(long)
-        self.altitude = convertAngleFromDeg(altitude)
-        self.assumedLat = convertAngleFromDeg(assumedLat)
-        self.assumedLong = convertAngleFromDeg(assumedLong)
+        self.lat = convertAngleFromDeg2(lat)
+        self.long = convertAngleFromDeg2(long)
+        self.altitude = convertAngleFromDeg2(altitude)
+        self.assumedLat = convertAngleFromDeg2(assumedLat)
+        self.assumedLong = convertAngleFromDeg2(assumedLong)
 
 def calcLHA(values):
     LHA = Values(**values).long + Values(**values).assumedLong
@@ -366,7 +371,7 @@ def calcIntDist(values):
     D = math.cos(math.radians(Values(**values).assumedLat))
     E = math.cos(math.radians(convertAngleFromDeg(calcLHA(values))))
     intDist = (A * B) + (C * D * E)
-    return B
+    return intDist
 
 def calcCorrectedAlt(values):
     correctedAlt = math.degrees(math.asin(calcIntDist(values)))
