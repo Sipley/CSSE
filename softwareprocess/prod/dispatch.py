@@ -262,15 +262,6 @@ class Stars():
                     '83d41.9', '80d38.2', '75d56.6', '62d06.9', '53d17.2', '49d30.7', '33d45.7', '27d42.0', '15d22.4',
                     '13d51.8', '13d36.7']
 
-
-def convertAngleFromDeg(angle):
-    degree = angle.split('d')[0]
-    arcminute = float(angle.split('d')[1]) / 60
-    convertedAngle = float(degree) + arcminute
-    if '-' in degree:
-        convertedAngle = -convertedAngle
-    return convertedAngle
-
 def convertAngleFromDeg2(angle):
     degree = angle.split('d')[0]
     arcminute = float(angle.split('d')[1]) / 60
