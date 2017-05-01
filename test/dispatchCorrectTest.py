@@ -55,11 +55,6 @@ class MyTestCase(unittest.TestCase):
         expectedResult='164d42.9'
         self.assertAlmostEquals(DP.calcCorrectedAzimuth(values),expectedResult)
 
-####happy path on other functions#######
-
-    def test100_110_shouldReturnCorrectAdjust(self):
-        values={'op':'adjust', 'observation':'13d51.6','height':'33', 'temperature':'72', 'pressure':'1010', 'horizon':'natural'}
-
 ############sad path tests##############
 
     def test900_010_shouldReturnErrorMissingInfo(self):
