@@ -48,7 +48,12 @@ class MyTestCase(unittest.TestCase):
     def test100_090_shouldReturnCorrectDist2(self):
         values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult=3950
-        self.assertAlmostEqual(DP.calcCorrectedAlt(values), expectedResult)
+        self.assertEqual(DP.calcCorrectedAlt(values), expectedResult)
+
+    def test100_040_shouldReturnCorrectedAzi(self):
+        values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
+        expectedResult=''
+        self.assertAlmostEquals(DP.calcCorrectedAzimuth(values),expectedResult)
 
 ############sad path tests##############
 
