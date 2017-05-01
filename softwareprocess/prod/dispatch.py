@@ -120,7 +120,7 @@ def dispatch(values=None):
         latitude = Stars.declination[index]
         values['lat'] = latitude
         SHA = Stars.siderealHour[index]
-        GHAstar = calcAmtRotAries(values) + convertAngleFromDeg(SHA)
+        GHAstar = calcAmtRotAries(values) + convertAngleFromDeg2(SHA)
         while GHAstar > 360:
             GHAstar = GHAstar - 360
         values['long'] = convertAngleToDeg(GHAstar)
@@ -294,7 +294,7 @@ def calcCumProgression(values):
         date = values['date']
     obsYear = datetime.datetime.strptime(date, '%Y-%m-%d').year
     diffYear = obsYear - 2001
-    cumProgression = diffYear * convertAngleFromDeg(GHAariesAnnualDecrease)
+    cumProgression = diffYear * convertAngleFromDeg2(GHAariesAnnualDecrease)
     return cumProgression
 
 
@@ -313,7 +313,7 @@ def calcNumLeapYear(values):
 def calcTotalLeapProg(values):
     rotPeriod = 86164.1
     clockPeriod = 86400
-    dailyDeg = convertAngleFromDeg('360d0.00')
+    dailyDeg = convertAngleFromDeg2('360d0.00')
     dailyRot = abs(dailyDeg - (rotPeriod / clockPeriod * dailyDeg))
     totalLeapProg = calcNumLeapYear(values) * dailyRot
     return totalLeapProg
@@ -347,7 +347,7 @@ def calcAmtRot(values):
 
 def calcAmtRotAries(values):
     GHAaries = '100d42.6'
-    GHAariesObs = convertAngleFromDeg(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
+    GHAariesObs = convertAngleFromDeg2(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
     GHAariesTotal = GHAariesObs + calcAmtRot(values)
     return GHAariesTotal
 
@@ -371,7 +371,7 @@ def calcIntDist(values):
     B = math.sin(math.radians(Values(**values).assumedLat))
     C = math.cos(math.radians(Values(**values).lat))
     D = math.cos(math.radians(Values(**values).assumedLat))
-    E = math.cos(math.radians(convertAngleFromDeg(calcLHA(values))))
+    E = math.cos(math.radians(convertAngleFromDeg2(calcLHA(values))))
     intDist = (A * B) + (C * D * E)
     return intDist
 
