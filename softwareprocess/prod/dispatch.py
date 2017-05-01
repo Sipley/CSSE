@@ -223,8 +223,9 @@ def dispatch(values=None):
         if not (0 <= arcminuteAssumedLong < 60.0):
             values['error'] = 'invalid assumedLong'
             return values
-        values['correctedDistance'] = calcCorrectedAlt(values)
-        values['correctedAzimuth'] = calcCorrectedAzimuth(values)
+        #values['correctedDistance'] = calcCorrectedAlt(values)
+        #values['correctedAzimuth'] = calcCorrectedAzimuth(values)
+        #values['error'] = 'something went right actually'
         return values
     elif (values['op'] == 'locate'):
         return values  # This calculation is stubbed out
