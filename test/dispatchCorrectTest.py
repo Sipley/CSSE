@@ -23,7 +23,7 @@ class MyTestCase(unittest.TestCase):
     def test100_040_shouldResultCorrectedDist(self):
         values={'op':'correct','lat':'89d20.1','long':'154d5.4','altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3'}
         expectedResult=104
-        self.assertAlmostEqual(DP.calcCorrectedAlt(values)/100, expectedResult/100,2)
+        self.assertAlmostEqual(DP.calcCorrectedAlt(values)/1000, expectedResult/1000,2)
 
 ############sad path tests##############
 
