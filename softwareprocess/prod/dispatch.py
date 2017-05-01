@@ -130,12 +130,12 @@ def dispatch(values=None):
         if not (all(key in values for key in ['lat', 'long', 'altitude', 'assumedLat', 'assumedLong'])):
             values['error'] = 'mandatory information is missing'
             return values
-        if 'correctedDistance' in values:
+        if ('correctedDistance' or 'correctedAziumuth')in values:
             values['error'] = 'correctedDistance and/or correctedAzimuth already present'
             return values
-        if 'correctedAzimuth' in values:
-            values['error'] = 'correctedDistance and/or correctedAzimuth already present'
-            return values
+        #if 'correctedAzimuth' in values:
+        #    values['error'] = 'correctedDistance and/or correctedAzimuth already present'
+        #    return values
         lat = values['lat']
         long = values['long']
         altitude = values['altitude']
@@ -225,7 +225,6 @@ def dispatch(values=None):
             return values
         values['correctedDistance'] = str(calcCorrectedAlt(values))
         values['correctedAzimuth'] = str(calcCorrectedAzimuth(values))
-        #values['error'] = 'something went right actually'
         return values
     elif (values['op'] == 'locate'):
         return values  # This calculation is stubbed out
@@ -277,7 +276,6 @@ def convertAngleToDeg(angle):
     convertedAngle = str(degree) + 'd' + str(arcminute)
     return convertedAngle
 
-
 def calcCumProgression(values):
     GHAariesAnnualDecrease = '-0d14.31667'
     date = '2001-01-01'
@@ -287,7 +285,6 @@ def calcCumProgression(values):
     diffYear = obsYear - 2001
     cumProgression = diffYear * convertAngleFromDeg2(GHAariesAnnualDecrease)
     return cumProgression
-
 
 def calcNumLeapYear(values):
     date = '2001-01-01'
@@ -300,7 +297,6 @@ def calcNumLeapYear(values):
             numLeapYear += 1
     return numLeapYear
 
-
 def calcTotalLeapProg(values):
     rotPeriod = 86164.1
     clockPeriod = 86400
@@ -308,7 +304,6 @@ def calcTotalLeapProg(values):
     dailyRot = abs(dailyDeg - (rotPeriod / clockPeriod * dailyDeg))
     totalLeapProg = calcNumLeapYear(values) * dailyRot
     return totalLeapProg
-
 
 def calcTotalSeconds(values):
     refYear = 2001
@@ -327,7 +322,6 @@ def calcTotalSeconds(values):
     deltaSeconds = (obsDateDate - refDateDate).total_seconds()
     return deltaSeconds
 
-
 def calcAmtRot(values):
     rotPeriod = 86164.1
     amtRot = calcTotalSeconds(values) / rotPeriod * 360
@@ -335,13 +329,11 @@ def calcAmtRot(values):
         amtRot = amtRot - 360
     return amtRot
 
-
 def calcAmtRotAries(values):
     GHAaries = '100d42.6'
     GHAariesObs = convertAngleFromDeg2(GHAaries) + calcCumProgression(values) + calcTotalLeapProg(values)
     GHAariesTotal = GHAariesObs + calcAmtRot(values)
     return GHAariesTotal
-
 
 class Values(object):
     def __init__(self, lat, long, altitude, assumedLat, assumedLong, op=None, correctedDistance=None):
