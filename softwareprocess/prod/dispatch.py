@@ -224,7 +224,7 @@ def dispatch(values=None):
             values['error'] = 'invalid assumedLong'
             return values
         values['correctedDistance'] = str(calcCorrectedAlt(values))
-        values['correctedAzimuth'] = calcCorrectedAzimuth(values)
+        values['correctedAzimuth'] = str(calcCorrectedAzimuth(values))
         #values['error'] = 'something went right actually'
         return values
     elif (values['op'] == 'locate'):
@@ -346,7 +346,7 @@ def calcAmtRotAries(values):
 
 
 class Values(object):
-    def __init__(self, lat, long, altitude, assumedLat, assumedLong, op=None):
+    def __init__(self, lat, long, altitude, assumedLat, assumedLong, op=None, correctedDistance=None):
         self.op = op
         self.lat = convertAngleFromDeg(lat)
         self.long = convertAngleFromDeg(long)
