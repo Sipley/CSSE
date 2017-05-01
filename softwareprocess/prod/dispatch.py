@@ -274,7 +274,9 @@ def convertAngleFromDeg(angle):
 def convertAngleFromDeg2(angle):
     degree = angle.split('d')[0]
     arcminute = float(angle.split('d')[1]) / 60
-    convertedAngle = float(degree) + arcminute
+    convertedAngle = abs(float(degree)) + arcminute
+    if '-' in degree:
+        convertedAngle = -convertedAngle
     return convertedAngle
 
 def convertAngleToDeg(angle):
