@@ -368,7 +368,7 @@ def calcIntDist(values):
 def calcCorrectedAlt(values):
     correctedAlt = math.degrees(math.asin(calcIntDist(values)))
     correctDistance = (Values(**values).altitude - correctedAlt) * 60
-    return correctDistance
+    return round(correctDistance,0)
 
 def calcCorrectedAzimuth(values):
     A = math.sin(math.radians(Values(**values).lat))

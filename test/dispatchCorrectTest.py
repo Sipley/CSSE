@@ -15,15 +15,14 @@ class MyTestCase(unittest.TestCase):
         expectedResult=0.581474846
         self.assertAlmostEqual(DP.calcIntDist(values), expectedResult,2)
 
-    #def test100_030_shouldResultCorrectedAlt(self):
-    #    values={'op':'correct','lat':'89d20.1','long':'154d5.4','altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3'}
-    #    expectedResult='35d33.3'
-    #    self.assertEqual(DP.calcCorrectedAlt(values), expectedResult)
-
-    def test100_040_shouldResultCorrectedDist(self):
+    def test100_030_shouldResultCorrectedDist(self):
         values={'op':'correct','lat':'89d20.1','long':'154d5.4','altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3'}
         expectedResult=104
         self.assertAlmostEquals(DP.calcCorrectedAlt(values),expectedResult,0)
+
+    def test100_040_shouldReturnCorrectedAzi(self):
+        values={'op':'correct','lat':'89d20.1','long':'154d5.4','altitude':'37d17.4','assumedLat':'35d59.7','assumedLong':'74d35.3'}
+        expectedResult=
 
 ############sad path tests##############
 
