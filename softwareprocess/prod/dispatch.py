@@ -224,7 +224,7 @@ def dispatch(values=None):
             values['error'] = 'invalid assumedLong'
             return values
         values['correctedDistance'] = str(calcCorrectedAlt(values))
-        #values['correctedAzimuth'] = calcCorrectedAzimuth(values)
+        values['correctedAzimuth'] = calcCorrectedAzimuth(values)
         #values['error'] = 'something went right actually'
         return values
     elif (values['op'] == 'locate'):
