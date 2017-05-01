@@ -361,7 +361,7 @@ def calcIntDist(values):
     B = math.sin(math.radians(Values(**values).assumedLat))
     C = math.cos(math.radians(Values(**values).lat))
     D = math.cos(math.radians(Values(**values).assumedLat))
-    E = math.cos(convertAngleFromDeg(calcLHA(values)))
+    E = math.cos(math.radians(convertAngleFromDeg(calcLHA(values))))
     intDist = (A * B) + (C * D * E)
     return intDist
 
@@ -375,4 +375,5 @@ def calcCorrectedAzimuth(values):
     B = math.sin(math.radians(Values(**values).assumedLat))
     C = calcIntDist(values)
     D = math.cos(math.radians(Values(**values).assumedLat))
-    E = math.cos(math.acos)
+    E = math.cos(math.acos(math.radians(calcIntDist(values))))
+    correctedAzimuth = 
