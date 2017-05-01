@@ -12,4 +12,10 @@ C = math.cos(math.radians(lat))
 D = math.cos(math.radians(assumedLat))
 E = math.cos(math.radians(LHA))
 
+print A
+print B
+print C
+print D
+print E
+
 print ((A * B) + (C * D * E))
