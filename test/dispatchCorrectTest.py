@@ -40,7 +40,7 @@ class MyTestCase(unittest.TestCase):
         expectedResult={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3', 'correctedDistance':'3940', 'correctedAzimuth':'164d42.9'}
         self.assertDictEqual(DP.dispatch(values),expectedResult)
 
-    def test100_030_shouldResultCorrectedDist(self):
+    def test100_080_shouldResultCorrectedDist(self):
         values={'op':'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':'74d35.3'}
         expectedResult=3950
         self.assertAlmostEquals(DP.calcCorrectedAlt(values),expectedResult,0)
