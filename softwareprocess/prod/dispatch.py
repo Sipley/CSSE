@@ -225,7 +225,7 @@ def dispatch(values=None):
             return values
         values['correctedDistance'] = calcCorrectedAlt(values)
         values['correctedAzimuth'] = calcCorrectedAzimuth(values)
-        return values  # This calculation is stubbed out
+        return values
     elif (values['op'] == 'locate'):
         return values  # This calculation is stubbed out
     else:
